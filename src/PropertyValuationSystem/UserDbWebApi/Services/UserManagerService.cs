@@ -158,7 +158,7 @@ namespace UserDbWebApi.Services
                 UserName = userDto.UserName,
                 Email = userDto.Email,
                 PhoneNumber = userDto.PhoneNumber,
-                PasswordHash = userDto.Password,
+                //PasswordHash = userDto.Password,
                 Company = company,
                 NormalizedUserName = userDto.UserName.ToUpper(),
                 NormalizedEmail = userDto.Email?.ToUpper(),
