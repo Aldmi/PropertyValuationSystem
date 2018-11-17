@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using UserDbWebApi.DTO.PasswordDto;
 using UserDbWebApi.DTO.RolesDto;
 using UserDbWebApi.DTO.UserDto;
 using UserDbWebApi.Entities;
@@ -164,21 +165,30 @@ namespace UserDbWebApi.Controllers
         }
 
 
-        // PUT api/SuperAdminManager/ChangeUserClaims/{id}
-        [HttpPut("ChangeUserClaims/{userId}")]
-        public async Task<IActionResult> ChangeUserPassword([FromRoute]string userId, [FromBody] ApplicationUserDto userDto)
+        // PUT api/SuperAdminManager/ChangeUserPassword/{id}
+        [HttpPut("ChangeUserPassword/{userId}")]
+        public async Task<IActionResult> ChangeUserPassword([FromRoute]string userId, [FromBody]ChangePasswordDto changePasswordDto)
         {
-            //TODO: Где передавать пароли? Сделать отдельное Dto?
+            if (userId != changePasswordDto.UserId)
+            {
+                throw new Exception("Id пользователя не совпадает");
+            }
             if (!await _userManager.UserExistsAsync(userId))
             {
                 return BadRequest($"Такого пользователя НЕ существует {userId}");
             }
-            var res = await _userManager.ChangeUserPassword(userId, "", "");
-            return Ok(res);
+            try
+            {
+                var res = await _userManager.ChangeUserPassword(userId, changePasswordDto.CurrentPassword, changePasswordDto.NewPassword);
+                return Ok(res);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                return BadRequest(e.Message);
+            }     
         }
 
-
         #endregion
-
     }
 }

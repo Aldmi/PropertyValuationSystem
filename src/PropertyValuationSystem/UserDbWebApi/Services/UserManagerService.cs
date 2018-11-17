@@ -240,20 +240,16 @@ namespace UserDbWebApi.Services
         }
 
 
-
         public async Task<bool> ChangeUserPassword(string userId, string currentPassword, string newPassword)
         {
             var user = await _userManager.Users.FirstOrDefaultAsync(u => u.Id == userId);
-            var result =await _userManager.ChangePasswordAsync(user, currentPassword, newPassword);
+            var result = await _userManager.ChangePasswordAsync(user, currentPassword, newPassword);
             if (!result.Succeeded)
             {
                 throw new Exception(result.Errors.First().Description);
             }
             return true;
         }
-
-
-
 
         #endregion
 
