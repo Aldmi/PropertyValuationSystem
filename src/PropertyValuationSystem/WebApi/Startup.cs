@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using IdentityServer4.AccessTokenValidation;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -54,6 +55,32 @@ namespace WebApi
                     options.ApiName = "MainApi";                   // scope(resource) с именем "apiMain"
                     options.EnableCaching = true;
                     options.CacheDuration = TimeSpan.FromMinutes(10);
+                    options.JwtBearerEvents = new JwtBearerEvents
+                    {
+                        //OnMessageReceived = e =>
+                        //{
+                        //    _logger.LogTrace("JWT: message received");
+                        //    return Task.CompletedTask;
+                        //},
+
+                        //OnTokenValidated = e =>
+                        //{
+                        //    _logger.LogTrace("JWT: token validated");
+                        //    return Task.CompletedTask;
+                        //},
+
+                        //OnAuthenticationFailed = e =>
+                        //{
+                        //    _logger.LogTrace("JWT: authentication failed");
+                        //    return Task.CompletedTask;
+                        //},
+
+                        //OnChallenge = e =>
+                        //{
+                        //    _logger.LogTrace("JWT: challenge");
+                        //    return Task.CompletedTask;
+                        //}
+                    };
                 });
 
             services.AddCors(options =>
