@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using DAL.Abstract.Concrete;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
@@ -9,12 +10,21 @@ namespace WebApi.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    [Authorize]
+    //[Authorize]
     public class ValuesController : ControllerBase
     {
+        private readonly IHouseRepository _houseRepository;
+
+        public ValuesController(IHouseRepository houseRepository)
+        {
+            _houseRepository = houseRepository;
+        }
+
+
+
         // GET api/values
         [HttpGet]
-        [Authorize(Roles = "SuperAdmin")]
+        //[Authorize(Roles = "SuperAdmin")]
         //[Authorize(Roles = "Admin")]
         //[Authorize(Policy = "SuperAdminOnly")]
         //[Authorize(Policy = "ManagerOnly")]

@@ -21,11 +21,14 @@ namespace DAL.EFCore.DbContext
 
         #region ctor
 
-        public Context(string connStr)
+        public Context(string connStr, bool isEnsureCreated = true)
         {
             _connStr = connStr;
             ChangeTracker.QueryTrackingBehavior = QueryTrackingBehavior.NoTracking;//Отключение Tracking для всего контекста
-            Database.EnsureCreated(); //Если БД нет, то создать.
+            if (isEnsureCreated)
+            {
+                Database.EnsureCreated(); //Если БД нет, то создать. (ОТКЛЮЧАТЬ ПРИ МИГРАЦИИ, Т.К. БД СОЗДАЕТСЯ 2 РАЗА)
+            }
         }
 
         #endregion

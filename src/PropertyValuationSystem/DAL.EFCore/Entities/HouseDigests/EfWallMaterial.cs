@@ -9,6 +9,7 @@ namespace DAL.EFCore.Entities.HouseDigests
     public class EfWallMaterial : IEntity
     {
         public int Id { get; set; }
+
         [Required]
         public string Name { get; set; }
 

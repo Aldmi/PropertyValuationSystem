@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore.Design;
+﻿using System.IO;
+using Microsoft.EntityFrameworkCore.Design;
 using Microsoft.Extensions.Configuration;
 using Shared.ForConfigFiles;
 
@@ -12,9 +13,10 @@ namespace DAL.EFCore.DbContext
     {
         public Context CreateDbContext(string[] args)
         {
-            var config = JsonConfigLib.GetConfiguration();
-            var connectionString = config.GetConnectionString("OptionDbConnection");
-            return new Context(connectionString);
+            var path = @"D:\Git\PropertyValuationSystem\src\PropertyValuationSystem\WebApi";
+            var config = JsonConfigLib.GetConfiguration(path);
+            var connectionString = config.GetConnectionString("MainDbConnection");
+            return new Context(connectionString, false);
         }
     }
 }

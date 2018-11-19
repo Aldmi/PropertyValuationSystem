@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
+using Autofac;
 using IdentityServer4.AccessTokenValidation;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
@@ -12,18 +14,21 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
+using Newtonsoft.Json;
+using Shared.ForConfigFiles;
+using WebApi.AutofacModules;
 
 namespace WebApi
 {
     public class Startup
     {
-        public Startup(IConfiguration configuration)
+        public Startup(IConfiguration appConfiguration)
         {
-            Configuration = configuration;
+            AppConfiguration = appConfiguration;
         }
 
 
-        public IConfiguration Configuration { get; }
+        public IConfiguration AppConfiguration { get; }
 
 
 
@@ -31,6 +36,12 @@ namespace WebApi
         {
             services.AddMvcCore()
                     .SetCompatibilityVersion(CompatibilityVersion.Version_2_1)
+                    .AddControllersAsServices()
+                    .AddJsonOptions(o =>
+                    {
+                        o.SerializerSettings.Formatting = Formatting.Indented;
+                        o.SerializerSettings.NullValueHandling = NullValueHandling.Ignore;
+                    })
                     // добавляем авторизацию, благодаря этому будут работать атрибуты Authorize (Роли и Политики)
                     .AddAuthorization(options =>
                      {
@@ -95,6 +106,17 @@ namespace WebApi
             });
         }
 
+
+        public void ConfigureContainer(ContainerBuilder builder)
+        {
+            var connectionString = AppConfiguration.GetConnectionString("MainDbConnection");
+            builder.RegisterModule(new RepositoryAutofacModule(connectionString));
+            //builder.RegisterModule(new EventBusAutofacModule());
+            //builder.RegisterModule(new ControllerAutofacModule());
+            //builder.RegisterModule(new MessageBrokerAutofacModule());
+            //builder.RegisterModule(new LogerAutofacModule());
+            //builder.RegisterModule(new BlConfigAutofacModule());
+        }
 
 
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)

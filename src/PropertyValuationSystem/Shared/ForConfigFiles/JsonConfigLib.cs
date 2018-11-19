@@ -16,7 +16,7 @@ namespace Shared.ForConfigFiles
             // установка пути к текущему каталогу
             builder.SetBasePath(basePath);
             // получаем конфигурацию из файла appsettings.json
-            builder.AddJsonFile("appsettings.json");
+            builder.AddJsonFile(fileName);
             // создаем конфигурацию
             var config = builder.Build();
 
