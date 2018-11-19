@@ -14,6 +14,8 @@ namespace JsClient
     {
         public static void Main(string[] args)
         {
+            Console.Title = "JsClient";
+
             CreateWebHostBuilder(args).Build().Run();
         }
 
