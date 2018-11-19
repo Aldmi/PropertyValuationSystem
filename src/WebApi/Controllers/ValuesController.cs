@@ -10,7 +10,7 @@ namespace WebApi.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    //[Authorize]
+    [Authorize]
     public class ValuesController : ControllerBase
     {
         private readonly IHouseRepository _houseRepository;
@@ -24,7 +24,7 @@ namespace WebApi.Controllers
 
         // GET api/values
         [HttpGet]
-        //[Authorize(Roles = "SuperAdmin")]
+        [Authorize(Roles = "SuperAdmin")]
         //[Authorize(Roles = "Admin")]
         //[Authorize(Policy = "SuperAdminOnly")]
         //[Authorize(Policy = "ManagerOnly")]

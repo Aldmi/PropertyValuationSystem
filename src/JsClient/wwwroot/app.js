@@ -110,6 +110,11 @@ function callApi() {
         };
         var url = "https://localhost:6001/api/values";
         xhr.open("GET", url, true);
+
+        //Тест доступа к UserDb
+        //var url = "https://localhost:7000/api/SuperAdminManager/ResetUserPassword/bb205d9f-faab-48b4-b2cd-6b1046ef25fe";
+        //xhr.open("PUT", url, true);
+
         xhr.setRequestHeader("Authorization", "Bearer " + user.access_token);
         xhr.send();
     });

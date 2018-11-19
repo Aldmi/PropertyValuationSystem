@@ -48,6 +48,7 @@ namespace UserDbWebApi.Services
                 {
                     Id = user.Id,
                     UserName = user.UserName,
+                    Password = user.PasswordHash,
                     Company = new CompanyDto { Id = user.Company.Id, Name = user.Company.Name },
                     Email = user.Email,
                     PhoneNumber = user.PhoneNumber,
@@ -250,6 +251,21 @@ namespace UserDbWebApi.Services
             }
             return true;
         }
+
+
+        public async Task<bool> ResetUserPassword(string userId, string newPassword)
+        {
+            var user = await _userManager.Users.FirstOrDefaultAsync(u => u.Id == userId);
+            var tokenReset = await _userManager.GeneratePasswordResetTokenAsync(user);        
+            var result = await _userManager.ResetPasswordAsync(user, tokenReset, newPassword);
+            if (!result.Succeeded)
+            {
+                throw new Exception(result.Errors.First().Description);
+            }
+            return true;
+        }
+
+        
 
         #endregion
 

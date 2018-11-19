@@ -15,6 +15,7 @@ namespace UserDbWebApi.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     //[Authorize(Roles = "SuperAdmin")]
     //[Authorize(Policy = "SuperAdminOnly")]
     public class SuperAdminManagerController : ControllerBase
@@ -188,6 +189,49 @@ namespace UserDbWebApi.Controllers
                 return BadRequest(e.Message);
             }     
         }
+
+
+        // PUT api/SuperAdminManager/ResetUserPassword/{id}
+        [HttpPut("ResetUserPassword/{userId}")]
+        //[Authorize(AuthenticationSchemes = "Bearer", Roles = "SuperAdmin")]
+        public async Task<IActionResult> ResetUserPassword([FromRoute]string userId, [FromBody]ChangePasswordDto changePasswordDto)
+        {
+            if (userId != changePasswordDto.UserId)
+            {
+                throw new Exception("Id пользователя не совпадает");
+            }
+            if (!await _userManager.UserExistsAsync(userId))
+            {
+                return BadRequest($"Такого пользователя НЕ существует {userId}");
+            }
+            try
+            {
+                var res = await _userManager.ResetUserPassword(userId, changePasswordDto.NewPassword);
+                return Ok(res);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                return BadRequest(e.Message);
+            }
+        }
+
+
+
+        // PUT api/SuperAdminManager/ResetUserPassword/{id}
+        //[HttpPut("ResetUserPassword/{userId}")]
+        //[Authorize(AuthenticationSchemes = "Bearer", Roles = "SuperAdmin")]
+        //public async Task<IActionResult> ResetUserPassword([FromRoute]string userId)
+        //{
+        //    var claims = from c in User.Claims select new { c.Type, c.Value };
+        //    claims = claims.ToList();
+        //    var name = User.Identity.Name;
+        //    var companyNAnme = User.FindFirst("CompanyName").Value;
+        //    var roles = claims.Where(c => c.Type == "role").Select(c => c.Value).ToList();
+
+
+        //    return Ok();
+        //}
 
         #endregion
     }
