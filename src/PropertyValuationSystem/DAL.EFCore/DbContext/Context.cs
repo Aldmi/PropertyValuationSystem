@@ -1,4 +1,5 @@
-﻿using DAL.EFCore.DbContext.EntitiConfiguration;
+﻿using DAL.EFCore.Entities;
+using DAL.EFCore.Entities.HouseDigests;
 using Microsoft.EntityFrameworkCore;
 
 namespace DAL.EFCore.DbContext
@@ -10,11 +11,9 @@ namespace DAL.EFCore.DbContext
 
         #region Reps
 
-        public DbSet<EfSerialOption> SerialPortOptions { get; set; }
-        public DbSet<EfTcpIpOption> TcpIpOptions { get; set; }
-        public DbSet<EfHttpOption> HttpOptions { get; set; }
-        public DbSet<EfDeviceOption> DeviceOptions { get; set; }
-        public DbSet<EfExchangeOption> ExchangeOptions { get; set; }
+        public DbSet<EfHouse> Houses { get; set; }
+        public DbSet<EfWallMaterial> WallMaterials { get; set; }
+        public DbSet<EfCompany> Companys { get; set; }
 
         #endregion
 
@@ -51,9 +50,7 @@ namespace DAL.EFCore.DbContext
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-           modelBuilder.ApplyConfiguration(new EfDeviceOptionConfig());
-           modelBuilder.ApplyConfiguration(new EfExchangeOptionConfig());
-           modelBuilder.ApplyConfiguration(new EfHttpOptionConfig());
+           //modelBuilder.ApplyConfiguration(new EfDeviceOptionConfig());
            base.OnModelCreating(modelBuilder);
         }
 
