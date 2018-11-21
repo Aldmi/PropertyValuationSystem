@@ -1,12 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using BL.Services.Mediators.DigestMediators;
 using DAL.Abstract.Concrete;
+using DAL.Abstract.Entities.Digests.HouseDigests;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Serilog;
+using SerilogTimings.Extensions;
 
 
 namespace WebApi.Controllers
@@ -49,10 +52,14 @@ namespace WebApi.Controllers
 
         // GET api/values/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<string>> Get(int id)
+        public async Task<IEnumerable<WallMaterial>> Get(int id)
         {
-            var res= await _digestBaseMed.GetWallMaterialAsync();          
-            return "value";
+            IEnumerable<WallMaterial> res;
+            using (_loger.TimeOperation("GetWallMaterialAsync Methode"))
+            {
+                res = await _digestBaseMed.GetWallMaterialAsync();
+            }
+            return res;
         }
 
         // POST api/values
@@ -72,5 +79,29 @@ namespace WebApi.Controllers
         public void Delete(int id)
         {
         }
+
+
+        //void Measure(params Action[] callbacks)
+        //{
+        //    foreach (Action callback in callbacks)
+        //    {
+        //        Stopwatch stopwatch = Stopwatch.StartNew();
+        //        callback();
+        //        stopwatch.Stop();
+        //        Console.WriteLine(callback.Method.Name + " : " + stopwatch.ElapsedMilliseconds);
+        //    }
+        //}
+
+
+
+        public async Task<T> Measure<T>(Func<Task<T>> func)
+        {          
+           Stopwatch stopwatch = Stopwatch.StartNew();
+           var res= await func();
+           stopwatch.Stop();
+           _loger.Information(">>>>>>>>" + func.Method.Name + " : " + stopwatch.ElapsedMilliseconds);
+           return res;
+        }
     }
+
 }
