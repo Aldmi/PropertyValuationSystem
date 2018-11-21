@@ -5,6 +5,7 @@ using DAL.Abstract.Concrete;
 using DAL.EFCore.Entities.HouseDigests;
 using DAL.EFCore.Repository;
 using DAL.EFCore.Repository.Digests;
+using Serilog;
 
 namespace WebApi.AutofacModules
 {

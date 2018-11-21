@@ -15,8 +15,11 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Newtonsoft.Json;
+using Serilog;
+using Serilog.Events;
 using Shared.ForConfigFiles;
 using WebApi.AutofacModules;
+using WebApi.Extensions;
 
 namespace WebApi
 {
@@ -34,6 +37,8 @@ namespace WebApi
 
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddSerilogServices();
+
             services.AddMvcCore()
                     .SetCompatibilityVersion(CompatibilityVersion.Version_2_1)
                     .AddControllersAsServices()
@@ -111,11 +116,7 @@ namespace WebApi
         {
             var connectionString = AppConfiguration.GetConnectionString("MainDbConnection");
             builder.RegisterModule(new RepositoryAutofacModule(connectionString));
-            //builder.RegisterModule(new EventBusAutofacModule());
-            //builder.RegisterModule(new ControllerAutofacModule());
-            //builder.RegisterModule(new MessageBrokerAutofacModule());
-            //builder.RegisterModule(new LogerAutofacModule());
-            //builder.RegisterModule(new BlConfigAutofacModule());
+            builder.RegisterModule(new MediatorsAutofacModule());
         }
 
 

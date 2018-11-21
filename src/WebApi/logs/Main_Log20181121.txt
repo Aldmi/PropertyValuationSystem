@@ -1,0 +1,218 @@
+2018-11-21 14:37:19.284 +07:00 [INF] Starting web host >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+2018-11-21 14:37:19.448 +07:00 [INF] Information>>>>>>>>>>>>>>>>>>>>>>>>
+2018-11-21 14:37:19.449 +07:00 [ERR] Error>>>>>>>>>>>>>>>>>>>>>>>>
+2018-11-21 14:37:19.690 +07:00 [INF] User profile is available. Using 'C:\Users\Aldmi\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2018-11-21 14:37:20.276 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:6001/api/values  
+2018-11-21 14:37:20.429 +07:00 [INF] Route matched with {action = "Get", controller = "Values"}. Executing action WebApi.Controllers.ValuesController.Get (WebApi)
+2018-11-21 14:37:20.707 +07:00 [INF] Authorization failed.
+2018-11-21 14:37:20.779 +07:00 [INF] Authorization failed for the request at filter 'Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter'.
+2018-11-21 14:37:20.788 +07:00 [INF] Executing ChallengeResult with authentication schemes ([]).
+2018-11-21 14:37:20.833 +07:00 [INF] AuthenticationScheme: BearerIdentityServerAuthenticationJwt was challenged.
+2018-11-21 14:37:20.834 +07:00 [INF] AuthenticationScheme: Bearer was challenged.
+2018-11-21 14:37:20.838 +07:00 [INF] Executed action WebApi.Controllers.ValuesController.Get (WebApi) in 143.733ms
+2018-11-21 14:37:20.856 +07:00 [INF] Request finished in 581.1177ms 401 
+2018-11-21 14:39:35.004 +07:00 [INF] Starting web host >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+2018-11-21 14:39:35.872 +07:00 [INF] Information>>>>>>>>>>>>>>>>>>>>>>>>
+2018-11-21 14:39:35.873 +07:00 [ERR] Error>>>>>>>>>>>>>>>>>>>>>>>>
+2018-11-21 14:39:36.398 +07:00 [INF] User profile is available. Using 'C:\Users\Aldmi\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2018-11-21 14:39:40.127 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:6001/api/values/5  
+2018-11-21 14:39:40.234 +07:00 [INF] Route matched with {action = "Get", controller = "Values"}. Executing action WebApi.Controllers.ValuesController.Get (WebApi)
+2018-11-21 14:39:40.252 +07:00 [INF] Executed action WebApi.Controllers.ValuesController.Get (WebApi) in 13.9661ms
+2018-11-21 14:39:40.259 +07:00 [ERR] An unhandled exception has occurred while executing the request.
+Autofac.Core.DependencyResolutionException: An error occurred during the activation of a particular registration. See the inner exception for details. Registration: Activator = ValuesController (ReflectionActivator), Services = [WebApi.Controllers.ValuesController], Lifetime = Autofac.Core.Lifetime.CurrentScopeLifetime, Sharing = None, Ownership = OwnedByLifetimeScope ---> None of the constructors found with 'Autofac.Core.Activators.Reflection.DefaultConstructorFinder' on type 'WebApi.Controllers.ValuesController' can be invoked with the available services and parameters:
+Cannot resolve parameter 'Serilog.ILogger loger' of constructor 'Void .ctor(DAL.Abstract.Concrete.IHouseRepository, Serilog.ILogger)'. (See inner exception for details.) ---> Autofac.Core.DependencyResolutionException: None of the constructors found with 'Autofac.Core.Activators.Reflection.DefaultConstructorFinder' on type 'WebApi.Controllers.ValuesController' can be invoked with the available services and parameters:
+Cannot resolve parameter 'Serilog.ILogger loger' of constructor 'Void .ctor(DAL.Abstract.Concrete.IHouseRepository, Serilog.ILogger)'.
+   at Autofac.Core.Activators.Reflection.ReflectionActivator.GetValidConstructorBindings(IComponentContext context, IEnumerable`1 parameters)
+   at Autofac.Core.Activators.Reflection.ReflectionActivator.ActivateInstance(IComponentContext context, IEnumerable`1 parameters)
+   at Autofac.Core.Resolving.InstanceLookup.Activate(IEnumerable`1 parameters)
+   --- End of inner exception stack trace ---
+   at Autofac.Core.Resolving.InstanceLookup.Activate(IEnumerable`1 parameters)
+   at Autofac.Core.Resolving.InstanceLookup.Execute()
+   at Autofac.Core.Resolving.ResolveOperation.GetOrCreateInstance(ISharingLifetimeScope currentOperationScope, IComponentRegistration registration, IEnumerable`1 parameters)
+   at Autofac.Core.Resolving.ResolveOperation.Execute(IComponentRegistration registration, IEnumerable`1 parameters)
+   at Autofac.ResolutionExtensions.TryResolveService(IComponentContext context, Service service, IEnumerable`1 parameters, Object& instance)
+   at Autofac.ResolutionExtensions.ResolveService(IComponentContext context, Service service, IEnumerable`1 parameters)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
+   at Microsoft.AspNetCore.Mvc.Controllers.ServiceBasedControllerActivator.Create(ControllerContext actionContext)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass5_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Cors.Infrastructure.CorsMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2018-11-21 14:39:40.390 +07:00 [INF] Request finished in 264.2098ms 500 text/html; charset=utf-8
+2018-11-21 14:39:40.477 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:6001/api/values  
+2018-11-21 14:39:40.479 +07:00 [INF] Route matched with {action = "Get", controller = "Values"}. Executing action WebApi.Controllers.ValuesController.Get (WebApi)
+2018-11-21 14:39:40.493 +07:00 [INF] Authorization failed.
+2018-11-21 14:39:40.498 +07:00 [INF] Authorization failed for the request at filter 'Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter'.
+2018-11-21 14:39:40.504 +07:00 [INF] Executing ChallengeResult with authentication schemes ([]).
+2018-11-21 14:39:40.573 +07:00 [INF] AuthenticationScheme: BearerIdentityServerAuthenticationJwt was challenged.
+2018-11-21 14:39:40.573 +07:00 [INF] AuthenticationScheme: Bearer was challenged.
+2018-11-21 14:39:40.575 +07:00 [INF] Executed action WebApi.Controllers.ValuesController.Get (WebApi) in 95.10560000000001ms
+2018-11-21 14:39:40.578 +07:00 [INF] Request finished in 101.3507ms 401 
+2018-11-21 14:55:53.823 +07:00 [INF] Starting web host >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+2018-11-21 14:55:54.776 +07:00 [INF] Information>>>>>>>>>>>>>>>>>>>>>>>>
+2018-11-21 14:55:54.777 +07:00 [ERR] Error>>>>>>>>>>>>>>>>>>>>>>>>
+2018-11-21 14:55:55.355 +07:00 [INF] User profile is available. Using 'C:\Users\Aldmi\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2018-11-21 14:55:57.769 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:6001/api/values  
+2018-11-21 14:55:57.869 +07:00 [INF] Route matched with {action = "Get", controller = "Values"}. Executing action WebApi.Controllers.ValuesController.Get (WebApi)
+2018-11-21 14:55:57.884 +07:00 [INF] Authorization failed.
+2018-11-21 14:55:57.889 +07:00 [INF] Authorization failed for the request at filter 'Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter'.
+2018-11-21 14:55:57.895 +07:00 [INF] Executing ChallengeResult with authentication schemes ([]).
+2018-11-21 14:55:57.965 +07:00 [INF] AuthenticationScheme: BearerIdentityServerAuthenticationJwt was challenged.
+2018-11-21 14:55:57.966 +07:00 [INF] AuthenticationScheme: Bearer was challenged.
+2018-11-21 14:55:57.969 +07:00 [INF] Executed action WebApi.Controllers.ValuesController.Get (WebApi) in 96.3478ms
+2018-11-21 14:55:57.993 +07:00 [INF] Request finished in 225.2535ms 401 
+2018-11-21 14:56:00.884 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:6001/api/values/5  
+2018-11-21 14:56:00.901 +07:00 [INF] Route matched with {action = "Get", controller = "Values"}. Executing action WebApi.Controllers.ValuesController.Get (WebApi)
+2018-11-21 14:56:00.915 +07:00 [INF] Executed action WebApi.Controllers.ValuesController.Get (WebApi) in 13.033800000000001ms
+2018-11-21 14:56:00.919 +07:00 [ERR] An unhandled exception has occurred while executing the request.
+Autofac.Core.DependencyResolutionException: An error occurred during the activation of a particular registration. See the inner exception for details. Registration: Activator = ValuesController (ReflectionActivator), Services = [WebApi.Controllers.ValuesController], Lifetime = Autofac.Core.Lifetime.CurrentScopeLifetime, Sharing = None, Ownership = OwnedByLifetimeScope ---> None of the constructors found with 'Autofac.Core.Activators.Reflection.DefaultConstructorFinder' on type 'WebApi.Controllers.ValuesController' can be invoked with the available services and parameters:
+Cannot resolve parameter 'Microsoft.Extensions.Logging.ILogger loger' of constructor 'Void .ctor(DAL.Abstract.Concrete.IHouseRepository, Microsoft.Extensions.Logging.ILogger)'. (See inner exception for details.) ---> Autofac.Core.DependencyResolutionException: None of the constructors found with 'Autofac.Core.Activators.Reflection.DefaultConstructorFinder' on type 'WebApi.Controllers.ValuesController' can be invoked with the available services and parameters:
+Cannot resolve parameter 'Microsoft.Extensions.Logging.ILogger loger' of constructor 'Void .ctor(DAL.Abstract.Concrete.IHouseRepository, Microsoft.Extensions.Logging.ILogger)'.
+   at Autofac.Core.Activators.Reflection.ReflectionActivator.GetValidConstructorBindings(IComponentContext context, IEnumerable`1 parameters)
+   at Autofac.Core.Activators.Reflection.ReflectionActivator.ActivateInstance(IComponentContext context, IEnumerable`1 parameters)
+   at Autofac.Core.Resolving.InstanceLookup.Activate(IEnumerable`1 parameters)
+   --- End of inner exception stack trace ---
+   at Autofac.Core.Resolving.InstanceLookup.Activate(IEnumerable`1 parameters)
+   at Autofac.Core.Resolving.InstanceLookup.Execute()
+   at Autofac.Core.Resolving.ResolveOperation.GetOrCreateInstance(ISharingLifetimeScope currentOperationScope, IComponentRegistration registration, IEnumerable`1 parameters)
+   at Autofac.Core.Resolving.ResolveOperation.Execute(IComponentRegistration registration, IEnumerable`1 parameters)
+   at Autofac.ResolutionExtensions.TryResolveService(IComponentContext context, Service service, IEnumerable`1 parameters, Object& instance)
+   at Autofac.ResolutionExtensions.ResolveService(IComponentContext context, Service service, IEnumerable`1 parameters)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
+   at Microsoft.AspNetCore.Mvc.Controllers.ServiceBasedControllerActivator.Create(ControllerContext actionContext)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass5_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Cors.Infrastructure.CorsMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2018-11-21 14:56:00.987 +07:00 [INF] Request finished in 102.6983ms 500 text/html; charset=utf-8
+2018-11-21 14:56:01.132 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:6001/favicon.ico  
+2018-11-21 14:56:01.137 +07:00 [INF] Request finished in 4.6426ms 404 
+2018-11-21 14:58:18.302 +07:00 [INF] User profile is available. Using 'C:\Users\Aldmi\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2018-11-21 14:58:20.439 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:6001/api/values  
+2018-11-21 14:58:20.541 +07:00 [INF] Route matched with {action = "Get", controller = "Values"}. Executing action WebApi.Controllers.ValuesController.Get (WebApi)
+2018-11-21 14:58:20.560 +07:00 [INF] Authorization failed.
+2018-11-21 14:58:20.566 +07:00 [INF] Authorization failed for the request at filter 'Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter'.
+2018-11-21 14:58:20.571 +07:00 [INF] Executing ChallengeResult with authentication schemes ([]).
+2018-11-21 14:58:20.665 +07:00 [INF] AuthenticationScheme: BearerIdentityServerAuthenticationJwt was challenged.
+2018-11-21 14:58:20.670 +07:00 [INF] AuthenticationScheme: Bearer was challenged.
+2018-11-21 14:58:20.676 +07:00 [INF] Executed action WebApi.Controllers.ValuesController.Get (WebApi) in 124.61370000000001ms
+2018-11-21 14:58:20.720 +07:00 [INF] Request finished in 280.6656ms 401 
+2018-11-21 14:58:24.425 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:6001/api/values/5  
+2018-11-21 14:58:24.442 +07:00 [INF] Route matched with {action = "Get", controller = "Values"}. Executing action WebApi.Controllers.ValuesController.Get (WebApi)
+2018-11-21 14:58:24.453 +07:00 [INF] Executed action WebApi.Controllers.ValuesController.Get (WebApi) in 9.7861000000000011ms
+2018-11-21 14:58:24.457 +07:00 [ERR] An unhandled exception has occurred while executing the request.
+Autofac.Core.DependencyResolutionException: An error occurred during the activation of a particular registration. See the inner exception for details. Registration: Activator = ValuesController (ReflectionActivator), Services = [WebApi.Controllers.ValuesController], Lifetime = Autofac.Core.Lifetime.CurrentScopeLifetime, Sharing = None, Ownership = OwnedByLifetimeScope ---> None of the constructors found with 'Autofac.Core.Activators.Reflection.DefaultConstructorFinder' on type 'WebApi.Controllers.ValuesController' can be invoked with the available services and parameters:
+Cannot resolve parameter 'Microsoft.Extensions.Logging.ILogger loger' of constructor 'Void .ctor(DAL.Abstract.Concrete.IHouseRepository, Microsoft.Extensions.Logging.ILogger)'. (See inner exception for details.) ---> Autofac.Core.DependencyResolutionException: None of the constructors found with 'Autofac.Core.Activators.Reflection.DefaultConstructorFinder' on type 'WebApi.Controllers.ValuesController' can be invoked with the available services and parameters:
+Cannot resolve parameter 'Microsoft.Extensions.Logging.ILogger loger' of constructor 'Void .ctor(DAL.Abstract.Concrete.IHouseRepository, Microsoft.Extensions.Logging.ILogger)'.
+   at Autofac.Core.Activators.Reflection.ReflectionActivator.GetValidConstructorBindings(IComponentContext context, IEnumerable`1 parameters)
+   at Autofac.Core.Activators.Reflection.ReflectionActivator.ActivateInstance(IComponentContext context, IEnumerable`1 parameters)
+   at Autofac.Core.Resolving.InstanceLookup.Activate(IEnumerable`1 parameters)
+   --- End of inner exception stack trace ---
+   at Autofac.Core.Resolving.InstanceLookup.Activate(IEnumerable`1 parameters)
+   at Autofac.Core.Resolving.InstanceLookup.Execute()
+   at Autofac.Core.Resolving.ResolveOperation.GetOrCreateInstance(ISharingLifetimeScope currentOperationScope, IComponentRegistration registration, IEnumerable`1 parameters)
+   at Autofac.Core.Resolving.ResolveOperation.Execute(IComponentRegistration registration, IEnumerable`1 parameters)
+   at Autofac.ResolutionExtensions.TryResolveService(IComponentContext context, Service service, IEnumerable`1 parameters, Object& instance)
+   at Autofac.ResolutionExtensions.ResolveService(IComponentContext context, Service service, IEnumerable`1 parameters)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
+   at Microsoft.AspNetCore.Mvc.Controllers.ServiceBasedControllerActivator.Create(ControllerContext actionContext)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass5_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Cors.Infrastructure.CorsMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2018-11-21 14:58:24.532 +07:00 [INF] Request finished in 106.7915ms 500 text/html; charset=utf-8
+2018-11-21 14:58:24.671 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:6001/favicon.ico  
+2018-11-21 14:58:24.675 +07:00 [INF] Request finished in 3.2672ms 404 
+2018-11-21 14:59:32.038 +07:00 [INF] User profile is available. Using 'C:\Users\Aldmi\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2018-11-21 14:59:34.921 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:6001/api/values  
+2018-11-21 14:59:35.020 +07:00 [INF] Route matched with {action = "Get", controller = "Values"}. Executing action WebApi.Controllers.ValuesController.Get (WebApi)
+2018-11-21 14:59:35.033 +07:00 [INF] Authorization failed.
+2018-11-21 14:59:35.037 +07:00 [INF] Authorization failed for the request at filter 'Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter'.
+2018-11-21 14:59:35.042 +07:00 [INF] Executing ChallengeResult with authentication schemes ([]).
+2018-11-21 14:59:35.107 +07:00 [INF] AuthenticationScheme: BearerIdentityServerAuthenticationJwt was challenged.
+2018-11-21 14:59:35.108 +07:00 [INF] AuthenticationScheme: Bearer was challenged.
+2018-11-21 14:59:35.112 +07:00 [INF] Executed action WebApi.Controllers.ValuesController.Get (WebApi) in 88.1447ms
+2018-11-21 14:59:35.139 +07:00 [INF] Request finished in 215.4897ms 401 
+2018-11-21 14:59:38.517 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:6001/api/values/5  
+2018-11-21 14:59:38.534 +07:00 [INF] Route matched with {action = "Get", controller = "Values"}. Executing action WebApi.Controllers.ValuesController.Get (WebApi)
+2018-11-21 14:59:39.869 +07:00 [INF] Executing action method WebApi.Controllers.ValuesController.Get (WebApi) with arguments (["5"]) - Validation state: "Valid"
+2018-11-21 14:59:42.038 +07:00 [ERR] dsdsd
+2018-11-21 14:59:42.042 +07:00 [INF] Executed action method WebApi.Controllers.ValuesController.Get (WebApi), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 2163.1707ms.
+2018-11-21 14:59:42.050 +07:00 [INF] Executing ObjectResult, writing value of type 'System.String'.
+2018-11-21 14:59:42.053 +07:00 [INF] Executed action WebApi.Controllers.ValuesController.Get (WebApi) in 3516.8258ms
+2018-11-21 14:59:42.056 +07:00 [INF] Request finished in 3538.9923ms 200 text/plain; charset=utf-8
+2018-11-21 14:59:42.090 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:6001/favicon.ico  
+2018-11-21 14:59:42.092 +07:00 [INF] Request finished in 2.1057ms 404 
+2018-11-21 15:02:13.225 +07:00 [INF] User profile is available. Using 'C:\Users\Aldmi\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2018-11-21 15:02:15.785 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:6001/api/values  
+2018-11-21 15:02:15.886 +07:00 [INF] Route matched with {action = "Get", controller = "Values"}. Executing action WebApi.Controllers.ValuesController.Get (WebApi)
+2018-11-21 15:02:15.899 +07:00 [INF] Authorization failed.
+2018-11-21 15:02:15.903 +07:00 [INF] Authorization failed for the request at filter 'Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter'.
+2018-11-21 15:02:15.910 +07:00 [INF] Executing ChallengeResult with authentication schemes ([]).
+2018-11-21 15:02:15.983 +07:00 [INF] AuthenticationScheme: BearerIdentityServerAuthenticationJwt was challenged.
+2018-11-21 15:02:15.984 +07:00 [INF] AuthenticationScheme: Bearer was challenged.
+2018-11-21 15:02:15.987 +07:00 [INF] Executed action WebApi.Controllers.ValuesController.Get (WebApi) in 97.112500000000011ms
+2018-11-21 15:02:16.008 +07:00 [INF] Request finished in 222.5046ms 401 
+2018-11-21 16:20:11.207 +07:00 [INF] User profile is available. Using 'C:\Users\Aldmi\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2018-11-21 16:20:13.630 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:6001/api/values  
+2018-11-21 16:20:13.726 +07:00 [INF] Route matched with {action = "Get", controller = "Values"}. Executing action WebApi.Controllers.ValuesController.Get (WebApi)
+2018-11-21 16:20:13.744 +07:00 [INF] Authorization failed.
+2018-11-21 16:20:13.754 +07:00 [INF] Authorization failed for the request at filter 'Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter'.
+2018-11-21 16:20:13.766 +07:00 [INF] Executing ChallengeResult with authentication schemes ([]).
+2018-11-21 16:20:13.831 +07:00 [INF] AuthenticationScheme: BearerIdentityServerAuthenticationJwt was challenged.
+2018-11-21 16:20:13.832 +07:00 [INF] AuthenticationScheme: Bearer was challenged.
+2018-11-21 16:20:13.835 +07:00 [INF] Executed action WebApi.Controllers.ValuesController.Get (WebApi) in 104.23580000000001ms
+2018-11-21 16:20:13.853 +07:00 [INF] Request finished in 224.1731ms 401 
+2018-11-21 16:20:16.665 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:6001/api/values/5  
+2018-11-21 16:20:16.678 +07:00 [INF] Route matched with {action = "Get", controller = "Values"}. Executing action WebApi.Controllers.ValuesController.Get (WebApi)
+2018-11-21 16:20:17.069 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:6001/api/values/5  
+2018-11-21 16:20:17.073 +07:00 [INF] Route matched with {action = "Get", controller = "Values"}. Executing action WebApi.Controllers.ValuesController.Get (WebApi)
+2018-11-21 16:22:15.240 +07:00 [INF] User profile is available. Using 'C:\Users\Aldmi\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2018-11-21 16:22:17.374 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:6001/api/values  
+2018-11-21 16:22:17.492 +07:00 [INF] Route matched with {action = "Get", controller = "Values"}. Executing action WebApi.Controllers.ValuesController.Get (WebApi)
+2018-11-21 16:22:17.516 +07:00 [INF] Authorization failed.
+2018-11-21 16:22:17.520 +07:00 [INF] Authorization failed for the request at filter 'Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter'.
+2018-11-21 16:22:17.527 +07:00 [INF] Executing ChallengeResult with authentication schemes ([]).
+2018-11-21 16:22:17.592 +07:00 [INF] AuthenticationScheme: BearerIdentityServerAuthenticationJwt was challenged.
+2018-11-21 16:22:17.593 +07:00 [INF] AuthenticationScheme: Bearer was challenged.
+2018-11-21 16:22:17.596 +07:00 [INF] Executed action WebApi.Controllers.ValuesController.Get (WebApi) in 100.80290000000001ms
+2018-11-21 16:22:17.613 +07:00 [INF] Request finished in 239.5834ms 401 
+2018-11-21 16:22:19.410 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:6001/api/values/5  
+2018-11-21 16:22:19.438 +07:00 [INF] Route matched with {action = "Get", controller = "Values"}. Executing action WebApi.Controllers.ValuesController.Get (WebApi)
+2018-11-21 16:22:19.761 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:6001/api/values/5  
+2018-11-21 16:22:19.764 +07:00 [INF] Route matched with {action = "Get", controller = "Values"}. Executing action WebApi.Controllers.ValuesController.Get (WebApi)
+2018-11-21 16:22:23.078 +07:00 [INF] Executing action method WebApi.Controllers.ValuesController.Get (WebApi) with arguments (["5"]) - Validation state: "Valid"
+2018-11-21 16:22:23.078 +07:00 [INF] Executing action method WebApi.Controllers.ValuesController.Get (WebApi) with arguments (["5"]) - Validation state: "Valid"
+2018-11-21 16:22:26.879 +07:00 [FTL] Fatal!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+2018-11-21 16:22:26.879 +07:00 [FTL] Fatal!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+2018-11-21 16:23:18.189 +07:00 [INF] User profile is available. Using 'C:\Users\Aldmi\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2018-11-21 16:23:21.060 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:6001/api/values  
+2018-11-21 16:23:21.168 +07:00 [INF] Route matched with {action = "Get", controller = "Values"}. Executing action WebApi.Controllers.ValuesController.Get (WebApi)
+2018-11-21 16:23:21.183 +07:00 [INF] Authorization failed.
+2018-11-21 16:23:21.188 +07:00 [INF] Authorization failed for the request at filter 'Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter'.
+2018-11-21 16:23:21.194 +07:00 [INF] Executing ChallengeResult with authentication schemes ([]).
+2018-11-21 16:23:21.269 +07:00 [INF] AuthenticationScheme: BearerIdentityServerAuthenticationJwt was challenged.
+2018-11-21 16:23:21.270 +07:00 [INF] AuthenticationScheme: Bearer was challenged.
+2018-11-21 16:23:21.273 +07:00 [INF] Executed action WebApi.Controllers.ValuesController.Get (WebApi) in 100.8707ms
+2018-11-21 16:23:21.291 +07:00 [INF] Request finished in 231.1175ms 401 
+2018-11-21 16:23:23.661 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:6001/api/values.1  
+2018-11-21 16:23:23.663 +07:00 [INF] Request finished in 1.7444ms 404 
+2018-11-21 16:23:27.345 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:6001/api/values/1  
+2018-11-21 16:23:27.370 +07:00 [INF] Route matched with {action = "Get", controller = "Values"}. Executing action WebApi.Controllers.ValuesController.Get (WebApi)
+2018-11-21 16:23:28.031 +07:00 [INF] Executing action method WebApi.Controllers.ValuesController.Get (WebApi) with arguments (["1"]) - Validation state: "Valid"
+2018-11-21 16:23:31.426 +07:00 [FTL] Fatal!!!!!!!!!!!!!!!!!!!!!!!!!!!!!

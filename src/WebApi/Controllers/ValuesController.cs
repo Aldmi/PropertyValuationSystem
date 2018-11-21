@@ -2,22 +2,30 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using BL.Services.Mediators.DigestMediators;
 using DAL.Abstract.Concrete;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Serilog;
+
 
 namespace WebApi.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    [Authorize]
+   // [Authorize]
     public class ValuesController : ControllerBase
     {
         private readonly IHouseRepository _houseRepository;
+        private readonly ILogger _loger;
+        private readonly DigestBaseMediator _digestBaseMed;
 
-        public ValuesController(IHouseRepository houseRepository)
+
+        public ValuesController(IHouseRepository houseRepository, ILogger loger, DigestBaseMediator digestBaseMed)
         {
             _houseRepository = houseRepository;
+            _loger = loger;
+            _digestBaseMed = digestBaseMed;
         }
 
 
@@ -41,8 +49,9 @@ namespace WebApi.Controllers
 
         // GET api/values/5
         [HttpGet("{id}")]
-        public ActionResult<string> Get(int id)
+        public async Task<ActionResult<string>> Get(int id)
         {
+            var res= await _digestBaseMed.GetWallMaterialAsync();          
             return "value";
         }
 
