@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Threading.Tasks;
 using AutoMapper;
 using IdentityServer4.Configuration;
@@ -11,6 +13,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using IdentityServerApi_AspNetIdentity.Services;
+using Microsoft.IdentityModel.Tokens;
 using UserDbWebApi.Data;
 using UserDbWebApi.Entities;
 
@@ -18,13 +21,15 @@ namespace IdentityServerApi_AspNetIdentity
 {
     public class Startup
     {
-        public Startup(IConfiguration configuration)
+        public Startup(IConfiguration configuration, IHostingEnvironment hostingEnvironment)
         {
             Configuration = configuration;
+            CurrentEnvironment = hostingEnvironment;
         }
 
-        public IConfiguration Configuration { get; }
 
+        public IConfiguration Configuration { get; }
+        private IHostingEnvironment CurrentEnvironment { get; set; }
 
 
         public void ConfigureServices(IServiceCollection services)
@@ -38,6 +43,8 @@ namespace IdentityServerApi_AspNetIdentity
                 .AddDefaultTokenProviders();
 
             services.AddMvc();
+
+            var cerf = CreateX509Certificate("1234"); //пароль указыется при создании сертификата .pfx
 
             services.AddIdentityServer(options =>
                 {
@@ -69,7 +76,8 @@ namespace IdentityServerApi_AspNetIdentity
                         CookieLifetime = TimeSpan.FromDays(1)
                     };
                 })
-                .AddDeveloperSigningCredential() // тестовый x509-сертификат, IdentityServer использует RS256 для подписи JWT
+               // .AddDeveloperSigningCredential() // тестовый x509-сертификат, IdentityServer использует RS256 для подписи JWT
+                .AddSigningCredential(cerf)
                 .AddInMemoryPersistedGrants()
                 .AddInMemoryIdentityResources(Config.GetIdentityResources()) // что включать в id_token
                 .AddInMemoryApiResources(Config.GetApiResources())           // что включать в access_token
@@ -113,6 +121,18 @@ namespace IdentityServerApi_AspNetIdentity
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");
             });
+        }
+
+
+        private X509Certificate2 CreateX509Certificate(string pass)
+        {
+            var fileName = Path.Combine(CurrentEnvironment.ContentRootPath, "cerf\\example.pfx");
+            if (!File.Exists(fileName))
+            {
+                throw new FileNotFoundException("Signing Certificate is missing!");
+            }
+            var cert = new X509Certificate2(fileName, pass);
+            return cert;
         }
     }
 }

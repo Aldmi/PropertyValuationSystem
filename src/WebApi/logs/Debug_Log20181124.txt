@@ -662,3 +662,933 @@ Microsoft.IdentityModel.Tokens.SecurityTokenInvalidAudienceException: IDX10214: 
 2018-11-24 15:46:00.304 +07:00 [INF] Executing JsonResult, writing value of type 'System.Linq.Enumerable+SelectEnumerableIterator`2[[System.Security.Claims.Claim, System.Security.Claims, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a],[<>f__AnonymousType0`2[[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
 2018-11-24 15:46:00.304 +07:00 [INF] Executed action WebApi.Controllers.ValuesController.Get (WebApi) in 10.1018ms
 2018-11-24 15:46:00.307 +07:00 [INF] Request finished in 17.4606ms 200 application/json; charset=utf-8
+2018-11-24 16:18:25.335 +07:00 [INF] User profile is available. Using 'C:\Users\Aldmi\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2018-11-24 16:18:57.377 +07:00 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:6001/api/values  
+2018-11-24 16:18:57.386 +07:00 [INF] Policy execution successful.
+2018-11-24 16:18:57.397 +07:00 [INF] Request finished in 21.0026ms 204 
+2018-11-24 16:18:57.403 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:6001/api/values  
+2018-11-24 16:18:57.404 +07:00 [INF] Policy execution successful.
+2018-11-24 16:18:57.716 +07:00 [INF] Successfully validated the token.
+2018-11-24 16:18:57.722 +07:00 [DBG] AuthenticationScheme: Bearer was successfully authenticated.
+2018-11-24 16:18:57.790 +07:00 [INF] Route matched with {action = "Get", controller = "Values"}. Executing action WebApi.Controllers.ValuesController.Get (WebApi)
+2018-11-24 16:18:57.801 +07:00 [INF] Authorization was successful.
+2018-11-24 16:18:58.443 +07:00 [INF] Executing action method WebApi.Controllers.ValuesController.Get (WebApi) - Validation state: "Valid"
+2018-11-24 16:18:58.462 +07:00 [INF] Executed action method WebApi.Controllers.ValuesController.Get (WebApi), returned result Microsoft.AspNetCore.Mvc.JsonResult in 2.6959ms.
+2018-11-24 16:18:58.471 +07:00 [INF] Executing JsonResult, writing value of type 'System.Linq.Enumerable+SelectEnumerableIterator`2[[System.Security.Claims.Claim, System.Security.Claims, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a],[<>f__AnonymousType0`2[[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2018-11-24 16:18:58.479 +07:00 [INF] Executed action WebApi.Controllers.ValuesController.Get (WebApi) in 685.5458ms
+2018-11-24 16:18:58.487 +07:00 [INF] Request finished in 1083.6814ms 200 application/json; charset=utf-8
+2018-11-24 16:18:59.350 +07:00 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:6001/api/values  
+2018-11-24 16:18:59.352 +07:00 [INF] Policy execution successful.
+2018-11-24 16:18:59.353 +07:00 [INF] Request finished in 3.0969ms 204 
+2018-11-24 16:18:59.355 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:6001/api/values  
+2018-11-24 16:18:59.356 +07:00 [INF] Policy execution successful.
+2018-11-24 16:18:59.358 +07:00 [INF] Successfully validated the token.
+2018-11-24 16:18:59.359 +07:00 [DBG] AuthenticationScheme: Bearer was successfully authenticated.
+2018-11-24 16:18:59.359 +07:00 [INF] Route matched with {action = "Get", controller = "Values"}. Executing action WebApi.Controllers.ValuesController.Get (WebApi)
+2018-11-24 16:18:59.362 +07:00 [INF] Authorization was successful.
+2018-11-24 16:18:59.368 +07:00 [INF] Executing action method WebApi.Controllers.ValuesController.Get (WebApi) - Validation state: "Valid"
+2018-11-24 16:18:59.370 +07:00 [INF] Executed action method WebApi.Controllers.ValuesController.Get (WebApi), returned result Microsoft.AspNetCore.Mvc.JsonResult in 0.0872ms.
+2018-11-24 16:18:59.371 +07:00 [INF] Executing JsonResult, writing value of type 'System.Linq.Enumerable+SelectEnumerableIterator`2[[System.Security.Claims.Claim, System.Security.Claims, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a],[<>f__AnonymousType0`2[[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2018-11-24 16:18:59.372 +07:00 [INF] Executed action WebApi.Controllers.ValuesController.Get (WebApi) in 10.8945ms
+2018-11-24 16:18:59.373 +07:00 [INF] Request finished in 17.8763ms 200 application/json; charset=utf-8
+2018-11-24 16:18:59.588 +07:00 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:6001/api/values  
+2018-11-24 16:18:59.590 +07:00 [INF] Policy execution successful.
+2018-11-24 16:18:59.591 +07:00 [INF] Request finished in 3.5639ms 204 
+2018-11-24 16:18:59.594 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:6001/api/values  
+2018-11-24 16:18:59.596 +07:00 [INF] Policy execution successful.
+2018-11-24 16:18:59.598 +07:00 [INF] Successfully validated the token.
+2018-11-24 16:18:59.598 +07:00 [DBG] AuthenticationScheme: Bearer was successfully authenticated.
+2018-11-24 16:18:59.599 +07:00 [INF] Route matched with {action = "Get", controller = "Values"}. Executing action WebApi.Controllers.ValuesController.Get (WebApi)
+2018-11-24 16:18:59.600 +07:00 [INF] Authorization was successful.
+2018-11-24 16:18:59.605 +07:00 [INF] Executing action method WebApi.Controllers.ValuesController.Get (WebApi) - Validation state: "Valid"
+2018-11-24 16:18:59.607 +07:00 [INF] Executed action method WebApi.Controllers.ValuesController.Get (WebApi), returned result Microsoft.AspNetCore.Mvc.JsonResult in 0.033100000000000004ms.
+2018-11-24 16:18:59.608 +07:00 [INF] Executing JsonResult, writing value of type 'System.Linq.Enumerable+SelectEnumerableIterator`2[[System.Security.Claims.Claim, System.Security.Claims, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a],[<>f__AnonymousType0`2[[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2018-11-24 16:18:59.610 +07:00 [INF] Executed action WebApi.Controllers.ValuesController.Get (WebApi) in 10.087100000000001ms
+2018-11-24 16:18:59.612 +07:00 [INF] Request finished in 17.7401ms 200 application/json; charset=utf-8
+2018-11-24 16:18:59.754 +07:00 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:6001/api/values  
+2018-11-24 16:18:59.756 +07:00 [INF] Policy execution successful.
+2018-11-24 16:18:59.758 +07:00 [INF] Request finished in 3.258ms 204 
+2018-11-24 16:18:59.760 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:6001/api/values  
+2018-11-24 16:18:59.762 +07:00 [INF] Policy execution successful.
+2018-11-24 16:18:59.764 +07:00 [INF] Successfully validated the token.
+2018-11-24 16:18:59.767 +07:00 [DBG] AuthenticationScheme: Bearer was successfully authenticated.
+2018-11-24 16:18:59.767 +07:00 [INF] Route matched with {action = "Get", controller = "Values"}. Executing action WebApi.Controllers.ValuesController.Get (WebApi)
+2018-11-24 16:18:59.774 +07:00 [INF] Authorization was successful.
+2018-11-24 16:18:59.782 +07:00 [INF] Executing action method WebApi.Controllers.ValuesController.Get (WebApi) - Validation state: "Valid"
+2018-11-24 16:18:59.784 +07:00 [INF] Executed action method WebApi.Controllers.ValuesController.Get (WebApi), returned result Microsoft.AspNetCore.Mvc.JsonResult in 0.062200000000000005ms.
+2018-11-24 16:18:59.789 +07:00 [INF] Executing JsonResult, writing value of type 'System.Linq.Enumerable+SelectEnumerableIterator`2[[System.Security.Claims.Claim, System.Security.Claims, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a],[<>f__AnonymousType0`2[[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2018-11-24 16:18:59.794 +07:00 [INF] Executed action WebApi.Controllers.ValuesController.Get (WebApi) in 19.7425ms
+2018-11-24 16:18:59.797 +07:00 [INF] Request finished in 37.1495ms 200 application/json; charset=utf-8
+2018-11-24 16:19:07.782 +07:00 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:6001/api/values  
+2018-11-24 16:19:07.784 +07:00 [INF] Policy execution successful.
+2018-11-24 16:19:07.786 +07:00 [INF] Request finished in 3.7979ms 204 
+2018-11-24 16:19:07.788 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:6001/api/values  
+2018-11-24 16:19:07.789 +07:00 [INF] Policy execution successful.
+2018-11-24 16:19:07.800 +07:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: You must either set Authority or IntrospectionEndpoint
+   at Microsoft.AspNetCore.Builder.OAuth2IntrospectionOptions.Validate() in C:\local\identity\model\AspNetCore.OAuth2Introspection\src\IdentityModel.AspNetCore.OAuth2Introspection\OAuth2IntrospectionOptions.cs:line 139
+   at IdentityModel.AspNetCore.OAuth2Introspection.PostConfigureOAuth2IntrospectionOptions.PostConfigure(String name, OAuth2IntrospectionOptions options) in C:\local\identity\model\AspNetCore.OAuth2Introspection\src\IdentityModel.AspNetCore.OAuth2Introspection\PostConfigureOAuth2IntrospectionOptions.cs:line 28
+   at Microsoft.Extensions.Options.OptionsFactory`1.Create(String name)
+   at Microsoft.Extensions.Options.OptionsMonitor`1.<>c__DisplayClass10_0.<Get>b__0()
+   at System.Lazy`1.ViaFactory(LazyThreadSafetyMode mode)
+   at System.Lazy`1.ExecutionAndPublication(LazyHelper executionAndPublication, Boolean useDefaultConstructor)
+   at System.Lazy`1.CreateValue()
+   at Microsoft.Extensions.Options.OptionsCache`1.GetOrAdd(String name, Func`1 createOptions)
+   at Microsoft.Extensions.Options.OptionsMonitor`1.Get(String name)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandler`1.InitializeAsync(AuthenticationScheme scheme, HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandlerProvider.GetHandlerAsync(HttpContext context, String authenticationScheme)
+   at Microsoft.AspNetCore.Authentication.AuthenticationService.AuthenticateAsync(HttpContext context, String scheme)
+   at IdentityServer4.AccessTokenValidation.IdentityServerAuthenticationHandler.HandleAuthenticateAsync() in C:\local\identity\server4\AccessTokenValidation\src\IdentityServer4.AccessTokenValidation\IdentityServerAuthenticationHandler.cs:line 68
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandler`1.AuthenticateAsync()
+   at Microsoft.AspNetCore.Authentication.AuthenticationService.AuthenticateAsync(HttpContext context, String scheme)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Cors.Infrastructure.CorsMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2018-11-24 16:19:07.901 +07:00 [INF] Request finished in 112.9719ms 500 text/html; charset=utf-8
+2018-11-24 16:19:08.403 +07:00 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:6001/api/values  
+2018-11-24 16:19:08.405 +07:00 [INF] Policy execution successful.
+2018-11-24 16:19:08.407 +07:00 [INF] Request finished in 3.3312ms 204 
+2018-11-24 16:19:08.410 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:6001/api/values  
+2018-11-24 16:19:08.411 +07:00 [INF] Policy execution successful.
+2018-11-24 16:19:08.415 +07:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: You must either set Authority or IntrospectionEndpoint
+   at Microsoft.AspNetCore.Builder.OAuth2IntrospectionOptions.Validate() in C:\local\identity\model\AspNetCore.OAuth2Introspection\src\IdentityModel.AspNetCore.OAuth2Introspection\OAuth2IntrospectionOptions.cs:line 139
+   at IdentityModel.AspNetCore.OAuth2Introspection.PostConfigureOAuth2IntrospectionOptions.PostConfigure(String name, OAuth2IntrospectionOptions options) in C:\local\identity\model\AspNetCore.OAuth2Introspection\src\IdentityModel.AspNetCore.OAuth2Introspection\PostConfigureOAuth2IntrospectionOptions.cs:line 28
+   at Microsoft.Extensions.Options.OptionsFactory`1.Create(String name)
+   at Microsoft.Extensions.Options.OptionsMonitor`1.<>c__DisplayClass10_0.<Get>b__0()
+   at System.Lazy`1.ViaFactory(LazyThreadSafetyMode mode)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Lazy`1.CreateValue()
+   at Microsoft.Extensions.Options.OptionsCache`1.GetOrAdd(String name, Func`1 createOptions)
+   at Microsoft.Extensions.Options.OptionsMonitor`1.Get(String name)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandler`1.InitializeAsync(AuthenticationScheme scheme, HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandlerProvider.GetHandlerAsync(HttpContext context, String authenticationScheme)
+   at Microsoft.AspNetCore.Authentication.AuthenticationService.AuthenticateAsync(HttpContext context, String scheme)
+   at IdentityServer4.AccessTokenValidation.IdentityServerAuthenticationHandler.HandleAuthenticateAsync() in C:\local\identity\server4\AccessTokenValidation\src\IdentityServer4.AccessTokenValidation\IdentityServerAuthenticationHandler.cs:line 68
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandler`1.AuthenticateAsync()
+   at Microsoft.AspNetCore.Authentication.AuthenticationService.AuthenticateAsync(HttpContext context, String scheme)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Cors.Infrastructure.CorsMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2018-11-24 16:19:08.452 +07:00 [INF] Request finished in 41.8215ms 500 text/html; charset=utf-8
+2018-11-24 16:19:08.619 +07:00 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:6001/api/values  
+2018-11-24 16:19:08.620 +07:00 [INF] Policy execution successful.
+2018-11-24 16:19:08.621 +07:00 [INF] Request finished in 2.6829ms 204 
+2018-11-24 16:19:08.624 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:6001/api/values  
+2018-11-24 16:19:08.624 +07:00 [INF] Policy execution successful.
+2018-11-24 16:19:08.627 +07:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: You must either set Authority or IntrospectionEndpoint
+   at Microsoft.AspNetCore.Builder.OAuth2IntrospectionOptions.Validate() in C:\local\identity\model\AspNetCore.OAuth2Introspection\src\IdentityModel.AspNetCore.OAuth2Introspection\OAuth2IntrospectionOptions.cs:line 139
+   at IdentityModel.AspNetCore.OAuth2Introspection.PostConfigureOAuth2IntrospectionOptions.PostConfigure(String name, OAuth2IntrospectionOptions options) in C:\local\identity\model\AspNetCore.OAuth2Introspection\src\IdentityModel.AspNetCore.OAuth2Introspection\PostConfigureOAuth2IntrospectionOptions.cs:line 28
+   at Microsoft.Extensions.Options.OptionsFactory`1.Create(String name)
+   at Microsoft.Extensions.Options.OptionsMonitor`1.<>c__DisplayClass10_0.<Get>b__0()
+   at System.Lazy`1.ViaFactory(LazyThreadSafetyMode mode)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Lazy`1.CreateValue()
+   at Microsoft.Extensions.Options.OptionsCache`1.GetOrAdd(String name, Func`1 createOptions)
+   at Microsoft.Extensions.Options.OptionsMonitor`1.Get(String name)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandler`1.InitializeAsync(AuthenticationScheme scheme, HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandlerProvider.GetHandlerAsync(HttpContext context, String authenticationScheme)
+   at Microsoft.AspNetCore.Authentication.AuthenticationService.AuthenticateAsync(HttpContext context, String scheme)
+   at IdentityServer4.AccessTokenValidation.IdentityServerAuthenticationHandler.HandleAuthenticateAsync() in C:\local\identity\server4\AccessTokenValidation\src\IdentityServer4.AccessTokenValidation\IdentityServerAuthenticationHandler.cs:line 68
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandler`1.AuthenticateAsync()
+   at Microsoft.AspNetCore.Authentication.AuthenticationService.AuthenticateAsync(HttpContext context, String scheme)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Cors.Infrastructure.CorsMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2018-11-24 16:19:08.670 +07:00 [INF] Request finished in 46.1839ms 500 text/html; charset=utf-8
+2018-11-24 16:19:08.815 +07:00 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:6001/api/values  
+2018-11-24 16:19:08.817 +07:00 [INF] Policy execution successful.
+2018-11-24 16:19:08.819 +07:00 [INF] Request finished in 4.5437ms 204 
+2018-11-24 16:19:08.822 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:6001/api/values  
+2018-11-24 16:19:08.822 +07:00 [INF] Policy execution successful.
+2018-11-24 16:19:08.825 +07:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: You must either set Authority or IntrospectionEndpoint
+   at Microsoft.AspNetCore.Builder.OAuth2IntrospectionOptions.Validate() in C:\local\identity\model\AspNetCore.OAuth2Introspection\src\IdentityModel.AspNetCore.OAuth2Introspection\OAuth2IntrospectionOptions.cs:line 139
+   at IdentityModel.AspNetCore.OAuth2Introspection.PostConfigureOAuth2IntrospectionOptions.PostConfigure(String name, OAuth2IntrospectionOptions options) in C:\local\identity\model\AspNetCore.OAuth2Introspection\src\IdentityModel.AspNetCore.OAuth2Introspection\PostConfigureOAuth2IntrospectionOptions.cs:line 28
+   at Microsoft.Extensions.Options.OptionsFactory`1.Create(String name)
+   at Microsoft.Extensions.Options.OptionsMonitor`1.<>c__DisplayClass10_0.<Get>b__0()
+   at System.Lazy`1.ViaFactory(LazyThreadSafetyMode mode)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Lazy`1.CreateValue()
+   at Microsoft.Extensions.Options.OptionsCache`1.GetOrAdd(String name, Func`1 createOptions)
+   at Microsoft.Extensions.Options.OptionsMonitor`1.Get(String name)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandler`1.InitializeAsync(AuthenticationScheme scheme, HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandlerProvider.GetHandlerAsync(HttpContext context, String authenticationScheme)
+   at Microsoft.AspNetCore.Authentication.AuthenticationService.AuthenticateAsync(HttpContext context, String scheme)
+   at IdentityServer4.AccessTokenValidation.IdentityServerAuthenticationHandler.HandleAuthenticateAsync() in C:\local\identity\server4\AccessTokenValidation\src\IdentityServer4.AccessTokenValidation\IdentityServerAuthenticationHandler.cs:line 68
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandler`1.AuthenticateAsync()
+   at Microsoft.AspNetCore.Authentication.AuthenticationService.AuthenticateAsync(HttpContext context, String scheme)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Cors.Infrastructure.CorsMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2018-11-24 16:19:08.863 +07:00 [INF] Request finished in 41.3176ms 500 text/html; charset=utf-8
+2018-11-24 16:19:09.009 +07:00 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:6001/api/values  
+2018-11-24 16:19:09.010 +07:00 [INF] Policy execution successful.
+2018-11-24 16:19:09.012 +07:00 [INF] Request finished in 3.4876ms 204 
+2018-11-24 16:19:09.015 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:6001/api/values  
+2018-11-24 16:19:09.016 +07:00 [INF] Policy execution successful.
+2018-11-24 16:19:09.021 +07:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: You must either set Authority or IntrospectionEndpoint
+   at Microsoft.AspNetCore.Builder.OAuth2IntrospectionOptions.Validate() in C:\local\identity\model\AspNetCore.OAuth2Introspection\src\IdentityModel.AspNetCore.OAuth2Introspection\OAuth2IntrospectionOptions.cs:line 139
+   at IdentityModel.AspNetCore.OAuth2Introspection.PostConfigureOAuth2IntrospectionOptions.PostConfigure(String name, OAuth2IntrospectionOptions options) in C:\local\identity\model\AspNetCore.OAuth2Introspection\src\IdentityModel.AspNetCore.OAuth2Introspection\PostConfigureOAuth2IntrospectionOptions.cs:line 28
+   at Microsoft.Extensions.Options.OptionsFactory`1.Create(String name)
+   at Microsoft.Extensions.Options.OptionsMonitor`1.<>c__DisplayClass10_0.<Get>b__0()
+   at System.Lazy`1.ViaFactory(LazyThreadSafetyMode mode)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Lazy`1.CreateValue()
+   at Microsoft.Extensions.Options.OptionsCache`1.GetOrAdd(String name, Func`1 createOptions)
+   at Microsoft.Extensions.Options.OptionsMonitor`1.Get(String name)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandler`1.InitializeAsync(AuthenticationScheme scheme, HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandlerProvider.GetHandlerAsync(HttpContext context, String authenticationScheme)
+   at Microsoft.AspNetCore.Authentication.AuthenticationService.AuthenticateAsync(HttpContext context, String scheme)
+   at IdentityServer4.AccessTokenValidation.IdentityServerAuthenticationHandler.HandleAuthenticateAsync() in C:\local\identity\server4\AccessTokenValidation\src\IdentityServer4.AccessTokenValidation\IdentityServerAuthenticationHandler.cs:line 68
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandler`1.AuthenticateAsync()
+   at Microsoft.AspNetCore.Authentication.AuthenticationService.AuthenticateAsync(HttpContext context, String scheme)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Cors.Infrastructure.CorsMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2018-11-24 16:19:09.056 +07:00 [INF] Request finished in 41.4821ms 500 text/html; charset=utf-8
+2018-11-24 16:19:09.178 +07:00 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:6001/api/values  
+2018-11-24 16:19:09.180 +07:00 [INF] Policy execution successful.
+2018-11-24 16:19:09.182 +07:00 [INF] Request finished in 4.1386ms 204 
+2018-11-24 16:19:09.189 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:6001/api/values  
+2018-11-24 16:19:09.190 +07:00 [INF] Policy execution successful.
+2018-11-24 16:19:09.196 +07:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: You must either set Authority or IntrospectionEndpoint
+   at Microsoft.AspNetCore.Builder.OAuth2IntrospectionOptions.Validate() in C:\local\identity\model\AspNetCore.OAuth2Introspection\src\IdentityModel.AspNetCore.OAuth2Introspection\OAuth2IntrospectionOptions.cs:line 139
+   at IdentityModel.AspNetCore.OAuth2Introspection.PostConfigureOAuth2IntrospectionOptions.PostConfigure(String name, OAuth2IntrospectionOptions options) in C:\local\identity\model\AspNetCore.OAuth2Introspection\src\IdentityModel.AspNetCore.OAuth2Introspection\PostConfigureOAuth2IntrospectionOptions.cs:line 28
+   at Microsoft.Extensions.Options.OptionsFactory`1.Create(String name)
+   at Microsoft.Extensions.Options.OptionsMonitor`1.<>c__DisplayClass10_0.<Get>b__0()
+   at System.Lazy`1.ViaFactory(LazyThreadSafetyMode mode)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Lazy`1.CreateValue()
+   at Microsoft.Extensions.Options.OptionsCache`1.GetOrAdd(String name, Func`1 createOptions)
+   at Microsoft.Extensions.Options.OptionsMonitor`1.Get(String name)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandler`1.InitializeAsync(AuthenticationScheme scheme, HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandlerProvider.GetHandlerAsync(HttpContext context, String authenticationScheme)
+   at Microsoft.AspNetCore.Authentication.AuthenticationService.AuthenticateAsync(HttpContext context, String scheme)
+   at IdentityServer4.AccessTokenValidation.IdentityServerAuthenticationHandler.HandleAuthenticateAsync() in C:\local\identity\server4\AccessTokenValidation\src\IdentityServer4.AccessTokenValidation\IdentityServerAuthenticationHandler.cs:line 68
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandler`1.AuthenticateAsync()
+   at Microsoft.AspNetCore.Authentication.AuthenticationService.AuthenticateAsync(HttpContext context, String scheme)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Cors.Infrastructure.CorsMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2018-11-24 16:19:09.231 +07:00 [INF] Request finished in 42.2396ms 500 text/html; charset=utf-8
+2018-11-24 16:19:09.354 +07:00 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:6001/api/values  
+2018-11-24 16:19:09.355 +07:00 [INF] Policy execution successful.
+2018-11-24 16:19:09.356 +07:00 [INF] Request finished in 2.0674ms 204 
+2018-11-24 16:19:09.358 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:6001/api/values  
+2018-11-24 16:19:09.359 +07:00 [INF] Policy execution successful.
+2018-11-24 16:19:09.361 +07:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: You must either set Authority or IntrospectionEndpoint
+   at Microsoft.AspNetCore.Builder.OAuth2IntrospectionOptions.Validate() in C:\local\identity\model\AspNetCore.OAuth2Introspection\src\IdentityModel.AspNetCore.OAuth2Introspection\OAuth2IntrospectionOptions.cs:line 139
+   at IdentityModel.AspNetCore.OAuth2Introspection.PostConfigureOAuth2IntrospectionOptions.PostConfigure(String name, OAuth2IntrospectionOptions options) in C:\local\identity\model\AspNetCore.OAuth2Introspection\src\IdentityModel.AspNetCore.OAuth2Introspection\PostConfigureOAuth2IntrospectionOptions.cs:line 28
+   at Microsoft.Extensions.Options.OptionsFactory`1.Create(String name)
+   at Microsoft.Extensions.Options.OptionsMonitor`1.<>c__DisplayClass10_0.<Get>b__0()
+   at System.Lazy`1.ViaFactory(LazyThreadSafetyMode mode)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Lazy`1.CreateValue()
+   at Microsoft.Extensions.Options.OptionsCache`1.GetOrAdd(String name, Func`1 createOptions)
+   at Microsoft.Extensions.Options.OptionsMonitor`1.Get(String name)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandler`1.InitializeAsync(AuthenticationScheme scheme, HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandlerProvider.GetHandlerAsync(HttpContext context, String authenticationScheme)
+   at Microsoft.AspNetCore.Authentication.AuthenticationService.AuthenticateAsync(HttpContext context, String scheme)
+   at IdentityServer4.AccessTokenValidation.IdentityServerAuthenticationHandler.HandleAuthenticateAsync() in C:\local\identity\server4\AccessTokenValidation\src\IdentityServer4.AccessTokenValidation\IdentityServerAuthenticationHandler.cs:line 68
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandler`1.AuthenticateAsync()
+   at Microsoft.AspNetCore.Authentication.AuthenticationService.AuthenticateAsync(HttpContext context, String scheme)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Cors.Infrastructure.CorsMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2018-11-24 16:19:09.391 +07:00 [INF] Request finished in 32.7039ms 500 text/html; charset=utf-8
+2018-11-24 16:19:09.574 +07:00 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:6001/api/values  
+2018-11-24 16:19:09.576 +07:00 [INF] Policy execution successful.
+2018-11-24 16:19:09.578 +07:00 [INF] Request finished in 4.3046ms 204 
+2018-11-24 16:19:09.585 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:6001/api/values  
+2018-11-24 16:19:09.586 +07:00 [INF] Policy execution successful.
+2018-11-24 16:19:09.589 +07:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: You must either set Authority or IntrospectionEndpoint
+   at Microsoft.AspNetCore.Builder.OAuth2IntrospectionOptions.Validate() in C:\local\identity\model\AspNetCore.OAuth2Introspection\src\IdentityModel.AspNetCore.OAuth2Introspection\OAuth2IntrospectionOptions.cs:line 139
+   at IdentityModel.AspNetCore.OAuth2Introspection.PostConfigureOAuth2IntrospectionOptions.PostConfigure(String name, OAuth2IntrospectionOptions options) in C:\local\identity\model\AspNetCore.OAuth2Introspection\src\IdentityModel.AspNetCore.OAuth2Introspection\PostConfigureOAuth2IntrospectionOptions.cs:line 28
+   at Microsoft.Extensions.Options.OptionsFactory`1.Create(String name)
+   at Microsoft.Extensions.Options.OptionsMonitor`1.<>c__DisplayClass10_0.<Get>b__0()
+   at System.Lazy`1.ViaFactory(LazyThreadSafetyMode mode)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Lazy`1.CreateValue()
+   at Microsoft.Extensions.Options.OptionsCache`1.GetOrAdd(String name, Func`1 createOptions)
+   at Microsoft.Extensions.Options.OptionsMonitor`1.Get(String name)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandler`1.InitializeAsync(AuthenticationScheme scheme, HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandlerProvider.GetHandlerAsync(HttpContext context, String authenticationScheme)
+   at Microsoft.AspNetCore.Authentication.AuthenticationService.AuthenticateAsync(HttpContext context, String scheme)
+   at IdentityServer4.AccessTokenValidation.IdentityServerAuthenticationHandler.HandleAuthenticateAsync() in C:\local\identity\server4\AccessTokenValidation\src\IdentityServer4.AccessTokenValidation\IdentityServerAuthenticationHandler.cs:line 68
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandler`1.AuthenticateAsync()
+   at Microsoft.AspNetCore.Authentication.AuthenticationService.AuthenticateAsync(HttpContext context, String scheme)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Cors.Infrastructure.CorsMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2018-11-24 16:19:09.608 +07:00 [INF] Request finished in 23.5206ms 500 text/html; charset=utf-8
+2018-11-24 16:19:09.772 +07:00 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:6001/api/values  
+2018-11-24 16:19:09.773 +07:00 [INF] Policy execution successful.
+2018-11-24 16:19:09.774 +07:00 [INF] Request finished in 2.2614ms 204 
+2018-11-24 16:19:09.776 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:6001/api/values  
+2018-11-24 16:19:09.777 +07:00 [INF] Policy execution successful.
+2018-11-24 16:19:09.778 +07:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: You must either set Authority or IntrospectionEndpoint
+   at Microsoft.AspNetCore.Builder.OAuth2IntrospectionOptions.Validate() in C:\local\identity\model\AspNetCore.OAuth2Introspection\src\IdentityModel.AspNetCore.OAuth2Introspection\OAuth2IntrospectionOptions.cs:line 139
+   at IdentityModel.AspNetCore.OAuth2Introspection.PostConfigureOAuth2IntrospectionOptions.PostConfigure(String name, OAuth2IntrospectionOptions options) in C:\local\identity\model\AspNetCore.OAuth2Introspection\src\IdentityModel.AspNetCore.OAuth2Introspection\PostConfigureOAuth2IntrospectionOptions.cs:line 28
+   at Microsoft.Extensions.Options.OptionsFactory`1.Create(String name)
+   at Microsoft.Extensions.Options.OptionsMonitor`1.<>c__DisplayClass10_0.<Get>b__0()
+   at System.Lazy`1.ViaFactory(LazyThreadSafetyMode mode)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Lazy`1.CreateValue()
+   at Microsoft.Extensions.Options.OptionsCache`1.GetOrAdd(String name, Func`1 createOptions)
+   at Microsoft.Extensions.Options.OptionsMonitor`1.Get(String name)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandler`1.InitializeAsync(AuthenticationScheme scheme, HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandlerProvider.GetHandlerAsync(HttpContext context, String authenticationScheme)
+   at Microsoft.AspNetCore.Authentication.AuthenticationService.AuthenticateAsync(HttpContext context, String scheme)
+   at IdentityServer4.AccessTokenValidation.IdentityServerAuthenticationHandler.HandleAuthenticateAsync() in C:\local\identity\server4\AccessTokenValidation\src\IdentityServer4.AccessTokenValidation\IdentityServerAuthenticationHandler.cs:line 68
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandler`1.AuthenticateAsync()
+   at Microsoft.AspNetCore.Authentication.AuthenticationService.AuthenticateAsync(HttpContext context, String scheme)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Cors.Infrastructure.CorsMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2018-11-24 16:19:09.793 +07:00 [INF] Request finished in 17.0661ms 500 text/html; charset=utf-8
+2018-11-24 16:19:11.589 +07:00 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:6001/api/values  
+2018-11-24 16:19:11.590 +07:00 [INF] Policy execution successful.
+2018-11-24 16:19:11.591 +07:00 [INF] Request finished in 1.3038ms 204 
+2018-11-24 16:19:11.592 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:6001/api/values  
+2018-11-24 16:19:11.593 +07:00 [INF] Policy execution successful.
+2018-11-24 16:19:11.594 +07:00 [INF] Successfully validated the token.
+2018-11-24 16:19:11.595 +07:00 [DBG] AuthenticationScheme: Bearer was successfully authenticated.
+2018-11-24 16:19:11.595 +07:00 [INF] Route matched with {action = "Get", controller = "Values"}. Executing action WebApi.Controllers.ValuesController.Get (WebApi)
+2018-11-24 16:19:11.596 +07:00 [INF] Authorization was successful.
+2018-11-24 16:19:11.601 +07:00 [INF] Executing action method WebApi.Controllers.ValuesController.Get (WebApi) - Validation state: "Valid"
+2018-11-24 16:19:11.602 +07:00 [INF] Executed action method WebApi.Controllers.ValuesController.Get (WebApi), returned result Microsoft.AspNetCore.Mvc.JsonResult in 0.026600000000000002ms.
+2018-11-24 16:19:11.603 +07:00 [INF] Executing JsonResult, writing value of type 'System.Linq.Enumerable+SelectEnumerableIterator`2[[System.Security.Claims.Claim, System.Security.Claims, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a],[<>f__AnonymousType0`2[[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2018-11-24 16:19:11.603 +07:00 [INF] Executed action WebApi.Controllers.ValuesController.Get (WebApi) in 7.8065000000000007ms
+2018-11-24 16:19:11.604 +07:00 [INF] Request finished in 12.302ms 200 application/json; charset=utf-8
+2018-11-24 16:19:12.275 +07:00 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:6001/api/values  
+2018-11-24 16:19:12.276 +07:00 [INF] Policy execution successful.
+2018-11-24 16:19:12.278 +07:00 [INF] Request finished in 2.4947ms 204 
+2018-11-24 16:19:12.281 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:6001/api/values  
+2018-11-24 16:19:12.283 +07:00 [INF] Policy execution successful.
+2018-11-24 16:19:12.285 +07:00 [INF] Successfully validated the token.
+2018-11-24 16:19:12.287 +07:00 [DBG] AuthenticationScheme: Bearer was successfully authenticated.
+2018-11-24 16:19:12.287 +07:00 [INF] Route matched with {action = "Get", controller = "Values"}. Executing action WebApi.Controllers.ValuesController.Get (WebApi)
+2018-11-24 16:19:12.290 +07:00 [INF] Authorization was successful.
+2018-11-24 16:19:12.297 +07:00 [INF] Executing action method WebApi.Controllers.ValuesController.Get (WebApi) - Validation state: "Valid"
+2018-11-24 16:19:12.299 +07:00 [INF] Executed action method WebApi.Controllers.ValuesController.Get (WebApi), returned result Microsoft.AspNetCore.Mvc.JsonResult in 0.0222ms.
+2018-11-24 16:19:12.300 +07:00 [INF] Executing JsonResult, writing value of type 'System.Linq.Enumerable+SelectEnumerableIterator`2[[System.Security.Claims.Claim, System.Security.Claims, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a],[<>f__AnonymousType0`2[[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2018-11-24 16:19:12.300 +07:00 [INF] Executed action WebApi.Controllers.ValuesController.Get (WebApi) in 10.887400000000001ms
+2018-11-24 16:19:12.302 +07:00 [INF] Request finished in 20.4466ms 200 application/json; charset=utf-8
+2018-11-24 16:19:12.431 +07:00 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:6001/api/values  
+2018-11-24 16:19:12.432 +07:00 [INF] Policy execution successful.
+2018-11-24 16:19:12.433 +07:00 [INF] Request finished in 2.7739ms 204 
+2018-11-24 16:19:12.436 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:6001/api/values  
+2018-11-24 16:19:12.437 +07:00 [INF] Policy execution successful.
+2018-11-24 16:19:12.438 +07:00 [INF] Successfully validated the token.
+2018-11-24 16:19:12.439 +07:00 [DBG] AuthenticationScheme: Bearer was successfully authenticated.
+2018-11-24 16:19:12.439 +07:00 [INF] Route matched with {action = "Get", controller = "Values"}. Executing action WebApi.Controllers.ValuesController.Get (WebApi)
+2018-11-24 16:19:12.440 +07:00 [INF] Authorization was successful.
+2018-11-24 16:19:12.445 +07:00 [INF] Executing action method WebApi.Controllers.ValuesController.Get (WebApi) - Validation state: "Valid"
+2018-11-24 16:19:12.446 +07:00 [INF] Executed action method WebApi.Controllers.ValuesController.Get (WebApi), returned result Microsoft.AspNetCore.Mvc.JsonResult in 0.0205ms.
+2018-11-24 16:19:12.447 +07:00 [INF] Executing JsonResult, writing value of type 'System.Linq.Enumerable+SelectEnumerableIterator`2[[System.Security.Claims.Claim, System.Security.Claims, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a],[<>f__AnonymousType0`2[[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2018-11-24 16:19:12.448 +07:00 [INF] Executed action WebApi.Controllers.ValuesController.Get (WebApi) in 7.968ms
+2018-11-24 16:19:12.449 +07:00 [INF] Request finished in 12.7095ms 200 application/json; charset=utf-8
+2018-11-24 16:19:13.963 +07:00 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:6001/api/values  
+2018-11-24 16:19:13.964 +07:00 [INF] Policy execution successful.
+2018-11-24 16:19:13.965 +07:00 [INF] Request finished in 1.4478ms 204 
+2018-11-24 16:19:13.967 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:6001/api/values  
+2018-11-24 16:19:14.030 +07:00 [INF] Policy execution successful.
+2018-11-24 16:19:14.032 +07:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenInvalidAudienceException: IDX10214: Audience validation failed. Audiences: 'http://localhost:5000/resources, UserDbApi'. Did not match: validationParameters.ValidAudience: 'MainApi' or validationParameters.ValidAudiences: 'null'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateAudience(IEnumerable`1 audiences, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateAudience(IEnumerable`1 audiences, JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2018-11-24 16:19:14.038 +07:00 [INF] BearerIdentityServerAuthenticationJwt was not authenticated. Failure message: IDX10214: Audience validation failed. Audiences: 'http://localhost:5000/resources, UserDbApi'. Did not match: validationParameters.ValidAudience: 'MainApi' or validationParameters.ValidAudiences: 'null'.
+2018-11-24 16:19:14.040 +07:00 [INF] Bearer was not authenticated. Failure message: IDX10214: Audience validation failed. Audiences: 'http://localhost:5000/resources, UserDbApi'. Did not match: validationParameters.ValidAudience: 'MainApi' or validationParameters.ValidAudiences: 'null'.
+2018-11-24 16:19:14.041 +07:00 [INF] Route matched with {action = "Get", controller = "Values"}. Executing action WebApi.Controllers.ValuesController.Get (WebApi)
+2018-11-24 16:19:14.042 +07:00 [INF] Authorization failed.
+2018-11-24 16:19:14.046 +07:00 [INF] Authorization failed for the request at filter 'Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter'.
+2018-11-24 16:19:14.053 +07:00 [INF] Executing ChallengeResult with authentication schemes ([]).
+2018-11-24 16:19:14.069 +07:00 [INF] AuthenticationScheme: BearerIdentityServerAuthenticationJwt was challenged.
+2018-11-24 16:19:14.070 +07:00 [INF] AuthenticationScheme: Bearer was challenged.
+2018-11-24 16:19:14.071 +07:00 [INF] Executed action WebApi.Controllers.ValuesController.Get (WebApi) in 29.191300000000002ms
+2018-11-24 16:19:14.072 +07:00 [INF] Request finished in 104.359ms 401 
+2018-11-24 16:19:14.488 +07:00 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:6001/api/values  
+2018-11-24 16:19:14.490 +07:00 [INF] Policy execution successful.
+2018-11-24 16:19:14.491 +07:00 [INF] Request finished in 3.4308ms 204 
+2018-11-24 16:19:14.494 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:6001/api/values  
+2018-11-24 16:19:14.495 +07:00 [INF] Policy execution successful.
+2018-11-24 16:19:14.497 +07:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenInvalidAudienceException: IDX10214: Audience validation failed. Audiences: 'http://localhost:5000/resources, UserDbApi'. Did not match: validationParameters.ValidAudience: 'MainApi' or validationParameters.ValidAudiences: 'null'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateAudience(IEnumerable`1 audiences, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateAudience(IEnumerable`1 audiences, JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2018-11-24 16:19:14.500 +07:00 [INF] BearerIdentityServerAuthenticationJwt was not authenticated. Failure message: IDX10214: Audience validation failed. Audiences: 'http://localhost:5000/resources, UserDbApi'. Did not match: validationParameters.ValidAudience: 'MainApi' or validationParameters.ValidAudiences: 'null'.
+2018-11-24 16:19:14.501 +07:00 [INF] Bearer was not authenticated. Failure message: IDX10214: Audience validation failed. Audiences: 'http://localhost:5000/resources, UserDbApi'. Did not match: validationParameters.ValidAudience: 'MainApi' or validationParameters.ValidAudiences: 'null'.
+2018-11-24 16:19:14.502 +07:00 [INF] Route matched with {action = "Get", controller = "Values"}. Executing action WebApi.Controllers.ValuesController.Get (WebApi)
+2018-11-24 16:19:14.503 +07:00 [INF] Authorization failed.
+2018-11-24 16:19:14.503 +07:00 [INF] Authorization failed for the request at filter 'Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter'.
+2018-11-24 16:19:14.504 +07:00 [INF] Executing ChallengeResult with authentication schemes ([]).
+2018-11-24 16:19:14.505 +07:00 [INF] AuthenticationScheme: BearerIdentityServerAuthenticationJwt was challenged.
+2018-11-24 16:19:14.506 +07:00 [INF] AuthenticationScheme: Bearer was challenged.
+2018-11-24 16:19:14.507 +07:00 [INF] Executed action WebApi.Controllers.ValuesController.Get (WebApi) in 3.9043ms
+2018-11-24 16:19:14.511 +07:00 [INF] Request finished in 17.0504ms 401 
+2018-11-24 16:19:14.670 +07:00 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:6001/api/values  
+2018-11-24 16:19:14.671 +07:00 [INF] Policy execution successful.
+2018-11-24 16:19:14.673 +07:00 [INF] Request finished in 2.9843ms 204 
+2018-11-24 16:19:14.677 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:6001/api/values  
+2018-11-24 16:19:14.677 +07:00 [INF] Policy execution successful.
+2018-11-24 16:19:14.679 +07:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenInvalidAudienceException: IDX10214: Audience validation failed. Audiences: 'http://localhost:5000/resources, UserDbApi'. Did not match: validationParameters.ValidAudience: 'MainApi' or validationParameters.ValidAudiences: 'null'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateAudience(IEnumerable`1 audiences, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateAudience(IEnumerable`1 audiences, JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2018-11-24 16:19:14.682 +07:00 [INF] BearerIdentityServerAuthenticationJwt was not authenticated. Failure message: IDX10214: Audience validation failed. Audiences: 'http://localhost:5000/resources, UserDbApi'. Did not match: validationParameters.ValidAudience: 'MainApi' or validationParameters.ValidAudiences: 'null'.
+2018-11-24 16:19:14.683 +07:00 [INF] Bearer was not authenticated. Failure message: IDX10214: Audience validation failed. Audiences: 'http://localhost:5000/resources, UserDbApi'. Did not match: validationParameters.ValidAudience: 'MainApi' or validationParameters.ValidAudiences: 'null'.
+2018-11-24 16:19:14.684 +07:00 [INF] Route matched with {action = "Get", controller = "Values"}. Executing action WebApi.Controllers.ValuesController.Get (WebApi)
+2018-11-24 16:19:14.685 +07:00 [INF] Authorization failed.
+2018-11-24 16:19:14.685 +07:00 [INF] Authorization failed for the request at filter 'Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter'.
+2018-11-24 16:19:14.686 +07:00 [INF] Executing ChallengeResult with authentication schemes ([]).
+2018-11-24 16:19:14.687 +07:00 [INF] AuthenticationScheme: BearerIdentityServerAuthenticationJwt was challenged.
+2018-11-24 16:19:14.687 +07:00 [INF] AuthenticationScheme: Bearer was challenged.
+2018-11-24 16:19:14.688 +07:00 [INF] Executed action WebApi.Controllers.ValuesController.Get (WebApi) in 3.2323ms
+2018-11-24 16:19:14.692 +07:00 [INF] Request finished in 15.974ms 401 
+2018-11-24 16:19:17.155 +07:00 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:6001/api/values  
+2018-11-24 16:19:17.157 +07:00 [INF] Policy execution successful.
+2018-11-24 16:19:17.158 +07:00 [INF] Request finished in 3.8608ms 204 
+2018-11-24 16:19:17.161 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:6001/api/values  
+2018-11-24 16:19:17.162 +07:00 [INF] Policy execution successful.
+2018-11-24 16:19:17.163 +07:00 [INF] Successfully validated the token.
+2018-11-24 16:19:17.164 +07:00 [DBG] AuthenticationScheme: Bearer was successfully authenticated.
+2018-11-24 16:19:17.164 +07:00 [INF] Route matched with {action = "Get", controller = "Values"}. Executing action WebApi.Controllers.ValuesController.Get (WebApi)
+2018-11-24 16:19:17.167 +07:00 [INF] Authorization was successful.
+2018-11-24 16:19:17.172 +07:00 [INF] Executing action method WebApi.Controllers.ValuesController.Get (WebApi) - Validation state: "Valid"
+2018-11-24 16:19:17.173 +07:00 [INF] Executed action method WebApi.Controllers.ValuesController.Get (WebApi), returned result Microsoft.AspNetCore.Mvc.JsonResult in 0.0222ms.
+2018-11-24 16:19:17.174 +07:00 [INF] Executing JsonResult, writing value of type 'System.Linq.Enumerable+SelectEnumerableIterator`2[[System.Security.Claims.Claim, System.Security.Claims, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a],[<>f__AnonymousType0`2[[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2018-11-24 16:19:17.176 +07:00 [INF] Executed action WebApi.Controllers.ValuesController.Get (WebApi) in 9.474400000000001ms
+2018-11-24 16:19:17.177 +07:00 [INF] Request finished in 15.9782ms 200 application/json; charset=utf-8
+2018-11-24 16:19:17.499 +07:00 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:6001/api/values  
+2018-11-24 16:19:17.501 +07:00 [INF] Policy execution successful.
+2018-11-24 16:19:17.501 +07:00 [INF] Request finished in 2.182ms 204 
+2018-11-24 16:19:17.504 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:6001/api/values  
+2018-11-24 16:19:17.505 +07:00 [INF] Policy execution successful.
+2018-11-24 16:19:17.506 +07:00 [INF] Successfully validated the token.
+2018-11-24 16:19:17.506 +07:00 [DBG] AuthenticationScheme: Bearer was successfully authenticated.
+2018-11-24 16:19:17.506 +07:00 [INF] Route matched with {action = "Get", controller = "Values"}. Executing action WebApi.Controllers.ValuesController.Get (WebApi)
+2018-11-24 16:19:17.507 +07:00 [INF] Authorization was successful.
+2018-11-24 16:19:17.513 +07:00 [INF] Executing action method WebApi.Controllers.ValuesController.Get (WebApi) - Validation state: "Valid"
+2018-11-24 16:19:17.515 +07:00 [INF] Executed action method WebApi.Controllers.ValuesController.Get (WebApi), returned result Microsoft.AspNetCore.Mvc.JsonResult in 0.0304ms.
+2018-11-24 16:19:17.516 +07:00 [INF] Executing JsonResult, writing value of type 'System.Linq.Enumerable+SelectEnumerableIterator`2[[System.Security.Claims.Claim, System.Security.Claims, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a],[<>f__AnonymousType0`2[[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2018-11-24 16:19:17.517 +07:00 [INF] Executed action WebApi.Controllers.ValuesController.Get (WebApi) in 9.7361ms
+2018-11-24 16:19:17.518 +07:00 [INF] Request finished in 13.7198ms 200 application/json; charset=utf-8
+2018-11-24 16:19:17.687 +07:00 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:6001/api/values  
+2018-11-24 16:19:17.688 +07:00 [INF] Policy execution successful.
+2018-11-24 16:19:17.689 +07:00 [INF] Request finished in 2.78ms 204 
+2018-11-24 16:19:17.692 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:6001/api/values  
+2018-11-24 16:19:17.693 +07:00 [INF] Policy execution successful.
+2018-11-24 16:19:17.694 +07:00 [INF] Successfully validated the token.
+2018-11-24 16:19:17.695 +07:00 [DBG] AuthenticationScheme: Bearer was successfully authenticated.
+2018-11-24 16:19:17.695 +07:00 [INF] Route matched with {action = "Get", controller = "Values"}. Executing action WebApi.Controllers.ValuesController.Get (WebApi)
+2018-11-24 16:19:17.699 +07:00 [INF] Authorization was successful.
+2018-11-24 16:19:17.705 +07:00 [INF] Executing action method WebApi.Controllers.ValuesController.Get (WebApi) - Validation state: "Valid"
+2018-11-24 16:19:17.707 +07:00 [INF] Executed action method WebApi.Controllers.ValuesController.Get (WebApi), returned result Microsoft.AspNetCore.Mvc.JsonResult in 0.0287ms.
+2018-11-24 16:19:17.709 +07:00 [INF] Executing JsonResult, writing value of type 'System.Linq.Enumerable+SelectEnumerableIterator`2[[System.Security.Claims.Claim, System.Security.Claims, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a],[<>f__AnonymousType0`2[[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2018-11-24 16:19:17.710 +07:00 [INF] Executed action WebApi.Controllers.ValuesController.Get (WebApi) in 11.0488ms
+2018-11-24 16:19:17.711 +07:00 [INF] Request finished in 19.1876ms 200 application/json; charset=utf-8
+2018-11-24 16:19:17.857 +07:00 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:6001/api/values  
+2018-11-24 16:19:17.859 +07:00 [INF] Policy execution successful.
+2018-11-24 16:19:17.861 +07:00 [INF] Request finished in 4.6853ms 204 
+2018-11-24 16:19:17.864 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:6001/api/values  
+2018-11-24 16:19:17.865 +07:00 [INF] Policy execution successful.
+2018-11-24 16:19:17.866 +07:00 [INF] Successfully validated the token.
+2018-11-24 16:19:17.868 +07:00 [DBG] AuthenticationScheme: Bearer was successfully authenticated.
+2018-11-24 16:19:17.868 +07:00 [INF] Route matched with {action = "Get", controller = "Values"}. Executing action WebApi.Controllers.ValuesController.Get (WebApi)
+2018-11-24 16:19:17.869 +07:00 [INF] Authorization was successful.
+2018-11-24 16:19:17.875 +07:00 [INF] Executing action method WebApi.Controllers.ValuesController.Get (WebApi) - Validation state: "Valid"
+2018-11-24 16:19:17.878 +07:00 [INF] Executed action method WebApi.Controllers.ValuesController.Get (WebApi), returned result Microsoft.AspNetCore.Mvc.JsonResult in 0.028ms.
+2018-11-24 16:19:17.880 +07:00 [INF] Executing JsonResult, writing value of type 'System.Linq.Enumerable+SelectEnumerableIterator`2[[System.Security.Claims.Claim, System.Security.Claims, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a],[<>f__AnonymousType0`2[[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2018-11-24 16:19:17.881 +07:00 [INF] Executed action WebApi.Controllers.ValuesController.Get (WebApi) in 11.6335ms
+2018-11-24 16:19:17.883 +07:00 [INF] Request finished in 18.7388ms 200 application/json; charset=utf-8
+2018-11-24 16:19:19.728 +07:00 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:6001/api/values  
+2018-11-24 16:19:19.730 +07:00 [INF] Policy execution successful.
+2018-11-24 16:19:19.730 +07:00 [INF] Request finished in 1.9052ms 204 
+2018-11-24 16:19:19.734 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:6001/api/values  
+2018-11-24 16:19:19.735 +07:00 [INF] Policy execution successful.
+2018-11-24 16:19:19.736 +07:00 [INF] Successfully validated the token.
+2018-11-24 16:19:19.737 +07:00 [DBG] AuthenticationScheme: Bearer was successfully authenticated.
+2018-11-24 16:19:19.737 +07:00 [INF] Route matched with {action = "Get", controller = "Values"}. Executing action WebApi.Controllers.ValuesController.Get (WebApi)
+2018-11-24 16:19:19.738 +07:00 [INF] Authorization was successful.
+2018-11-24 16:19:19.746 +07:00 [INF] Executing action method WebApi.Controllers.ValuesController.Get (WebApi) - Validation state: "Valid"
+2018-11-24 16:19:19.747 +07:00 [INF] Executed action method WebApi.Controllers.ValuesController.Get (WebApi), returned result Microsoft.AspNetCore.Mvc.JsonResult in 0.0253ms.
+2018-11-24 16:19:19.747 +07:00 [INF] Executing JsonResult, writing value of type 'System.Linq.Enumerable+SelectEnumerableIterator`2[[System.Security.Claims.Claim, System.Security.Claims, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a],[<>f__AnonymousType0`2[[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2018-11-24 16:19:19.748 +07:00 [INF] Executed action WebApi.Controllers.ValuesController.Get (WebApi) in 10.083400000000001ms
+2018-11-24 16:19:19.756 +07:00 [INF] Request finished in 21.6824ms 200 application/json; charset=utf-8
+2018-11-24 16:19:19.898 +07:00 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:6001/api/values  
+2018-11-24 16:19:19.903 +07:00 [INF] Policy execution successful.
+2018-11-24 16:19:19.904 +07:00 [INF] Request finished in 5.6204ms 204 
+2018-11-24 16:19:19.906 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:6001/api/values  
+2018-11-24 16:19:19.907 +07:00 [INF] Policy execution successful.
+2018-11-24 16:19:19.908 +07:00 [INF] Successfully validated the token.
+2018-11-24 16:19:19.910 +07:00 [DBG] AuthenticationScheme: Bearer was successfully authenticated.
+2018-11-24 16:19:19.910 +07:00 [INF] Route matched with {action = "Get", controller = "Values"}. Executing action WebApi.Controllers.ValuesController.Get (WebApi)
+2018-11-24 16:19:19.910 +07:00 [INF] Authorization was successful.
+2018-11-24 16:19:19.915 +07:00 [INF] Executing action method WebApi.Controllers.ValuesController.Get (WebApi) - Validation state: "Valid"
+2018-11-24 16:19:19.917 +07:00 [INF] Executed action method WebApi.Controllers.ValuesController.Get (WebApi), returned result Microsoft.AspNetCore.Mvc.JsonResult in 0.0318ms.
+2018-11-24 16:19:19.918 +07:00 [INF] Executing JsonResult, writing value of type 'System.Linq.Enumerable+SelectEnumerableIterator`2[[System.Security.Claims.Claim, System.Security.Claims, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a],[<>f__AnonymousType0`2[[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2018-11-24 16:19:19.920 +07:00 [INF] Executed action WebApi.Controllers.ValuesController.Get (WebApi) in 9.9937ms
+2018-11-24 16:19:19.922 +07:00 [INF] Request finished in 15.0814ms 200 application/json; charset=utf-8
+2018-11-24 16:19:22.994 +07:00 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:6001/api/values  
+2018-11-24 16:19:22.996 +07:00 [INF] Policy execution successful.
+2018-11-24 16:19:22.997 +07:00 [INF] Request finished in 3.2754ms 204 
+2018-11-24 16:19:23.000 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:6001/api/values  
+2018-11-24 16:19:23.000 +07:00 [INF] Policy execution successful.
+2018-11-24 16:19:23.002 +07:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: You must either set Authority or IntrospectionEndpoint
+   at Microsoft.AspNetCore.Builder.OAuth2IntrospectionOptions.Validate() in C:\local\identity\model\AspNetCore.OAuth2Introspection\src\IdentityModel.AspNetCore.OAuth2Introspection\OAuth2IntrospectionOptions.cs:line 139
+   at IdentityModel.AspNetCore.OAuth2Introspection.PostConfigureOAuth2IntrospectionOptions.PostConfigure(String name, OAuth2IntrospectionOptions options) in C:\local\identity\model\AspNetCore.OAuth2Introspection\src\IdentityModel.AspNetCore.OAuth2Introspection\PostConfigureOAuth2IntrospectionOptions.cs:line 28
+   at Microsoft.Extensions.Options.OptionsFactory`1.Create(String name)
+   at Microsoft.Extensions.Options.OptionsMonitor`1.<>c__DisplayClass10_0.<Get>b__0()
+   at System.Lazy`1.ViaFactory(LazyThreadSafetyMode mode)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Lazy`1.CreateValue()
+   at Microsoft.Extensions.Options.OptionsCache`1.GetOrAdd(String name, Func`1 createOptions)
+   at Microsoft.Extensions.Options.OptionsMonitor`1.Get(String name)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandler`1.InitializeAsync(AuthenticationScheme scheme, HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandlerProvider.GetHandlerAsync(HttpContext context, String authenticationScheme)
+   at Microsoft.AspNetCore.Authentication.AuthenticationService.AuthenticateAsync(HttpContext context, String scheme)
+   at IdentityServer4.AccessTokenValidation.IdentityServerAuthenticationHandler.HandleAuthenticateAsync() in C:\local\identity\server4\AccessTokenValidation\src\IdentityServer4.AccessTokenValidation\IdentityServerAuthenticationHandler.cs:line 68
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandler`1.AuthenticateAsync()
+   at Microsoft.AspNetCore.Authentication.AuthenticationService.AuthenticateAsync(HttpContext context, String scheme)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Cors.Infrastructure.CorsMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2018-11-24 16:19:23.018 +07:00 [INF] Request finished in 18.9016ms 500 text/html; charset=utf-8
+2018-11-24 16:19:23.335 +07:00 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:6001/api/values  
+2018-11-24 16:19:23.337 +07:00 [INF] Policy execution successful.
+2018-11-24 16:19:23.337 +07:00 [INF] Request finished in 2.3866ms 204 
+2018-11-24 16:19:23.340 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:6001/api/values  
+2018-11-24 16:19:23.341 +07:00 [INF] Policy execution successful.
+2018-11-24 16:19:23.343 +07:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: You must either set Authority or IntrospectionEndpoint
+   at Microsoft.AspNetCore.Builder.OAuth2IntrospectionOptions.Validate() in C:\local\identity\model\AspNetCore.OAuth2Introspection\src\IdentityModel.AspNetCore.OAuth2Introspection\OAuth2IntrospectionOptions.cs:line 139
+   at IdentityModel.AspNetCore.OAuth2Introspection.PostConfigureOAuth2IntrospectionOptions.PostConfigure(String name, OAuth2IntrospectionOptions options) in C:\local\identity\model\AspNetCore.OAuth2Introspection\src\IdentityModel.AspNetCore.OAuth2Introspection\PostConfigureOAuth2IntrospectionOptions.cs:line 28
+   at Microsoft.Extensions.Options.OptionsFactory`1.Create(String name)
+   at Microsoft.Extensions.Options.OptionsMonitor`1.<>c__DisplayClass10_0.<Get>b__0()
+   at System.Lazy`1.ViaFactory(LazyThreadSafetyMode mode)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Lazy`1.CreateValue()
+   at Microsoft.Extensions.Options.OptionsCache`1.GetOrAdd(String name, Func`1 createOptions)
+   at Microsoft.Extensions.Options.OptionsMonitor`1.Get(String name)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandler`1.InitializeAsync(AuthenticationScheme scheme, HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandlerProvider.GetHandlerAsync(HttpContext context, String authenticationScheme)
+   at Microsoft.AspNetCore.Authentication.AuthenticationService.AuthenticateAsync(HttpContext context, String scheme)
+   at IdentityServer4.AccessTokenValidation.IdentityServerAuthenticationHandler.HandleAuthenticateAsync() in C:\local\identity\server4\AccessTokenValidation\src\IdentityServer4.AccessTokenValidation\IdentityServerAuthenticationHandler.cs:line 68
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandler`1.AuthenticateAsync()
+   at Microsoft.AspNetCore.Authentication.AuthenticationService.AuthenticateAsync(HttpContext context, String scheme)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Cors.Infrastructure.CorsMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2018-11-24 16:19:23.357 +07:00 [INF] Request finished in 16.5591ms 500 text/html; charset=utf-8
+2018-11-24 16:19:23.489 +07:00 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:6001/api/values  
+2018-11-24 16:19:23.490 +07:00 [INF] Policy execution successful.
+2018-11-24 16:19:23.491 +07:00 [INF] Request finished in 1.5097ms 204 
+2018-11-24 16:19:23.493 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:6001/api/values  
+2018-11-24 16:19:23.494 +07:00 [INF] Policy execution successful.
+2018-11-24 16:19:23.495 +07:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: You must either set Authority or IntrospectionEndpoint
+   at Microsoft.AspNetCore.Builder.OAuth2IntrospectionOptions.Validate() in C:\local\identity\model\AspNetCore.OAuth2Introspection\src\IdentityModel.AspNetCore.OAuth2Introspection\OAuth2IntrospectionOptions.cs:line 139
+   at IdentityModel.AspNetCore.OAuth2Introspection.PostConfigureOAuth2IntrospectionOptions.PostConfigure(String name, OAuth2IntrospectionOptions options) in C:\local\identity\model\AspNetCore.OAuth2Introspection\src\IdentityModel.AspNetCore.OAuth2Introspection\PostConfigureOAuth2IntrospectionOptions.cs:line 28
+   at Microsoft.Extensions.Options.OptionsFactory`1.Create(String name)
+   at Microsoft.Extensions.Options.OptionsMonitor`1.<>c__DisplayClass10_0.<Get>b__0()
+   at System.Lazy`1.ViaFactory(LazyThreadSafetyMode mode)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Lazy`1.CreateValue()
+   at Microsoft.Extensions.Options.OptionsCache`1.GetOrAdd(String name, Func`1 createOptions)
+   at Microsoft.Extensions.Options.OptionsMonitor`1.Get(String name)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandler`1.InitializeAsync(AuthenticationScheme scheme, HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandlerProvider.GetHandlerAsync(HttpContext context, String authenticationScheme)
+   at Microsoft.AspNetCore.Authentication.AuthenticationService.AuthenticateAsync(HttpContext context, String scheme)
+   at IdentityServer4.AccessTokenValidation.IdentityServerAuthenticationHandler.HandleAuthenticateAsync() in C:\local\identity\server4\AccessTokenValidation\src\IdentityServer4.AccessTokenValidation\IdentityServerAuthenticationHandler.cs:line 68
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandler`1.AuthenticateAsync()
+   at Microsoft.AspNetCore.Authentication.AuthenticationService.AuthenticateAsync(HttpContext context, String scheme)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Cors.Infrastructure.CorsMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2018-11-24 16:19:23.508 +07:00 [INF] Request finished in 14.7705ms 500 text/html; charset=utf-8
+2018-11-24 16:19:23.656 +07:00 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:6001/api/values  
+2018-11-24 16:19:23.659 +07:00 [INF] Policy execution successful.
+2018-11-24 16:19:23.661 +07:00 [INF] Request finished in 4.1273ms 204 
+2018-11-24 16:19:23.662 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:6001/api/values  
+2018-11-24 16:19:23.663 +07:00 [INF] Policy execution successful.
+2018-11-24 16:19:23.665 +07:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: You must either set Authority or IntrospectionEndpoint
+   at Microsoft.AspNetCore.Builder.OAuth2IntrospectionOptions.Validate() in C:\local\identity\model\AspNetCore.OAuth2Introspection\src\IdentityModel.AspNetCore.OAuth2Introspection\OAuth2IntrospectionOptions.cs:line 139
+   at IdentityModel.AspNetCore.OAuth2Introspection.PostConfigureOAuth2IntrospectionOptions.PostConfigure(String name, OAuth2IntrospectionOptions options) in C:\local\identity\model\AspNetCore.OAuth2Introspection\src\IdentityModel.AspNetCore.OAuth2Introspection\PostConfigureOAuth2IntrospectionOptions.cs:line 28
+   at Microsoft.Extensions.Options.OptionsFactory`1.Create(String name)
+   at Microsoft.Extensions.Options.OptionsMonitor`1.<>c__DisplayClass10_0.<Get>b__0()
+   at System.Lazy`1.ViaFactory(LazyThreadSafetyMode mode)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Lazy`1.CreateValue()
+   at Microsoft.Extensions.Options.OptionsCache`1.GetOrAdd(String name, Func`1 createOptions)
+   at Microsoft.Extensions.Options.OptionsMonitor`1.Get(String name)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandler`1.InitializeAsync(AuthenticationScheme scheme, HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandlerProvider.GetHandlerAsync(HttpContext context, String authenticationScheme)
+   at Microsoft.AspNetCore.Authentication.AuthenticationService.AuthenticateAsync(HttpContext context, String scheme)
+   at IdentityServer4.AccessTokenValidation.IdentityServerAuthenticationHandler.HandleAuthenticateAsync() in C:\local\identity\server4\AccessTokenValidation\src\IdentityServer4.AccessTokenValidation\IdentityServerAuthenticationHandler.cs:line 68
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandler`1.AuthenticateAsync()
+   at Microsoft.AspNetCore.Authentication.AuthenticationService.AuthenticateAsync(HttpContext context, String scheme)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Cors.Infrastructure.CorsMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2018-11-24 16:19:23.680 +07:00 [INF] Request finished in 17.3655ms 500 text/html; charset=utf-8
+2018-11-24 16:19:23.814 +07:00 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:6001/api/values  
+2018-11-24 16:19:23.815 +07:00 [INF] Policy execution successful.
+2018-11-24 16:19:23.816 +07:00 [INF] Request finished in 1.8758ms 204 
+2018-11-24 16:19:23.819 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:6001/api/values  
+2018-11-24 16:19:23.820 +07:00 [INF] Policy execution successful.
+2018-11-24 16:19:23.826 +07:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: You must either set Authority or IntrospectionEndpoint
+   at Microsoft.AspNetCore.Builder.OAuth2IntrospectionOptions.Validate() in C:\local\identity\model\AspNetCore.OAuth2Introspection\src\IdentityModel.AspNetCore.OAuth2Introspection\OAuth2IntrospectionOptions.cs:line 139
+   at IdentityModel.AspNetCore.OAuth2Introspection.PostConfigureOAuth2IntrospectionOptions.PostConfigure(String name, OAuth2IntrospectionOptions options) in C:\local\identity\model\AspNetCore.OAuth2Introspection\src\IdentityModel.AspNetCore.OAuth2Introspection\PostConfigureOAuth2IntrospectionOptions.cs:line 28
+   at Microsoft.Extensions.Options.OptionsFactory`1.Create(String name)
+   at Microsoft.Extensions.Options.OptionsMonitor`1.<>c__DisplayClass10_0.<Get>b__0()
+   at System.Lazy`1.ViaFactory(LazyThreadSafetyMode mode)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Lazy`1.CreateValue()
+   at Microsoft.Extensions.Options.OptionsCache`1.GetOrAdd(String name, Func`1 createOptions)
+   at Microsoft.Extensions.Options.OptionsMonitor`1.Get(String name)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandler`1.InitializeAsync(AuthenticationScheme scheme, HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandlerProvider.GetHandlerAsync(HttpContext context, String authenticationScheme)
+   at Microsoft.AspNetCore.Authentication.AuthenticationService.AuthenticateAsync(HttpContext context, String scheme)
+   at IdentityServer4.AccessTokenValidation.IdentityServerAuthenticationHandler.HandleAuthenticateAsync() in C:\local\identity\server4\AccessTokenValidation\src\IdentityServer4.AccessTokenValidation\IdentityServerAuthenticationHandler.cs:line 68
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandler`1.AuthenticateAsync()
+   at Microsoft.AspNetCore.Authentication.AuthenticationService.AuthenticateAsync(HttpContext context, String scheme)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Cors.Infrastructure.CorsMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2018-11-24 16:19:23.843 +07:00 [INF] Request finished in 23.7625ms 500 text/html; charset=utf-8
+2018-11-24 16:19:25.380 +07:00 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:6001/api/values  
+2018-11-24 16:19:25.381 +07:00 [INF] Policy execution successful.
+2018-11-24 16:19:25.381 +07:00 [INF] Request finished in 1.5929ms 204 
+2018-11-24 16:19:25.384 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:6001/api/values  
+2018-11-24 16:19:25.384 +07:00 [INF] Policy execution successful.
+2018-11-24 16:19:25.386 +07:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: You must either set Authority or IntrospectionEndpoint
+   at Microsoft.AspNetCore.Builder.OAuth2IntrospectionOptions.Validate() in C:\local\identity\model\AspNetCore.OAuth2Introspection\src\IdentityModel.AspNetCore.OAuth2Introspection\OAuth2IntrospectionOptions.cs:line 139
+   at IdentityModel.AspNetCore.OAuth2Introspection.PostConfigureOAuth2IntrospectionOptions.PostConfigure(String name, OAuth2IntrospectionOptions options) in C:\local\identity\model\AspNetCore.OAuth2Introspection\src\IdentityModel.AspNetCore.OAuth2Introspection\PostConfigureOAuth2IntrospectionOptions.cs:line 28
+   at Microsoft.Extensions.Options.OptionsFactory`1.Create(String name)
+   at Microsoft.Extensions.Options.OptionsMonitor`1.<>c__DisplayClass10_0.<Get>b__0()
+   at System.Lazy`1.ViaFactory(LazyThreadSafetyMode mode)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Lazy`1.CreateValue()
+   at Microsoft.Extensions.Options.OptionsCache`1.GetOrAdd(String name, Func`1 createOptions)
+   at Microsoft.Extensions.Options.OptionsMonitor`1.Get(String name)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandler`1.InitializeAsync(AuthenticationScheme scheme, HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandlerProvider.GetHandlerAsync(HttpContext context, String authenticationScheme)
+   at Microsoft.AspNetCore.Authentication.AuthenticationService.AuthenticateAsync(HttpContext context, String scheme)
+   at IdentityServer4.AccessTokenValidation.IdentityServerAuthenticationHandler.HandleAuthenticateAsync() in C:\local\identity\server4\AccessTokenValidation\src\IdentityServer4.AccessTokenValidation\IdentityServerAuthenticationHandler.cs:line 68
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandler`1.AuthenticateAsync()
+   at Microsoft.AspNetCore.Authentication.AuthenticationService.AuthenticateAsync(HttpContext context, String scheme)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Cors.Infrastructure.CorsMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2018-11-24 16:19:25.401 +07:00 [INF] Request finished in 17.2916ms 500 text/html; charset=utf-8
+2018-11-24 16:19:28.655 +07:00 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:6001/api/values  
+2018-11-24 16:19:28.656 +07:00 [INF] Policy execution successful.
+2018-11-24 16:19:28.657 +07:00 [INF] Request finished in 1.9757ms 204 
+2018-11-24 16:19:28.659 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:6001/api/values  
+2018-11-24 16:19:28.660 +07:00 [INF] Policy execution successful.
+2018-11-24 16:19:28.662 +07:00 [INF] Successfully validated the token.
+2018-11-24 16:19:28.663 +07:00 [DBG] AuthenticationScheme: Bearer was successfully authenticated.
+2018-11-24 16:19:28.663 +07:00 [INF] Route matched with {action = "Get", controller = "Values"}. Executing action WebApi.Controllers.ValuesController.Get (WebApi)
+2018-11-24 16:19:28.666 +07:00 [INF] Authorization was successful.
+2018-11-24 16:19:28.671 +07:00 [INF] Executing action method WebApi.Controllers.ValuesController.Get (WebApi) - Validation state: "Valid"
+2018-11-24 16:19:28.673 +07:00 [INF] Executed action method WebApi.Controllers.ValuesController.Get (WebApi), returned result Microsoft.AspNetCore.Mvc.JsonResult in 0.0413ms.
+2018-11-24 16:19:28.675 +07:00 [INF] Executing JsonResult, writing value of type 'System.Linq.Enumerable+SelectEnumerableIterator`2[[System.Security.Claims.Claim, System.Security.Claims, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a],[<>f__AnonymousType0`2[[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2018-11-24 16:19:28.676 +07:00 [INF] Executed action WebApi.Controllers.ValuesController.Get (WebApi) in 10.6181ms
+2018-11-24 16:19:28.677 +07:00 [INF] Request finished in 18.127ms 200 application/json; charset=utf-8
+2018-11-24 16:19:29.101 +07:00 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:6001/api/values  
+2018-11-24 16:19:29.102 +07:00 [INF] Policy execution successful.
+2018-11-24 16:19:29.104 +07:00 [INF] Request finished in 3.3326ms 204 
+2018-11-24 16:19:29.107 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:6001/api/values  
+2018-11-24 16:19:29.107 +07:00 [INF] Policy execution successful.
+2018-11-24 16:19:29.108 +07:00 [INF] Successfully validated the token.
+2018-11-24 16:19:29.109 +07:00 [DBG] AuthenticationScheme: Bearer was successfully authenticated.
+2018-11-24 16:19:29.109 +07:00 [INF] Route matched with {action = "Get", controller = "Values"}. Executing action WebApi.Controllers.ValuesController.Get (WebApi)
+2018-11-24 16:19:29.110 +07:00 [INF] Authorization was successful.
+2018-11-24 16:19:29.115 +07:00 [INF] Executing action method WebApi.Controllers.ValuesController.Get (WebApi) - Validation state: "Valid"
+2018-11-24 16:19:29.116 +07:00 [INF] Executed action method WebApi.Controllers.ValuesController.Get (WebApi), returned result Microsoft.AspNetCore.Mvc.JsonResult in 0.0253ms.
+2018-11-24 16:19:29.117 +07:00 [INF] Executing JsonResult, writing value of type 'System.Linq.Enumerable+SelectEnumerableIterator`2[[System.Security.Claims.Claim, System.Security.Claims, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a],[<>f__AnonymousType0`2[[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2018-11-24 16:19:29.118 +07:00 [INF] Executed action WebApi.Controllers.ValuesController.Get (WebApi) in 8.4408000000000012ms
+2018-11-24 16:19:29.119 +07:00 [INF] Request finished in 12.611ms 200 application/json; charset=utf-8
+2018-11-24 16:19:29.269 +07:00 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:6001/api/values  
+2018-11-24 16:19:29.270 +07:00 [INF] Policy execution successful.
+2018-11-24 16:19:29.272 +07:00 [INF] Request finished in 3.0698ms 204 
+2018-11-24 16:19:29.275 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:6001/api/values  
+2018-11-24 16:19:29.275 +07:00 [INF] Policy execution successful.
+2018-11-24 16:19:29.276 +07:00 [INF] Successfully validated the token.
+2018-11-24 16:19:29.277 +07:00 [DBG] AuthenticationScheme: Bearer was successfully authenticated.
+2018-11-24 16:19:29.277 +07:00 [INF] Route matched with {action = "Get", controller = "Values"}. Executing action WebApi.Controllers.ValuesController.Get (WebApi)
+2018-11-24 16:19:29.277 +07:00 [INF] Authorization was successful.
+2018-11-24 16:19:29.285 +07:00 [INF] Executing action method WebApi.Controllers.ValuesController.Get (WebApi) - Validation state: "Valid"
+2018-11-24 16:19:29.287 +07:00 [INF] Executed action method WebApi.Controllers.ValuesController.Get (WebApi), returned result Microsoft.AspNetCore.Mvc.JsonResult in 0.0218ms.
+2018-11-24 16:19:29.289 +07:00 [INF] Executing JsonResult, writing value of type 'System.Linq.Enumerable+SelectEnumerableIterator`2[[System.Security.Claims.Claim, System.Security.Claims, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a],[<>f__AnonymousType0`2[[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2018-11-24 16:19:29.290 +07:00 [INF] Executed action WebApi.Controllers.ValuesController.Get (WebApi) in 12.421100000000001ms
+2018-11-24 16:19:29.291 +07:00 [INF] Request finished in 16.9943ms 200 application/json; charset=utf-8
+2018-11-24 16:19:32.207 +07:00 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:6001/api/values  
+2018-11-24 16:19:32.209 +07:00 [INF] Policy execution successful.
+2018-11-24 16:19:32.210 +07:00 [INF] Request finished in 3.077ms 204 
+2018-11-24 16:19:32.212 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:6001/api/values  
+2018-11-24 16:19:32.214 +07:00 [INF] Policy execution successful.
+2018-11-24 16:19:32.215 +07:00 [INF] Successfully validated the token.
+2018-11-24 16:19:32.215 +07:00 [DBG] AuthenticationScheme: Bearer was successfully authenticated.
+2018-11-24 16:19:32.216 +07:00 [INF] Route matched with {action = "Get", controller = "Values"}. Executing action WebApi.Controllers.ValuesController.Get (WebApi)
+2018-11-24 16:19:32.219 +07:00 [INF] Authorization was successful.
+2018-11-24 16:19:32.225 +07:00 [INF] Executing action method WebApi.Controllers.ValuesController.Get (WebApi) - Validation state: "Valid"
+2018-11-24 16:19:32.227 +07:00 [INF] Executed action method WebApi.Controllers.ValuesController.Get (WebApi), returned result Microsoft.AspNetCore.Mvc.JsonResult in 0.0256ms.
+2018-11-24 16:19:32.229 +07:00 [INF] Executing JsonResult, writing value of type 'System.Linq.Enumerable+SelectEnumerableIterator`2[[System.Security.Claims.Claim, System.Security.Claims, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a],[<>f__AnonymousType0`2[[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2018-11-24 16:19:32.230 +07:00 [INF] Executed action WebApi.Controllers.ValuesController.Get (WebApi) in 11.2387ms
+2018-11-24 16:19:32.231 +07:00 [INF] Request finished in 19.2068ms 200 application/json; charset=utf-8
+2018-11-24 16:19:32.372 +07:00 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:6001/api/values  
+2018-11-24 16:19:32.374 +07:00 [INF] Policy execution successful.
+2018-11-24 16:19:32.376 +07:00 [INF] Request finished in 4.5683ms 204 
+2018-11-24 16:19:32.379 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:6001/api/values  
+2018-11-24 16:19:32.379 +07:00 [INF] Policy execution successful.
+2018-11-24 16:19:32.380 +07:00 [INF] Successfully validated the token.
+2018-11-24 16:19:32.380 +07:00 [DBG] AuthenticationScheme: Bearer was successfully authenticated.
+2018-11-24 16:19:32.381 +07:00 [INF] Route matched with {action = "Get", controller = "Values"}. Executing action WebApi.Controllers.ValuesController.Get (WebApi)
+2018-11-24 16:19:32.381 +07:00 [INF] Authorization was successful.
+2018-11-24 16:19:32.389 +07:00 [INF] Executing action method WebApi.Controllers.ValuesController.Get (WebApi) - Validation state: "Valid"
+2018-11-24 16:19:32.390 +07:00 [INF] Executed action method WebApi.Controllers.ValuesController.Get (WebApi), returned result Microsoft.AspNetCore.Mvc.JsonResult in 0.034800000000000005ms.
+2018-11-24 16:19:32.391 +07:00 [INF] Executing JsonResult, writing value of type 'System.Linq.Enumerable+SelectEnumerableIterator`2[[System.Security.Claims.Claim, System.Security.Claims, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a],[<>f__AnonymousType0`2[[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2018-11-24 16:19:32.392 +07:00 [INF] Executed action WebApi.Controllers.ValuesController.Get (WebApi) in 10.355ms
+2018-11-24 16:19:32.394 +07:00 [INF] Request finished in 15.8427ms 200 application/json; charset=utf-8
+2018-11-24 16:19:32.541 +07:00 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:6001/api/values  
+2018-11-24 16:19:32.543 +07:00 [INF] Policy execution successful.
+2018-11-24 16:19:32.544 +07:00 [INF] Request finished in 2.9692ms 204 
+2018-11-24 16:19:32.547 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:6001/api/values  
+2018-11-24 16:19:32.548 +07:00 [INF] Policy execution successful.
+2018-11-24 16:19:32.549 +07:00 [INF] Successfully validated the token.
+2018-11-24 16:19:32.549 +07:00 [DBG] AuthenticationScheme: Bearer was successfully authenticated.
+2018-11-24 16:19:32.550 +07:00 [INF] Route matched with {action = "Get", controller = "Values"}. Executing action WebApi.Controllers.ValuesController.Get (WebApi)
+2018-11-24 16:19:32.553 +07:00 [INF] Authorization was successful.
+2018-11-24 16:19:32.562 +07:00 [INF] Executing action method WebApi.Controllers.ValuesController.Get (WebApi) - Validation state: "Valid"
+2018-11-24 16:19:32.565 +07:00 [INF] Executed action method WebApi.Controllers.ValuesController.Get (WebApi), returned result Microsoft.AspNetCore.Mvc.JsonResult in 0.026000000000000002ms.
+2018-11-24 16:19:32.566 +07:00 [INF] Executing JsonResult, writing value of type 'System.Linq.Enumerable+SelectEnumerableIterator`2[[System.Security.Claims.Claim, System.Security.Claims, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a],[<>f__AnonymousType0`2[[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2018-11-24 16:19:32.567 +07:00 [INF] Executed action WebApi.Controllers.ValuesController.Get (WebApi) in 13.9008ms
+2018-11-24 16:19:32.569 +07:00 [INF] Request finished in 21.7358ms 200 application/json; charset=utf-8
+2018-11-24 16:19:33.636 +07:00 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:6001/api/values  
+2018-11-24 16:19:33.637 +07:00 [INF] Policy execution successful.
+2018-11-24 16:19:33.639 +07:00 [INF] Request finished in 3.5009ms 204 
+2018-11-24 16:19:33.642 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:6001/api/values  
+2018-11-24 16:19:33.643 +07:00 [INF] Policy execution successful.
+2018-11-24 16:19:33.644 +07:00 [INF] Successfully validated the token.
+2018-11-24 16:19:33.646 +07:00 [DBG] AuthenticationScheme: Bearer was successfully authenticated.
+2018-11-24 16:19:33.646 +07:00 [INF] Route matched with {action = "Get", controller = "Values"}. Executing action WebApi.Controllers.ValuesController.Get (WebApi)
+2018-11-24 16:19:33.647 +07:00 [INF] Authorization was successful.
+2018-11-24 16:19:33.652 +07:00 [INF] Executing action method WebApi.Controllers.ValuesController.Get (WebApi) - Validation state: "Valid"
+2018-11-24 16:19:33.653 +07:00 [INF] Executed action method WebApi.Controllers.ValuesController.Get (WebApi), returned result Microsoft.AspNetCore.Mvc.JsonResult in 0.0181ms.
+2018-11-24 16:19:33.654 +07:00 [INF] Executing JsonResult, writing value of type 'System.Linq.Enumerable+SelectEnumerableIterator`2[[System.Security.Claims.Claim, System.Security.Claims, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a],[<>f__AnonymousType0`2[[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2018-11-24 16:19:33.657 +07:00 [INF] Executed action WebApi.Controllers.ValuesController.Get (WebApi) in 10.286200000000001ms
+2018-11-24 16:19:33.659 +07:00 [INF] Request finished in 17.4052ms 200 application/json; charset=utf-8
+2018-11-24 16:19:33.799 +07:00 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:6001/api/values  
+2018-11-24 16:19:33.801 +07:00 [INF] Policy execution successful.
+2018-11-24 16:19:33.803 +07:00 [INF] Request finished in 3.4958ms 204 
+2018-11-24 16:19:33.805 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:6001/api/values  
+2018-11-24 16:19:33.806 +07:00 [INF] Policy execution successful.
+2018-11-24 16:19:33.808 +07:00 [INF] Successfully validated the token.
+2018-11-24 16:19:33.808 +07:00 [DBG] AuthenticationScheme: Bearer was successfully authenticated.
+2018-11-24 16:19:33.808 +07:00 [INF] Route matched with {action = "Get", controller = "Values"}. Executing action WebApi.Controllers.ValuesController.Get (WebApi)
+2018-11-24 16:19:33.811 +07:00 [INF] Authorization was successful.
+2018-11-24 16:19:33.816 +07:00 [INF] Executing action method WebApi.Controllers.ValuesController.Get (WebApi) - Validation state: "Valid"
+2018-11-24 16:19:33.817 +07:00 [INF] Executed action method WebApi.Controllers.ValuesController.Get (WebApi), returned result Microsoft.AspNetCore.Mvc.JsonResult in 0.0253ms.
+2018-11-24 16:19:33.818 +07:00 [INF] Executing JsonResult, writing value of type 'System.Linq.Enumerable+SelectEnumerableIterator`2[[System.Security.Claims.Claim, System.Security.Claims, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a],[<>f__AnonymousType0`2[[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2018-11-24 16:19:33.821 +07:00 [INF] Executed action WebApi.Controllers.ValuesController.Get (WebApi) in 9.9667000000000012ms
+2018-11-24 16:19:33.823 +07:00 [INF] Request finished in 17.6727ms 200 application/json; charset=utf-8
+2018-11-24 17:50:54.159 +07:00 [INF] User profile is available. Using 'C:\Users\Aldmi\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2018-11-24 18:17:55.771 +07:00 [INF] User profile is available. Using 'C:\Users\Aldmi\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2018-11-24 18:18:16.693 +07:00 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:6001/api/values  
+2018-11-24 18:18:16.701 +07:00 [INF] Policy execution successful.
+2018-11-24 18:18:16.713 +07:00 [INF] Request finished in 22.0177ms 204 
+2018-11-24 18:18:16.726 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:6001/api/values  
+2018-11-24 18:18:16.728 +07:00 [INF] Policy execution successful.
+2018-11-24 18:18:17.055 +07:00 [INF] Successfully validated the token.
+2018-11-24 18:18:17.061 +07:00 [DBG] AuthenticationScheme: Bearer was successfully authenticated.
+2018-11-24 18:18:17.135 +07:00 [INF] Route matched with {action = "Get", controller = "Values"}. Executing action WebApi.Controllers.ValuesController.Get (WebApi)
+2018-11-24 18:18:17.148 +07:00 [INF] Authorization was successful.
+2018-11-24 18:18:17.498 +07:00 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:6001/api/values  
+2018-11-24 18:18:17.499 +07:00 [INF] Policy execution successful.
+2018-11-24 18:18:17.500 +07:00 [INF] Request finished in 2.1061ms 204 
+2018-11-24 18:18:17.506 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:6001/api/values  
+2018-11-24 18:18:17.507 +07:00 [INF] Policy execution successful.
+2018-11-24 18:18:17.510 +07:00 [INF] Successfully validated the token.
+2018-11-24 18:18:17.510 +07:00 [DBG] AuthenticationScheme: Bearer was successfully authenticated.
+2018-11-24 18:18:17.511 +07:00 [INF] Route matched with {action = "Get", controller = "Values"}. Executing action WebApi.Controllers.ValuesController.Get (WebApi)
+2018-11-24 18:18:17.512 +07:00 [INF] Authorization was successful.
+2018-11-24 18:18:17.802 +07:00 [INF] Executing action method WebApi.Controllers.ValuesController.Get (WebApi) - Validation state: "Valid"
+2018-11-24 18:18:17.802 +07:00 [INF] Executing action method WebApi.Controllers.ValuesController.Get (WebApi) - Validation state: "Valid"
+2018-11-24 18:18:17.814 +07:00 [INF] Executed action method WebApi.Controllers.ValuesController.Get (WebApi), returned result Microsoft.AspNetCore.Mvc.JsonResult in 2.5166ms.
+2018-11-24 18:18:17.814 +07:00 [INF] Executed action method WebApi.Controllers.ValuesController.Get (WebApi), returned result Microsoft.AspNetCore.Mvc.JsonResult in 2.5375ms.
+2018-11-24 18:18:17.822 +07:00 [INF] Executing JsonResult, writing value of type 'System.Linq.Enumerable+SelectEnumerableIterator`2[[System.Security.Claims.Claim, System.Security.Claims, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a],[<>f__AnonymousType0`2[[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2018-11-24 18:18:17.822 +07:00 [INF] Executing JsonResult, writing value of type 'System.Linq.Enumerable+SelectEnumerableIterator`2[[System.Security.Claims.Claim, System.Security.Claims, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a],[<>f__AnonymousType0`2[[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2018-11-24 18:18:17.831 +07:00 [INF] Executed action WebApi.Controllers.ValuesController.Get (WebApi) in 317.2486ms
+2018-11-24 18:18:17.831 +07:00 [INF] Executed action WebApi.Controllers.ValuesController.Get (WebApi) in 691.1074ms
+2018-11-24 18:18:17.837 +07:00 [INF] Request finished in 1111.1125ms 200 application/json; charset=utf-8
+2018-11-24 18:18:17.837 +07:00 [INF] Request finished in 330.9581ms 200 application/json; charset=utf-8
+2018-11-24 18:18:18.514 +07:00 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:6001/api/values  
+2018-11-24 18:18:18.516 +07:00 [INF] Policy execution successful.
+2018-11-24 18:18:18.518 +07:00 [INF] Request finished in 3.9125ms 204 
+2018-11-24 18:18:18.521 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:6001/api/values  
+2018-11-24 18:18:18.522 +07:00 [INF] Policy execution successful.
+2018-11-24 18:18:18.523 +07:00 [INF] Successfully validated the token.
+2018-11-24 18:18:18.525 +07:00 [DBG] AuthenticationScheme: Bearer was successfully authenticated.
+2018-11-24 18:18:18.525 +07:00 [INF] Route matched with {action = "Get", controller = "Values"}. Executing action WebApi.Controllers.ValuesController.Get (WebApi)
+2018-11-24 18:18:18.526 +07:00 [INF] Authorization was successful.
+2018-11-24 18:18:18.531 +07:00 [INF] Executing action method WebApi.Controllers.ValuesController.Get (WebApi) - Validation state: "Valid"
+2018-11-24 18:18:18.534 +07:00 [INF] Executed action method WebApi.Controllers.ValuesController.Get (WebApi), returned result Microsoft.AspNetCore.Mvc.JsonResult in 0.10980000000000001ms.
+2018-11-24 18:18:18.535 +07:00 [INF] Executing JsonResult, writing value of type 'System.Linq.Enumerable+SelectEnumerableIterator`2[[System.Security.Claims.Claim, System.Security.Claims, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a],[<>f__AnonymousType0`2[[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2018-11-24 18:18:18.539 +07:00 [INF] Executed action WebApi.Controllers.ValuesController.Get (WebApi) in 13.030100000000001ms
+2018-11-24 18:18:18.540 +07:00 [INF] Request finished in 19.7538ms 200 application/json; charset=utf-8
+2018-11-24 18:18:18.675 +07:00 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:6001/api/values  
+2018-11-24 18:18:18.678 +07:00 [INF] Policy execution successful.
+2018-11-24 18:18:18.679 +07:00 [INF] Request finished in 4.7692ms 204 
+2018-11-24 18:18:18.682 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:6001/api/values  
+2018-11-24 18:18:18.686 +07:00 [INF] Policy execution successful.
+2018-11-24 18:18:18.690 +07:00 [INF] Successfully validated the token.
+2018-11-24 18:18:18.693 +07:00 [DBG] AuthenticationScheme: Bearer was successfully authenticated.
+2018-11-24 18:18:18.693 +07:00 [INF] Route matched with {action = "Get", controller = "Values"}. Executing action WebApi.Controllers.ValuesController.Get (WebApi)
+2018-11-24 18:18:18.697 +07:00 [INF] Authorization was successful.
+2018-11-24 18:18:18.704 +07:00 [INF] Executing action method WebApi.Controllers.ValuesController.Get (WebApi) - Validation state: "Valid"
+2018-11-24 18:18:18.706 +07:00 [INF] Executed action method WebApi.Controllers.ValuesController.Get (WebApi), returned result Microsoft.AspNetCore.Mvc.JsonResult in 0.030100000000000002ms.
+2018-11-24 18:18:18.711 +07:00 [INF] Executing JsonResult, writing value of type 'System.Linq.Enumerable+SelectEnumerableIterator`2[[System.Security.Claims.Claim, System.Security.Claims, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a],[<>f__AnonymousType0`2[[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2018-11-24 18:18:18.714 +07:00 [INF] Executed action WebApi.Controllers.ValuesController.Get (WebApi) in 17.739800000000002ms
+2018-11-24 18:18:18.718 +07:00 [INF] Request finished in 35.8874ms 200 application/json; charset=utf-8
+2018-11-24 18:18:18.832 +07:00 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:6001/api/values  
+2018-11-24 18:18:18.836 +07:00 [INF] Policy execution successful.
+2018-11-24 18:18:18.838 +07:00 [INF] Request finished in 5.2906ms 204 
+2018-11-24 18:18:18.840 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:6001/api/values  
+2018-11-24 18:18:18.842 +07:00 [INF] Policy execution successful.
+2018-11-24 18:18:18.846 +07:00 [INF] Successfully validated the token.
+2018-11-24 18:18:18.848 +07:00 [DBG] AuthenticationScheme: Bearer was successfully authenticated.
+2018-11-24 18:18:18.848 +07:00 [INF] Route matched with {action = "Get", controller = "Values"}. Executing action WebApi.Controllers.ValuesController.Get (WebApi)
+2018-11-24 18:18:18.851 +07:00 [INF] Authorization was successful.
+2018-11-24 18:18:18.859 +07:00 [INF] Executing action method WebApi.Controllers.ValuesController.Get (WebApi) - Validation state: "Valid"
+2018-11-24 18:18:18.860 +07:00 [INF] Executed action method WebApi.Controllers.ValuesController.Get (WebApi), returned result Microsoft.AspNetCore.Mvc.JsonResult in 0.0229ms.
+2018-11-24 18:18:18.864 +07:00 [INF] Executing JsonResult, writing value of type 'System.Linq.Enumerable+SelectEnumerableIterator`2[[System.Security.Claims.Claim, System.Security.Claims, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a],[<>f__AnonymousType0`2[[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2018-11-24 18:18:18.870 +07:00 [INF] Executed action WebApi.Controllers.ValuesController.Get (WebApi) in 19.235200000000003ms
+2018-11-24 18:18:18.874 +07:00 [INF] Request finished in 33.3615ms 200 application/json; charset=utf-8
+2018-11-24 18:19:23.713 +07:00 [INF] User profile is available. Using 'C:\Users\Aldmi\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2018-11-24 18:19:45.743 +07:00 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:6001/api/values  
+2018-11-24 18:19:45.752 +07:00 [INF] Policy execution successful.
+2018-11-24 18:19:45.764 +07:00 [INF] Request finished in 22.6834ms 204 
+2018-11-24 18:19:45.773 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:6001/api/values  
+2018-11-24 18:19:45.775 +07:00 [INF] Policy execution successful.
+2018-11-24 18:19:45.813 +07:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: You must either set Authority or IntrospectionEndpoint
+   at Microsoft.AspNetCore.Builder.OAuth2IntrospectionOptions.Validate() in C:\local\identity\model\AspNetCore.OAuth2Introspection\src\IdentityModel.AspNetCore.OAuth2Introspection\OAuth2IntrospectionOptions.cs:line 139
+   at IdentityModel.AspNetCore.OAuth2Introspection.PostConfigureOAuth2IntrospectionOptions.PostConfigure(String name, OAuth2IntrospectionOptions options) in C:\local\identity\model\AspNetCore.OAuth2Introspection\src\IdentityModel.AspNetCore.OAuth2Introspection\PostConfigureOAuth2IntrospectionOptions.cs:line 28
+   at Microsoft.Extensions.Options.OptionsFactory`1.Create(String name)
+   at Microsoft.Extensions.Options.OptionsMonitor`1.<>c__DisplayClass10_0.<Get>b__0()
+   at System.Lazy`1.ViaFactory(LazyThreadSafetyMode mode)
+   at System.Lazy`1.ExecutionAndPublication(LazyHelper executionAndPublication, Boolean useDefaultConstructor)
+   at System.Lazy`1.CreateValue()
+   at Microsoft.Extensions.Options.OptionsCache`1.GetOrAdd(String name, Func`1 createOptions)
+   at Microsoft.Extensions.Options.OptionsMonitor`1.Get(String name)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandler`1.InitializeAsync(AuthenticationScheme scheme, HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandlerProvider.GetHandlerAsync(HttpContext context, String authenticationScheme)
+   at Microsoft.AspNetCore.Authentication.AuthenticationService.AuthenticateAsync(HttpContext context, String scheme)
+   at IdentityServer4.AccessTokenValidation.IdentityServerAuthenticationHandler.HandleAuthenticateAsync() in C:\local\identity\server4\AccessTokenValidation\src\IdentityServer4.AccessTokenValidation\IdentityServerAuthenticationHandler.cs:line 68
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandler`1.AuthenticateAsync()
+   at Microsoft.AspNetCore.Authentication.AuthenticationService.AuthenticateAsync(HttpContext context, String scheme)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Cors.Infrastructure.CorsMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2018-11-24 18:19:45.902 +07:00 [INF] Request finished in 128.1356ms 500 text/html; charset=utf-8
+2018-11-24 18:19:46.115 +07:00 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:6001/api/values  
+2018-11-24 18:19:46.116 +07:00 [INF] Policy execution successful.
+2018-11-24 18:19:46.117 +07:00 [INF] Request finished in 1.8156ms 204 
+2018-11-24 18:19:46.118 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:6001/api/values  
+2018-11-24 18:19:46.119 +07:00 [INF] Policy execution successful.
+2018-11-24 18:19:46.122 +07:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: You must either set Authority or IntrospectionEndpoint
+   at Microsoft.AspNetCore.Builder.OAuth2IntrospectionOptions.Validate() in C:\local\identity\model\AspNetCore.OAuth2Introspection\src\IdentityModel.AspNetCore.OAuth2Introspection\OAuth2IntrospectionOptions.cs:line 139
+   at IdentityModel.AspNetCore.OAuth2Introspection.PostConfigureOAuth2IntrospectionOptions.PostConfigure(String name, OAuth2IntrospectionOptions options) in C:\local\identity\model\AspNetCore.OAuth2Introspection\src\IdentityModel.AspNetCore.OAuth2Introspection\PostConfigureOAuth2IntrospectionOptions.cs:line 28
+   at Microsoft.Extensions.Options.OptionsFactory`1.Create(String name)
+   at Microsoft.Extensions.Options.OptionsMonitor`1.<>c__DisplayClass10_0.<Get>b__0()
+   at System.Lazy`1.ViaFactory(LazyThreadSafetyMode mode)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Lazy`1.CreateValue()
+   at Microsoft.Extensions.Options.OptionsCache`1.GetOrAdd(String name, Func`1 createOptions)
+   at Microsoft.Extensions.Options.OptionsMonitor`1.Get(String name)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandler`1.InitializeAsync(AuthenticationScheme scheme, HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandlerProvider.GetHandlerAsync(HttpContext context, String authenticationScheme)
+   at Microsoft.AspNetCore.Authentication.AuthenticationService.AuthenticateAsync(HttpContext context, String scheme)
+   at IdentityServer4.AccessTokenValidation.IdentityServerAuthenticationHandler.HandleAuthenticateAsync() in C:\local\identity\server4\AccessTokenValidation\src\IdentityServer4.AccessTokenValidation\IdentityServerAuthenticationHandler.cs:line 68
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandler`1.AuthenticateAsync()
+   at Microsoft.AspNetCore.Authentication.AuthenticationService.AuthenticateAsync(HttpContext context, String scheme)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Cors.Infrastructure.CorsMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2018-11-24 18:19:46.151 +07:00 [INF] Request finished in 32.4969ms 500 text/html; charset=utf-8
+2018-11-24 18:19:46.269 +07:00 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:6001/api/values  
+2018-11-24 18:19:46.270 +07:00 [INF] Policy execution successful.
+2018-11-24 18:19:46.272 +07:00 [INF] Request finished in 3.4824ms 204 
+2018-11-24 18:19:46.275 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:6001/api/values  
+2018-11-24 18:19:46.276 +07:00 [INF] Policy execution successful.
+2018-11-24 18:19:46.280 +07:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: You must either set Authority or IntrospectionEndpoint
+   at Microsoft.AspNetCore.Builder.OAuth2IntrospectionOptions.Validate() in C:\local\identity\model\AspNetCore.OAuth2Introspection\src\IdentityModel.AspNetCore.OAuth2Introspection\OAuth2IntrospectionOptions.cs:line 139
+   at IdentityModel.AspNetCore.OAuth2Introspection.PostConfigureOAuth2IntrospectionOptions.PostConfigure(String name, OAuth2IntrospectionOptions options) in C:\local\identity\model\AspNetCore.OAuth2Introspection\src\IdentityModel.AspNetCore.OAuth2Introspection\PostConfigureOAuth2IntrospectionOptions.cs:line 28
+   at Microsoft.Extensions.Options.OptionsFactory`1.Create(String name)
+   at Microsoft.Extensions.Options.OptionsMonitor`1.<>c__DisplayClass10_0.<Get>b__0()
+   at System.Lazy`1.ViaFactory(LazyThreadSafetyMode mode)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Lazy`1.CreateValue()
+   at Microsoft.Extensions.Options.OptionsCache`1.GetOrAdd(String name, Func`1 createOptions)
+   at Microsoft.Extensions.Options.OptionsMonitor`1.Get(String name)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandler`1.InitializeAsync(AuthenticationScheme scheme, HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandlerProvider.GetHandlerAsync(HttpContext context, String authenticationScheme)
+   at Microsoft.AspNetCore.Authentication.AuthenticationService.AuthenticateAsync(HttpContext context, String scheme)
+   at IdentityServer4.AccessTokenValidation.IdentityServerAuthenticationHandler.HandleAuthenticateAsync() in C:\local\identity\server4\AccessTokenValidation\src\IdentityServer4.AccessTokenValidation\IdentityServerAuthenticationHandler.cs:line 68
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandler`1.AuthenticateAsync()
+   at Microsoft.AspNetCore.Authentication.AuthenticationService.AuthenticateAsync(HttpContext context, String scheme)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Cors.Infrastructure.CorsMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2018-11-24 18:19:46.317 +07:00 [INF] Request finished in 42.0754ms 500 text/html; charset=utf-8
+2018-11-24 18:19:48.864 +07:00 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:6001/api/values  
+2018-11-24 18:19:48.866 +07:00 [INF] Policy execution successful.
+2018-11-24 18:19:48.868 +07:00 [INF] Request finished in 4.5889ms 204 
+2018-11-24 18:19:48.872 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:6001/api/values  
+2018-11-24 18:19:48.875 +07:00 [INF] Policy execution successful.
+2018-11-24 18:19:49.147 +07:00 [INF] Successfully validated the token.
+2018-11-24 18:19:49.153 +07:00 [DBG] AuthenticationScheme: Bearer was successfully authenticated.
+2018-11-24 18:19:49.225 +07:00 [INF] Route matched with {action = "Get", controller = "Values"}. Executing action WebApi.Controllers.ValuesController.Get (WebApi)
+2018-11-24 18:19:49.242 +07:00 [INF] Authorization was successful.
+2018-11-24 18:19:49.859 +07:00 [INF] Executing action method WebApi.Controllers.ValuesController.Get (WebApi) - Validation state: "Valid"
+2018-11-24 18:19:49.887 +07:00 [INF] Executed action method WebApi.Controllers.ValuesController.Get (WebApi), returned result Microsoft.AspNetCore.Mvc.JsonResult in 3.1191ms.
+2018-11-24 18:19:49.917 +07:00 [INF] Executing JsonResult, writing value of type 'System.Linq.Enumerable+SelectEnumerableIterator`2[[System.Security.Claims.Claim, System.Security.Claims, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a],[<>f__AnonymousType0`2[[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2018-11-24 18:19:49.932 +07:00 [INF] Executed action WebApi.Controllers.ValuesController.Get (WebApi) in 700.5691ms
+2018-11-24 18:19:49.935 +07:00 [INF] Request finished in 1063.6309ms 200 application/json; charset=utf-8
+2018-11-24 18:19:50.098 +07:00 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:6001/api/values  
+2018-11-24 18:19:50.102 +07:00 [INF] Policy execution successful.
+2018-11-24 18:19:50.106 +07:00 [INF] Request finished in 8.07ms 204 
+2018-11-24 18:19:50.108 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:6001/api/values  
+2018-11-24 18:19:50.111 +07:00 [INF] Policy execution successful.
+2018-11-24 18:19:50.115 +07:00 [INF] Successfully validated the token.
+2018-11-24 18:19:50.116 +07:00 [DBG] AuthenticationScheme: Bearer was successfully authenticated.
+2018-11-24 18:19:50.116 +07:00 [INF] Route matched with {action = "Get", controller = "Values"}. Executing action WebApi.Controllers.ValuesController.Get (WebApi)
+2018-11-24 18:19:50.120 +07:00 [INF] Authorization was successful.
+2018-11-24 18:19:50.129 +07:00 [INF] Executing action method WebApi.Controllers.ValuesController.Get (WebApi) - Validation state: "Valid"
+2018-11-24 18:19:50.130 +07:00 [INF] Executed action method WebApi.Controllers.ValuesController.Get (WebApi), returned result Microsoft.AspNetCore.Mvc.JsonResult in 0.0889ms.
+2018-11-24 18:19:50.133 +07:00 [INF] Executing JsonResult, writing value of type 'System.Linq.Enumerable+SelectEnumerableIterator`2[[System.Security.Claims.Claim, System.Security.Claims, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a],[<>f__AnonymousType0`2[[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2018-11-24 18:19:50.139 +07:00 [INF] Executed action WebApi.Controllers.ValuesController.Get (WebApi) in 19.860200000000003ms
+2018-11-24 18:19:50.141 +07:00 [INF] Request finished in 32.0546ms 200 application/json; charset=utf-8

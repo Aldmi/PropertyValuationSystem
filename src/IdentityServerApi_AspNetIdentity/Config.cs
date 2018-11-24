@@ -87,6 +87,8 @@ namespace IdentityServerApi_AspNetIdentity
                     AllowAccessTokensViaBrowser = true,
                     AlwaysIncludeUserClaimsInIdToken = true,        
                     RequireConsent = false,  //страница согласия
+                    RequireClientSecret = false,
+                    AccessTokenType = AccessTokenType.Jwt,
 
                     // белый список адресов на который клиентское приложение может попросить
                     // перенаправить User Agent, важно для безопасности
