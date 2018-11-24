@@ -21,83 +21,129 @@ namespace UserDbWebApi.Data
 
                 var userMgr = scope.ServiceProvider.GetRequiredService<UserManager<ApplicationUser>>();
                 var roleMgr = scope.ServiceProvider.GetRequiredService<RoleManager<IdentityRole>>();
-                var companyScoring = new Company { Name = "Скоринг" };
 
-                //ROLES---------------------------
+                //ROLES-------------------------------------------------------------
                 //Добавить РОЛЬ SuperAdmin
-                string roleStr = "SuperAdmin";  
-                var role = new IdentityRole(roleStr);
-                var result= roleMgr.CreateAsync(role).Result;
-                if (!result.Succeeded)
+
+                string roleStr = "SuperAdmin";
+                var role = roleMgr.FindByNameAsync(roleStr).Result;
+                if (role == null)
                 {
-                    throw new Exception(result.Errors.First().Description);
-                }
-                var claims = new Dictionary<string, string>
-                {
-                    {"Acceess2_Tab1", "true"},
-                    {"Acceess2_Tab2", "true"},
-                    {"Acceess2_Tab3", "true"},
-                    {"Acceess2_Tab4", "true"},
-                    {"Acceess2_Tab5", "true"}
-                }.Select(c=> new Claim(c.Key, c.Value)).ToList();
-                foreach (var cliam in claims)
-                {
-                    result = roleMgr.AddClaimAsync(role, cliam).Result;
+                    role = new IdentityRole(roleStr);
+                    var result = roleMgr.CreateAsync(role).Result;
                     if (!result.Succeeded)
                     {
                         throw new Exception(result.Errors.First().Description);
                     }
+                    var claims = new Dictionary<string, string>
+                    {
+                        {"Acceess2_Tab1", "true"},
+                        {"Acceess2_Tab2", "true"},
+                        {"Acceess2_Tab3", "true"},
+                        {"Acceess2_Tab4", "true"},
+                        {"Acceess2_Tab5", "true"}
+                    }.Select(c => new Claim(c.Key, c.Value)).ToList();
+                    foreach (var cliam in claims)
+                    {
+                        result = roleMgr.AddClaimAsync(role, cliam).Result;
+                        if (!result.Succeeded)
+                        {
+                            throw new Exception(result.Errors.First().Description);
+                        }
+                    }
                 }
 
-                //Добавить РОЛЬ Admin
-                roleStr = "Admin";
-                role = new IdentityRole(roleStr);
-                result= roleMgr.CreateAsync(role).Result;
-                if (!result.Succeeded)
+                roleStr = "Manager";
+                role = roleMgr.FindByNameAsync(roleStr).Result;
+                if (role == null)
                 {
-                    throw new Exception(result.Errors.First().Description);
-                }
-                foreach (var cliam in claims)
-                {
-                    result = roleMgr.AddClaimAsync(role, cliam).Result;
+                    role = new IdentityRole(roleStr);
+                    var result = roleMgr.CreateAsync(role).Result;
                     if (!result.Succeeded)
                     {
                         throw new Exception(result.Errors.First().Description);
                     }
-                }
-     
-
-                //USERS-----------------------------     
-                var alice = userMgr.FindByNameAsync("alice").Result;
-                if (alice == null)
-                {
-                    alice = new ApplicationUser
+                    var claims = new Dictionary<string, string>
                     {
-                        UserName = "alice",
+                        {"Acceess2_Tab1", "true"},
+                        {"Acceess2_Tab2", "true"},
+                        {"Acceess2_Tab3", "true"},
+                        {"Acceess2_Tab4", "false"},
+                        {"Acceess2_Tab5", "false"}
+                    }.Select(c => new Claim(c.Key, c.Value)).ToList();
+                    foreach (var cliam in claims)
+                    {
+                        result = roleMgr.AddClaimAsync(role, cliam).Result;
+                        if (!result.Succeeded)
+                        {
+                            throw new Exception(result.Errors.First().Description);
+                        }
+                    }
+                }
+
+                roleStr = "Photograph";
+                role = roleMgr.FindByNameAsync(roleStr).Result;
+                if (role == null)
+                {
+                    role = new IdentityRole(roleStr);
+                    var result = roleMgr.CreateAsync(role).Result;
+                    if (!result.Succeeded)
+                    {
+                        throw new Exception(result.Errors.First().Description);
+                    }
+                    var claims = new Dictionary<string, string>
+                    {
+                        {"Acceess2_Tab1", "true"},
+                        {"Acceess2_Tab2", "false"},
+                        {"Acceess2_Tab3", "false"},
+                        {"Acceess2_Tab4", "false"},
+                        {"Acceess2_Tab5", "false"}
+                    }.Select(c => new Claim(c.Key, c.Value)).ToList();
+                    foreach (var cliam in claims)
+                    {
+                        result = roleMgr.AddClaimAsync(role, cliam).Result;
+                        if (!result.Succeeded)
+                        {
+                            throw new Exception(result.Errors.First().Description);
+                        }
+                    }
+                }
+
+                //USERS------------------------------------------------------------------     
+                //Добавить ПОЛЬЗОВАТЕЛЯ SuperAdmin
+                roleStr = "SuperAdmin";
+                var superAdmin = userMgr.FindByNameAsync("SuperAdmin").Result;
+                if (superAdmin == null)
+                {
+                    superAdmin = new ApplicationUser
+                    {
+                        UserName = "SuperAdmin",
                         Company = new Company { Name = "Супер Компания" }
                     };
-                    result = userMgr.CreateAsync(alice, "Pass123$").Result;
-                    if (!result.Succeeded)
-                    {
-                        throw new Exception(result.Errors.First().Description);
-                    }
-                
-                    roleStr = "SuperAdmin";
-                    result = userMgr.AddToRoleAsync(alice, roleStr).Result;
+                    var result = userMgr.CreateAsync(superAdmin, "Pass123$").Result;
                     if (!result.Succeeded)
                     {
                         throw new Exception(result.Errors.First().Description);
                     }
 
-                    result = userMgr.AddClaimsAsync(alice, new Claim[]{
+                    result = userMgr.AddToRoleAsync(superAdmin, roleStr).Result;
+                    if (!result.Succeeded)
+                    {
+                        throw new Exception(result.Errors.First().Description);
+                    }
+
+                    result = userMgr.AddClaimsAsync(superAdmin, new Claim[]{
                         new Claim(JwtClaimTypes.Name, "Alice Smith"),
                         new Claim(JwtClaimTypes.GivenName, "Alice"),
-                        new Claim("CompanyName", alice.Company.Name),
+                        new Claim("CompanyName", superAdmin.Company.Name),
                         new Claim(JwtClaimTypes.FamilyName, "Smith"),
                         new Claim(JwtClaimTypes.Email, "AliceSmith@email.com"),
                         new Claim(JwtClaimTypes.EmailVerified, "true", ClaimValueTypes.Boolean),
-                        new Claim(JwtClaimTypes.WebSite, "http://alice.com"),
-                        new Claim(JwtClaimTypes.Address, @"{ 'street_address': 'One Hacker Way', 'locality': 'Heidelberg', 'postal_code': 69118, 'country': 'Germany' }")
+                        new Claim("Acceess2_Tab1", "true"),
+                        new Claim("Acceess2_Tab2", "true"),
+                        new Claim("Acceess2_Tab3", "true"),
+                        new Claim("Acceess2_Tab4", "true"),
+                        new Claim("Acceess2_Tab5", "true")
                     }).Result;
                     if (!result.Succeeded)
                     {
@@ -106,53 +152,7 @@ namespace UserDbWebApi.Data
                 }
                 else
                 {
-                    Console.WriteLine("alice already exists");
-                }
-
-
-                var bob = userMgr.FindByNameAsync("bob").Result;
-                if (bob == null)
-                {
-                    bob = new ApplicationUser
-                    {
-                        UserName = "bob",
-                        Company = companyScoring
-                    };
-                    result = userMgr.CreateAsync(bob, "Pass123$").Result;
-                    if (!result.Succeeded)
-                    {
-                        throw new Exception(result.Errors.First().Description);
-                    }
-
-                    roleStr = "Admin";
-                    result = userMgr.AddToRoleAsync(bob, roleStr).Result;
-                    if (!result.Succeeded)
-                    {
-                        throw new Exception(result.Errors.First().Description);
-                    }
-
-                    result = userMgr.AddClaimsAsync(bob, new Claim[]{
-                        new Claim(JwtClaimTypes.Name, "Bob Smith"),
-                        new Claim(JwtClaimTypes.GivenName, "Bob"),
-                        new Claim(JwtClaimTypes.FamilyName, "Smith"),
-                        new Claim("CompanyName", bob.Company.Name),
-                        new Claim("Access2AddingNewOrder", "true"),
-                        new Claim(JwtClaimTypes.Email, "BobSmith@email.com"),
-                        new Claim(JwtClaimTypes.EmailVerified, "true", ClaimValueTypes.Boolean),
-                        new Claim(JwtClaimTypes.WebSite, "http://bob.com"),
-                        new Claim(JwtClaimTypes.Address, @"{ 'street_address': 'One Hacker Way', 'locality': 'Heidelberg', 'postal_code': 69118, 'country': 'Germany' }"),
-                        new Claim("location", "somewhere"),
-                        //IdentityServer4.IdentityServerConstants.ClaimValueTypes.Json
-                    }).Result;
-                    if (!result.Succeeded)
-                    {
-                        throw new Exception(result.Errors.First().Description);
-                    }
-                    Console.WriteLine("bob created");
-                }
-                else
-                {
-                    Console.WriteLine("bob already exists");
+                    Console.WriteLine("SuperAdmin already exists");
                 }
             }
         }

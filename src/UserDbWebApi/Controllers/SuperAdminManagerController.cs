@@ -15,7 +15,7 @@ namespace UserDbWebApi.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    [Authorize]
+    //[Authorize]
     //[Authorize(Roles = "SuperAdmin")]
     //[Authorize(Policy = "SuperAdminOnly")]
     public class SuperAdminManagerController : ControllerBase

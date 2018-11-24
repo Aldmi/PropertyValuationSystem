@@ -27,7 +27,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shared", "Shared\Shared.csp
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BL", "BL", "{5E057C35-4A65-402F-9A8E-5EC6FFC3320E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BL.Services", "BL.Services\BL.Services.csproj", "{AEA954BF-BB89-4C0F-AC30-7D58B151F552}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BL.Services", "BL.Services\BL.Services.csproj", "{AEA954BF-BB89-4C0F-AC30-7D58B151F552}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

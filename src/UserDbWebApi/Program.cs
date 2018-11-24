@@ -25,16 +25,16 @@ namespace UserDbWebApi
             //seed = true; //DEBUG
             if (seed)
             {
+                Console.WriteLine(">>>>>> Start Seeding data");
                 SeedData.EnsureSeedData(host.Services);
+                Console.WriteLine("<<<<<< Seed data Sucsesful");
+                Console.ReadLine();
                 return;
             }
 
             host.Run();
         }
 
-        //public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
-        //    WebHost.CreateDefaultBuilder(args)
-        //        .UseStartup<Startup>();
 
         public static IWebHost BuildWebHost(string[] args) =>
             WebHost.CreateDefaultBuilder(args)

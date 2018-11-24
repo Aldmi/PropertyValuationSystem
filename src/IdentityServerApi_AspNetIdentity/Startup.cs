@@ -61,7 +61,7 @@ namespace IdentityServerApi_AspNetIdentity
                         EnableTokenEndpoint = false,
                         // мы не используем refresh и reference tokens 
                         // http://docs.identityserver.io/en/release/topics/reference_tokens.html
-                        EnableTokenRevocationEndpoint = false
+                        EnableTokenRevocationEndpoint = false,  //false
                     };
                     // IdentitySever использует cookie для хранения своей сессии
                     options.Authentication = new AuthenticationOptions
