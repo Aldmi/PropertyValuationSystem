@@ -37,11 +37,11 @@ namespace UserDbWebApi.Data
                     }
                     var claims = new Dictionary<string, string>
                     {
-                        {"Acceess2_Tab1", "true"},
-                        {"Acceess2_Tab2", "true"},
-                        {"Acceess2_Tab3", "true"},
-                        {"Acceess2_Tab4", "true"},
-                        {"Acceess2_Tab5", "true"}
+                        {"Role_Acceess2_Tab1", "true"},
+                        {"Role_Acceess2_Tab2", "true"},
+                        {"Role_Acceess2_Tab3", "true"},
+                        {"Role_Acceess2_Tab4", "true"},
+                        {"Role_Acceess2_Tab5", "true"}
                     }.Select(c => new Claim(c.Key, c.Value)).ToList();
                     foreach (var cliam in claims)
                     {
@@ -65,11 +65,11 @@ namespace UserDbWebApi.Data
                     }
                     var claims = new Dictionary<string, string>
                     {
-                        {"Acceess2_Tab1", "true"},
-                        {"Acceess2_Tab2", "true"},
-                        {"Acceess2_Tab3", "true"},
-                        {"Acceess2_Tab4", "false"},
-                        {"Acceess2_Tab5", "false"}
+                        {"Role_Acceess2_Tab1", "true"},
+                        {"Role_Acceess2_Tab2", "true"},
+                        {"Role_Acceess2_Tab3", "true"},
+                        {"Role_Acceess2_Tab4", "false"},
+                        {"Role_Acceess2_Tab5", "false"}
                     }.Select(c => new Claim(c.Key, c.Value)).ToList();
                     foreach (var cliam in claims)
                     {

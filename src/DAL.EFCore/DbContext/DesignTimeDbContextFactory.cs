@@ -1,4 +1,5 @@
-﻿using System.IO;
+﻿using System;
+using System.IO;
 using Microsoft.EntityFrameworkCore.Design;
 using Microsoft.Extensions.Configuration;
 using Shared.ForConfigFiles;
@@ -13,7 +14,9 @@ namespace DAL.EFCore.DbContext
     {
         public Context CreateDbContext(string[] args)
         {
-            var path = @"D:\Git\PropertyValuationSystem\src\PropertyValuationSystem\WebApi";
+            var path = @"D:\\Git\\PropertyValuationSystem\\src\\WebApi";
+            //var hh=  Directory.Exists(path);
+            //Console.WriteLine(hh.ToString());
             var config = JsonConfigLib.GetConfiguration(path);
             var connectionString = config.GetConnectionString("MainDbConnection");
             return new Context(connectionString, false);

@@ -60,6 +60,10 @@ namespace WebApi
                              policyUser.RequireClaim("role", "manager");
                              //policyUser.RequireClaim("Access2Read", "true");
                          });
+                         options.AddPolicy("Acceess2_Tab1_Policy", policyUser =>
+                         {
+                             policyUser.RequireClaim("Acceess2_Tab1", "true");
+                         });
                      })
                     .AddJsonFormatters();
 

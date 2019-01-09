@@ -35,10 +35,10 @@ namespace WebApi.Controllers
 
         // GET api/values
         [HttpGet]
-        [Authorize(Roles = "SuperAdmin")]
+        //[Authorize(Roles = "SuperAdmin")]
         //[Authorize(Roles = "Admin")]
         //[Authorize(Policy = "SuperAdminOnly")]
-        //[Authorize(Policy = "ManagerOnly")]
+        [Authorize(Policy = "Acceess2_Tab1_Policy")]
         public ActionResult<IEnumerable<string>> Get()
         {
             var claims = from c in User.Claims select new { c.Type, c.Value };
