@@ -73,8 +73,8 @@ namespace WebApi
                     options.Authority = "http://localhost:5000";   //адресс сервера авторизации
                     options.RequireHttpsMetadata = false;          // Https - нет
                     options.ApiName = "MainApi";                   // scope(resource) с именем "apiMain"
-                    options.EnableCaching = true;
-                    options.CacheDuration = TimeSpan.FromMinutes(10);
+                    //options.EnableCaching = true;
+                    //options.CacheDuration = TimeSpan.FromMinutes(10);
                     options.JwtBearerEvents = new JwtBearerEvents
                     {
                         //OnMessageReceived = e =>

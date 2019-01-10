@@ -30,12 +30,11 @@ var config = {
 
     //ОБНОВЛЕНИЕ access_token---------------------------------------------------------------------
     // если true, клиент попытается обновить access_token перед его истечением, по умолчанию false
-    automaticSilentRenew: true,
+    automaticSilentRenew: false,
     // эта страница используется для "фонового" обновления токена пользователя через iframe
-    silent_redirect_uri: 'http://localhost:5003/callback-silent.html',
+    silent_redirect_uri: window.location.origin + "/silent.html",
     // за столько секунд до истечения oidc-client постарается обновить access_token
-    accessTokenExpiringNotificationTime: 60,
-
+    accessTokenExpiringNotificationTime: 30,
 
     // this will allow all the OIDC protocol claims to be visible in the window. normally a client app 
     // wouldn't care about them or want them taking up space

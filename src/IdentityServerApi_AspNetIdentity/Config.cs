@@ -75,6 +75,8 @@ namespace IdentityServerApi_AspNetIdentity
         // clients want to access resources (aka scopes)
         public static IEnumerable<Client> GetClients()
         {
+            var jsClientUrl = "http://localhost:5003";
+
             // client credentials client
             return new List<Client>
             {
@@ -84,7 +86,7 @@ namespace IdentityServerApi_AspNetIdentity
                     ClientId = "js",
                     ClientName = "JavaScript Client",
                     AllowedGrantTypes = GrantTypes.Implicit,
-                    AllowAccessTokensViaBrowser = true,
+                    AllowAccessTokensViaBrowser = true, 
                     AlwaysIncludeUserClaimsInIdToken = true,        
                     RequireConsent = false,  //страница согласия
                     RequireClientSecret = false,
@@ -95,15 +97,15 @@ namespace IdentityServerApi_AspNetIdentity
                     RedirectUris =
                     {
                         // адрес перенаправления после логина
-                        "http://localhost:5003/callback.html",
+                        jsClientUrl + "/callback.html",
                         // адрес перенаправления при автоматическом обновлении access_token через iframe
-                        "http://localhost:5003/callback-silent.html"
+                        jsClientUrl + "/silent.html"
                     },
 
-                    PostLogoutRedirectUris = { "http://localhost:5003/index.html" },
+                    PostLogoutRedirectUris = { jsClientUrl + "/index.html" },
 
                     // адрес клиентского приложения, просим сервер возвращать нужные CORS-заголовки
-                    AllowedCorsOrigins =     { "http://localhost:5003" },
+                    AllowedCorsOrigins =     { jsClientUrl },
 
                     // список scopes (ресурсов), разрешённых для данного клиентского приложения
                     AllowedScopes =
@@ -115,8 +117,8 @@ namespace IdentityServerApi_AspNetIdentity
                         "UserDbApi"
                     },
 
-                    AccessTokenLifetime = 300, // секунд, это значение по умолчанию
-                    IdentityTokenLifetime = 3600, // секунд, это значение по умолчанию
+                    AccessTokenLifetime = 3600,     // 300 секунд, это значение по умолчанию
+                    IdentityTokenLifetime = 3600,  // 3600 секунд, это значение по умолчанию
 
                     // разрешено ли получение refresh-токенов через указание scope offline_access
                     AllowOfflineAccess = false,
