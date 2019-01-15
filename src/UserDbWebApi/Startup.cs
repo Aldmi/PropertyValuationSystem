@@ -62,7 +62,7 @@ namespace UserDbWebApi
             services.AddAuthentication("Bearer")
                 .AddIdentityServerAuthentication(options =>
                 {
-                    options.Authority = "http://localhost:5000";   //адресс сервера авторизации
+                    options.Authority = "https://localhost:5000";   //адресс сервера авторизации
                     options.RequireHttpsMetadata = false;          // Https - нет
                     options.ApiName = "UserDbApi";                 // scope(resource) с именем "UserDbApi"
                     options.EnableCaching = true;

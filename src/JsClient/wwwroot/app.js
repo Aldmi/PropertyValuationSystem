@@ -1,7 +1,7 @@
 ﻿/// <reference path="libs/oidc-client.js" />
 
 var config = {
-    authority: "http://localhost:5000/",
+    authority: "https://localhost:5000/",
     client_id: "js",
     // Адрес страницы, на которую будет перенаправлен браузер после прохождения пользователем аутентификации (Login)
     // и получения от пользователя подтверждений - в соответствии с требованиями OpenId Connect

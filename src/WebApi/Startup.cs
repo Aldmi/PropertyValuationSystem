@@ -67,7 +67,7 @@ namespace WebApi
             services.AddAuthentication("Bearer")
                 .AddIdentityServerAuthentication(options =>
                 {
-                    options.Authority = "http://localhost:5000"; //адресс сервера авторизации
+                    options.Authority = "https://localhost:5000"; //адресс сервера авторизации
                     options.RequireHttpsMetadata = false; // Https - нет
                     options.ApiName = "MainApi"; // scope(resource) с именем "apiMain"
                     //options.EnableCaching = true;
