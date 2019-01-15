@@ -14,7 +14,6 @@ namespace WebApi.AutofacModules
         private readonly string _connectionString;
 
 
-
         #region ctor
 
         public RepositoryAutofacModule(string connectionString)
@@ -23,7 +22,6 @@ namespace WebApi.AutofacModules
         }
 
         #endregion
-
 
 
         protected override void Load(ContainerBuilder builder)

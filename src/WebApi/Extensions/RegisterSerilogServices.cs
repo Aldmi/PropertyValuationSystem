@@ -22,6 +22,7 @@ namespace WebApi.Extensions
             {
                 loggerConf.WriteTo.File("logs/Debug_Log.txt", rollingInterval: RollingInterval.Day);
             }
+
             Log.Logger = loggerConf.CreateLogger();
 
             AppDomain.CurrentDomain.ProcessExit += (s, e) => Log.CloseAndFlush();

@@ -89,7 +89,7 @@ namespace IdentityServerApi_AspNetIdentity
                 // задаём политику CORS, чтобы наше клиентское приложение могло отправить запрос на сервер API
                 options.AddPolicy("default", policy =>
                 {
-                    policy.WithOrigins("http://localhost:5003")
+                    policy.WithOrigins(Config.JsClientUrl)
                         .AllowAnyHeader() // принимаются запросы с любыми заголовками
                         .AllowAnyMethod() // принимаются запросы с на все HTTP методы
                         .AllowCredentials();

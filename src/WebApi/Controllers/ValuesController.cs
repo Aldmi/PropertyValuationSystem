@@ -16,7 +16,7 @@ namespace WebApi.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-   // [Authorize]
+    // [Authorize]
     public class ValuesController : ControllerBase
     {
         private readonly IHouseRepository _houseRepository;
@@ -32,7 +32,6 @@ namespace WebApi.Controllers
         }
 
 
-
         // GET api/values
         [HttpGet]
         //[Authorize(Roles = "SuperAdmin")]
@@ -41,13 +40,13 @@ namespace WebApi.Controllers
         [Authorize(Policy = "Acceess2_Tab1_Policy")]
         public ActionResult<IEnumerable<string>> Get()
         {
-            var claims = from c in User.Claims select new { c.Type, c.Value };
+            var claims = from c in User.Claims select new {c.Type, c.Value};
             claims = claims.ToList();
             var name = User.Identity.Name;
             var companyNAnme = User.FindFirst("CompanyName").Value;
             var roles = claims.Where(c => c.Type == "role").Select(c => c.Value).ToList();
 
-            return new JsonResult(from c in User.Claims select new { c.Type, c.Value });
+            return new JsonResult(from c in User.Claims select new {c.Type, c.Value});
         }
 
         // GET api/values/5
@@ -59,6 +58,7 @@ namespace WebApi.Controllers
             {
                 res = await _digestBaseMed.GetWallMaterialAsync();
             }
+
             return res;
         }
 
@@ -93,15 +93,13 @@ namespace WebApi.Controllers
         //}
 
 
-
         public async Task<T> Measure<T>(Func<Task<T>> func)
-        {          
-           Stopwatch stopwatch = Stopwatch.StartNew();
-           var res= await func();
-           stopwatch.Stop();
-           _loger.Information(">>>>>>>>" + func.Method.Name + " : " + stopwatch.ElapsedMilliseconds);
-           return res;
+        {
+            Stopwatch stopwatch = Stopwatch.StartNew();
+            var res = await func();
+            stopwatch.Stop();
+            _loger.Information(">>>>>>>>" + func.Method.Name + " : " + stopwatch.ElapsedMilliseconds);
+            return res;
         }
     }
-
 }

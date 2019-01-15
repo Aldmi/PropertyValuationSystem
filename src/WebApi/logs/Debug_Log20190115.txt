@@ -1,0 +1,29 @@
+2019-01-15 20:36:18.512 +07:00 [INF] User profile is available. Using 'C:\Users\Aldmi\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-01-15 20:36:37.079 +07:00 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:6001/api/values  
+2019-01-15 20:36:37.088 +07:00 [INF] Policy execution successful.
+2019-01-15 20:36:37.105 +07:00 [INF] Request finished in 29.125ms 204 
+2019-01-15 20:36:37.116 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:6001/api/values  
+2019-01-15 20:36:37.116 +07:00 [INF] Policy execution successful.
+2019-01-15 20:36:37.517 +07:00 [INF] Successfully validated the token.
+2019-01-15 20:36:37.524 +07:00 [DBG] AuthenticationScheme: Bearer was successfully authenticated.
+2019-01-15 20:36:37.606 +07:00 [INF] Route matched with {action = "Get", controller = "Values"}. Executing action WebApi.Controllers.ValuesController.Get (WebApi)
+2019-01-15 20:36:37.621 +07:00 [INF] Authorization was successful.
+2019-01-15 20:36:38.353 +07:00 [INF] Executing action method WebApi.Controllers.ValuesController.Get (WebApi) - Validation state: "Valid"
+2019-01-15 20:36:38.394 +07:00 [INF] Executed action method WebApi.Controllers.ValuesController.Get (WebApi), returned result Microsoft.AspNetCore.Mvc.JsonResult in 3.0106ms.
+2019-01-15 20:36:38.404 +07:00 [INF] Executing JsonResult, writing value of type 'System.Linq.Enumerable+SelectEnumerableIterator`2[[System.Security.Claims.Claim, System.Security.Claims, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a],[<>f__AnonymousType0`2[[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2019-01-15 20:36:38.414 +07:00 [INF] Executed action WebApi.Controllers.ValuesController.Get (WebApi) in 803.0724ms
+2019-01-15 20:36:38.423 +07:00 [INF] Request finished in 1307.5844ms 200 application/json; charset=utf-8
+2019-01-15 20:36:39.384 +07:00 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:6001/api/values  
+2019-01-15 20:36:39.391 +07:00 [INF] Policy execution successful.
+2019-01-15 20:36:39.393 +07:00 [INF] Request finished in 9.7737ms 204 
+2019-01-15 20:36:39.397 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:6001/api/values  
+2019-01-15 20:36:39.398 +07:00 [INF] Policy execution successful.
+2019-01-15 20:36:39.400 +07:00 [INF] Successfully validated the token.
+2019-01-15 20:36:39.401 +07:00 [DBG] AuthenticationScheme: Bearer was successfully authenticated.
+2019-01-15 20:36:39.401 +07:00 [INF] Route matched with {action = "Get", controller = "Values"}. Executing action WebApi.Controllers.ValuesController.Get (WebApi)
+2019-01-15 20:36:39.402 +07:00 [INF] Authorization was successful.
+2019-01-15 20:36:39.409 +07:00 [INF] Executing action method WebApi.Controllers.ValuesController.Get (WebApi) - Validation state: "Valid"
+2019-01-15 20:36:39.411 +07:00 [INF] Executed action method WebApi.Controllers.ValuesController.Get (WebApi), returned result Microsoft.AspNetCore.Mvc.JsonResult in 0.1228ms.
+2019-01-15 20:36:39.412 +07:00 [INF] Executing JsonResult, writing value of type 'System.Linq.Enumerable+SelectEnumerableIterator`2[[System.Security.Claims.Claim, System.Security.Claims, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a],[<>f__AnonymousType0`2[[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2019-01-15 20:36:39.414 +07:00 [INF] Executed action WebApi.Controllers.ValuesController.Get (WebApi) in 12.1631ms
+2019-01-15 20:36:39.416 +07:00 [INF] Request finished in 19.0864ms 200 application/json; charset=utf-8

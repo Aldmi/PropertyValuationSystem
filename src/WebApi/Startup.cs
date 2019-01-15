@@ -34,45 +34,42 @@ namespace WebApi
         public IConfiguration AppConfiguration { get; }
 
 
-
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddSerilogServices();
 
             services.AddMvcCore()
-                    .SetCompatibilityVersion(CompatibilityVersion.Version_2_1)
-                    .AddControllersAsServices()
-                    .AddJsonOptions(o =>
+                .SetCompatibilityVersion(CompatibilityVersion.Version_2_1)
+                .AddControllersAsServices()
+                .AddJsonOptions(o =>
+                {
+                    o.SerializerSettings.Formatting = Formatting.Indented;
+                    o.SerializerSettings.NullValueHandling = NullValueHandling.Ignore;
+                })
+                // добавляем авторизацию, благодаря этому будут работать атрибуты Authorize (Роли и Политики)
+                .AddAuthorization(options =>
+                {
+                    options.AddPolicy("AdminsOnly", policyUser =>
                     {
-                        o.SerializerSettings.Formatting = Formatting.Indented;
-                        o.SerializerSettings.NullValueHandling = NullValueHandling.Ignore;
-                    })
-                    // добавляем авторизацию, благодаря этому будут работать атрибуты Authorize (Роли и Политики)
-                    .AddAuthorization(options =>
-                     {
-                         options.AddPolicy("AdminsOnly", policyUser =>
-                         {
-                             policyUser.RequireClaim("role", "admin");
-                            //policyUser.RequireClaim("Access2Read", "true");
-                        });
-                         options.AddPolicy("ManagerOnly", policyUser =>
-                         {
-                             policyUser.RequireClaim("role", "manager");
-                             //policyUser.RequireClaim("Access2Read", "true");
-                         });
-                         options.AddPolicy("Acceess2_Tab1_Policy", policyUser =>
-                         {
-                             policyUser.RequireClaim("Acceess2_Tab1", "true");
-                         });
-                     })
-                    .AddJsonFormatters();
+                        policyUser.RequireClaim("role", "admin");
+                        //policyUser.RequireClaim("Access2Read", "true");
+                    });
+                    options.AddPolicy("ManagerOnly", policyUser =>
+                    {
+                        policyUser.RequireClaim("role", "manager");
+                        //policyUser.RequireClaim("Access2Read", "true");
+                    });
+                    options.AddPolicy("Acceess2_Tab1_Policy",
+                        policyUser => { policyUser.RequireClaim("Acceess2_Tab1", "true"); });
+                })
+                .AddJsonFormatters();
 
             services.AddAuthentication("Bearer")
                 .AddIdentityServerAuthentication(options =>
                 {
-                    options.Authority = "http://localhost:5000";   //адресс сервера авторизации
-                    options.RequireHttpsMetadata = false;          // Https - нет
-                    options.ApiName = "MainApi";                   // scope(resource) с именем "apiMain"
+                    options.Authority = "http://localhost:5000"; //адресс сервера авторизации
+                    options.RequireHttpsMetadata = false; // Https - нет
+                    options.ApiName = "MainApi"; // scope(resource) с именем "apiMain"
                     //options.EnableCaching = true;
                     //options.CacheDuration = TimeSpan.FromMinutes(10);
                     options.JwtBearerEvents = new JwtBearerEvents

@@ -133,10 +133,10 @@ namespace UserDbWebApi.Data
                     }
 
                     result = userMgr.AddClaimsAsync(superAdmin, new Claim[]{
-                        new Claim(JwtClaimTypes.Name, "Alice Smith"),
-                        new Claim(JwtClaimTypes.GivenName, "Alice"),
+                        new Claim(JwtClaimTypes.Name, superAdmin.UserName),
+                        new Claim(JwtClaimTypes.GivenName, "Root"),
                         new Claim("CompanyName", superAdmin.Company.Name),
-                        new Claim(JwtClaimTypes.FamilyName, "Smith"),
+                        new Claim(JwtClaimTypes.FamilyName, ""),
                         new Claim(JwtClaimTypes.Email, "AliceSmith@email.com"),
                         new Claim(JwtClaimTypes.EmailVerified, "true", ClaimValueTypes.Boolean),
                         new Claim("Acceess2_Tab1", "true"),

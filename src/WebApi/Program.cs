@@ -21,7 +21,7 @@ namespace WebApi
             CreateWebHostBuilder(args).Build().Run();
             return 0;
         }
-        
+
 
         public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
             WebHost.CreateDefaultBuilder(args)

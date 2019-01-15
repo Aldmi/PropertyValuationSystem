@@ -7,7 +7,7 @@ namespace WebApi.AutofacModules
     {
         protected override void Load(ContainerBuilder builder)
         {
-            builder.RegisterType<DigestBaseMediator>().InstancePerDependency();           
+            builder.RegisterType<DigestBaseMediator>().InstancePerDependency();
         }
     }
 }

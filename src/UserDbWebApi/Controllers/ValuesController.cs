@@ -12,7 +12,7 @@ namespace UserDbWebApi.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    [Authorize]
+    //[Authorize]
     public class ValuesController : ControllerBase
     {
         private readonly RoleManagerService _roleManager;
@@ -28,7 +28,7 @@ namespace UserDbWebApi.Controllers
 
         // GET api/values
         [HttpGet]
-        [Authorize(AuthenticationSchemes = "Bearer", Roles = "SuperAdmin")]
+        //[Authorize(AuthenticationSchemes = "Bearer", Roles = "SuperAdmin")]
         public ActionResult<IEnumerable<string>> Get()
         {
             var claims = from c in User.Claims select new { c.Type, c.Value };

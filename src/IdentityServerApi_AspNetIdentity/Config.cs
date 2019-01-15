@@ -9,6 +9,9 @@ namespace IdentityServerApi_AspNetIdentity
 {
     public class Config
     {
+        public static string JsClientUrl => "http://localhost:5003";
+
+
         // scopes define the resources in your system 
         //описание пользователя для OpenIdConnect. нужно для формирования IdToken (инфа про пользователя)
         public static IEnumerable<IdentityResource> GetIdentityResources()
@@ -75,8 +78,6 @@ namespace IdentityServerApi_AspNetIdentity
         // clients want to access resources (aka scopes)
         public static IEnumerable<Client> GetClients()
         {
-            var jsClientUrl = "http://localhost:5003";
-
             // client credentials client
             return new List<Client>
             {
@@ -97,15 +98,15 @@ namespace IdentityServerApi_AspNetIdentity
                     RedirectUris =
                     {
                         // адрес перенаправления после логина
-                        jsClientUrl + "/callback.html",
+                        JsClientUrl + "/callback.html",
                         // адрес перенаправления при автоматическом обновлении access_token через iframe
-                        jsClientUrl + "/silent.html"
+                        JsClientUrl + "/silent.html"
                     },
 
-                    PostLogoutRedirectUris = { jsClientUrl + "/index.html" },
+                    PostLogoutRedirectUris = { JsClientUrl + "/index.html" },
 
                     // адрес клиентского приложения, просим сервер возвращать нужные CORS-заголовки
-                    AllowedCorsOrigins =     { jsClientUrl },
+                    AllowedCorsOrigins =     { JsClientUrl },
 
                     // список scopes (ресурсов), разрешённых для данного клиентского приложения
                     AllowedScopes =
