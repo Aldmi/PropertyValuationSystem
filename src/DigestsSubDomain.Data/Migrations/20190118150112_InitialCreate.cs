@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore.Migrations;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
-namespace DigestsSubDomain.Data.EfCore.Migrations
+namespace Digests.Data.EfCore.Migrations
 {
     public partial class InitialCreate : Migration
     {

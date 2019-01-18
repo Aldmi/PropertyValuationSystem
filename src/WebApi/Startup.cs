@@ -17,7 +17,6 @@ using Microsoft.Extensions.Options;
 using Newtonsoft.Json;
 using Serilog;
 using Serilog.Events;
-using Shared.ForConfigFiles;
 using WebApi.AutofacModules;
 using WebApi.Extensions;
 

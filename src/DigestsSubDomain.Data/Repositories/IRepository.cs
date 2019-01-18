@@ -1,8 +1,8 @@
 ﻿using Database.Abstract.Abstract;
-using DigestsSubDomain.Core.Model;
-using DigestsSubDomain.Core.Model.Digests.HouseDigests;
+using Digests.Core.Model;
+using Digests.Core.Model.House;
 
-namespace DigestsSubDomain.Data.EfCore.Repositories
+namespace Digests.Data.EfCore.Repositories
 {
     /// <summary>
     /// Доступ к Компаниям

@@ -2,7 +2,7 @@
 using System.IO;
 using Microsoft.EntityFrameworkCore.Design;
 using Microsoft.Extensions.Configuration;
-using Shared.ForConfigFiles;
+using Shared.Kernel.ForConfigFiles;
 
 
 namespace DAL.EFCore.DbContext

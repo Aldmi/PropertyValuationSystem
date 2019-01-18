@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using Database.Abstract;
 
-namespace DigestsSubDomain.Data.EfCore.Entities.HouseDigests
+namespace Digests.Data.EfCore.Entities.HouseDigests
 {
     /// <summary>
     /// Материал Стен

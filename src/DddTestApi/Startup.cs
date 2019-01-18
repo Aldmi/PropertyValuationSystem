@@ -4,10 +4,10 @@ using System.Linq;
 using System.Threading.Tasks;
 using Autofac;
 using DddTestApi.AutofacModules;
-using DigestsSubDomain.Core.Model.Digests.HouseDigests;
-using DigestsSubDomain.Data.EfCore.Mapper;
-using DigestsSubDomain.Data.EfCore.Repositories;
-using DigestsSubDomain.Data.EfCore.Uow;
+using Digests.Core.Model.House;
+using Digests.Data.EfCore.Mapper;
+using Digests.Data.EfCore.Repositories;
+using Digests.Data.EfCore.Uow;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
@@ -15,7 +15,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
-using Shared.Enums;
+using Shared.Kernel.Enums;
 
 namespace DddTestApi
 {
@@ -34,7 +34,6 @@ namespace DddTestApi
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
-            AutoMapperConfig.Register();
         }
 
 
@@ -74,9 +73,9 @@ namespace DddTestApi
                 await uow.CreateDb(HowCreateDb.Migrate);
 
                 //DEBUG-------
-                var serialPortOptionRepository = scope.Resolve<IHouseRepository>();
-                var newHouse = new House {City = "Новосибирск6", Year = 1988, WallMaterial =  new WallMaterial{Name = "Кирпич"}};
-                await serialPortOptionRepository.AddAsync(newHouse);
+                //var serialPortOptionRepository = scope.Resolve<IHouseRepository>();
+                //var newHouse = new House {City = "Новосибирск6", Year = 1988, WallMaterial =  new WallMaterial{Name = "Кирпич"}};
+                //await serialPortOptionRepository.AddAsync(newHouse);
                 //DEBUG-------
             }
             catch (Exception ex)

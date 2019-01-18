@@ -1,8 +1,9 @@
 ﻿using Database.EFCore;
-using DigestsSubDomain.Data.EfCore.DbContext;
-using DigestsSubDomain.Data.EfCore.Repositories;
+using Digests.Data.EfCore.DbContext;
+using Digests.Data.EfCore.Mapper;
+using Digests.Data.EfCore.Repositories;
 
-namespace DigestsSubDomain.Data.EfCore.Uow
+namespace Digests.Data.EfCore.Uow
 {
     public class UowDigests : EfBaseUnitOfWork
     {
@@ -24,7 +25,11 @@ namespace DigestsSubDomain.Data.EfCore.Uow
             _dbContext = new Context(connectionString);
         }
 
-        #endregion
+        static UowDigests()
+        {
+            AutoMapperConfig.Register();
+        }
 
+        #endregion
     }
 }

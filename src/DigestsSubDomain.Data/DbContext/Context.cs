@@ -1,8 +1,9 @@
-﻿using DigestsSubDomain.Data.EfCore.Entities;
-using DigestsSubDomain.Data.EfCore.Entities.HouseDigests;
+﻿using System;
+using Digests.Data.EfCore.Entities;
+using Digests.Data.EfCore.Entities.HouseDigests;
 using Microsoft.EntityFrameworkCore;
 
-namespace DigestsSubDomain.Data.EfCore.DbContext
+namespace Digests.Data.EfCore.DbContext
 {
     public sealed class Context : Microsoft.EntityFrameworkCore.DbContext
     {
@@ -21,15 +22,10 @@ namespace DigestsSubDomain.Data.EfCore.DbContext
 
         #region ctor
 
-        public Context(string connStr, bool isEnsureCreated = true)
+        public Context(string connStr)
         {
             _connStr = connStr;
             ChangeTracker.QueryTrackingBehavior = QueryTrackingBehavior.NoTracking;//Отключение Tracking для всего контекста
-            //TODO: убрать создангие БД из контекста,
-            //if (isEnsureCreated)
-            //{
-            //    Database.EnsureCreated(); //Если БД нет, то создать. (ОТКЛЮЧАТЬ ПРИ МИГРАЦИИ, Т.К. БД СОЗДАЕТСЯ 2 РАЗА)
-            //}
         }
 
         #endregion

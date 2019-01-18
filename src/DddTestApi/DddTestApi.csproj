@@ -16,8 +16,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\DigestsSubDomain.Core\DigestsSubDomain.Core.csproj" />
-    <ProjectReference Include="..\DigestsSubDomain.Data\DigestsSubDomain.Data.EfCore.csproj" />
+    <ProjectReference Include="..\DigestsSubDomain.Core\Digests.Core.csproj" />
+    <ProjectReference Include="..\DigestsSubDomain.Data\Digests.Data.EfCore.csproj" />
   </ItemGroup>
 
 </Project>

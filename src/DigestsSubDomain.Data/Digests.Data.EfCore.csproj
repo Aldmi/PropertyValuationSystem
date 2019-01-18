@@ -17,8 +17,8 @@
   <ItemGroup>
     <ProjectReference Include="..\Database.Abstract\Database.Abstract.csproj" />
     <ProjectReference Include="..\Database.EFCore\Database.EFCore.csproj" />
-    <ProjectReference Include="..\DigestsSubDomain.Core\DigestsSubDomain.Core.csproj" />
-    <ProjectReference Include="..\Shared\Shared.csproj" />
+    <ProjectReference Include="..\DigestsSubDomain.Core\Digests.Core.csproj" />
+    <ProjectReference Include="..\Shared\Shared.Kernel.csproj" />
   </ItemGroup>
 
 </Project>

@@ -1,6 +1,6 @@
 ﻿using Database.Abstract;
 
-namespace DigestsSubDomain.Data.EfCore.Entities
+namespace Digests.Data.EfCore.Entities
 {
     public class EfCompany : IEntity
     {

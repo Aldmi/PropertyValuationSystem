@@ -1,7 +1,7 @@
 ﻿using System.IO;
 using Microsoft.Extensions.Configuration;
 
-namespace Shared.ForConfigFiles
+namespace Shared.Kernel.ForConfigFiles
 {
     public static class JsonConfigLib
     {

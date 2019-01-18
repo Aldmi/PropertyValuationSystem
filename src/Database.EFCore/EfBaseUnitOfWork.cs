@@ -1,6 +1,6 @@
 ﻿using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
-using Shared.Enums;
+using Shared.Kernel.Enums;
 
 namespace Database.EFCore
 {

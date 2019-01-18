@@ -8,7 +8,6 @@ using AutoMapper.Extensions.ExpressionMapping;
 using Database.Abstract;
 using Database.Abstract.Abstract;
 using Microsoft.EntityFrameworkCore;
-using Shared.Enums;
 
 namespace Database.EFCore
 {

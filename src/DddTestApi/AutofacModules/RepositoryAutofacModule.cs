@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
 using Autofac;
 using Autofac.Core;
-using DigestsSubDomain.Data.EfCore.Repositories;
-using DigestsSubDomain.Data.EfCore.Uow;
+using Digests.Data.EfCore.Repositories;
+using Digests.Data.EfCore.Uow;
 
 namespace DddTestApi.AutofacModules
 {

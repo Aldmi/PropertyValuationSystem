@@ -25,7 +25,7 @@
     <ProjectReference Include="..\BL.Services\BL.Services.csproj" />
     <ProjectReference Include="..\DAL.Abstract\DAL.Abstract.csproj" />
     <ProjectReference Include="..\DAL.EFCore\DAL.EFCore.csproj" />
-    <ProjectReference Include="..\Shared\Shared.csproj" />
+    <ProjectReference Include="..\Shared\Shared.Kernel.csproj" />
   </ItemGroup>
 
 </Project>

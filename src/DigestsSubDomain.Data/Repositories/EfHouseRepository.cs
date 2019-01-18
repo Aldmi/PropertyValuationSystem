@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
 using Database.EFCore;
-using DigestsSubDomain.Core.Model.Digests.HouseDigests;
-using DigestsSubDomain.Data.EfCore.DbContext;
-using DigestsSubDomain.Data.EfCore.Entities.HouseDigests;
-using DigestsSubDomain.Data.EfCore.Mapper;
-using Shared.Enums;
+using Digests.Core.Model.House;
+using Digests.Data.EfCore.DbContext;
+using Digests.Data.EfCore.Entities.HouseDigests;
+using Digests.Data.EfCore.Mapper;
+using Shared.Kernel.Enums;
 
-namespace DigestsSubDomain.Data.EfCore.Repositories
+namespace Digests.Data.EfCore.Repositories
 {
     public class EfHouseRepository : EfBaseRepository<EfHouse, House>, IHouseRepository
     {

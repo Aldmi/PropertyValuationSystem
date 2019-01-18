@@ -1,4 +1,4 @@
-﻿namespace DigestsSubDomain.Core.Model
+﻿namespace Digests.Core.Model
 {
     public abstract class EntityBase
     {

@@ -1,4 +1,4 @@
-﻿namespace DigestsSubDomain.Core.Model.Digests.HouseDigests
+﻿namespace Digests.Core.Model.House
 {
     public class House : EntityBase
     {

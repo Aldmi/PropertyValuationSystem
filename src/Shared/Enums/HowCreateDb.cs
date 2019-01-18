@@ -1,4 +1,4 @@
-﻿namespace Shared.Enums
+﻿namespace Shared.Kernel.Enums
 {
     public enum HowCreateDb
     {

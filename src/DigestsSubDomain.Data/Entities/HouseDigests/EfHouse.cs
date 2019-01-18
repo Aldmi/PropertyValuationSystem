@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 using Database.Abstract;
 
-namespace DigestsSubDomain.Data.EfCore.Entities.HouseDigests
+namespace Digests.Data.EfCore.Entities.HouseDigests
 {
     public class EfHouse : IEntity
     {
