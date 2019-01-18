@@ -4,12 +4,12 @@ using System.Linq.Expressions;
 using System.Threading.Tasks;
 using Database.EFCore;
 using DigestsSubDomain.Core.Model.Digests.HouseDigests;
-using DigestsSubDomain.Data.DbContext;
-using DigestsSubDomain.Data.Entities.HouseDigests;
-using DigestsSubDomain.Data.Mapper;
+using DigestsSubDomain.Data.EfCore.DbContext;
+using DigestsSubDomain.Data.EfCore.Entities.HouseDigests;
+using DigestsSubDomain.Data.EfCore.Mapper;
+using Shared.Enums;
 
-
-namespace DigestsSubDomain.Data.Repositories
+namespace DigestsSubDomain.Data.EfCore.Repositories
 {
     public class EfHouseRepository : EfBaseRepository<EfHouse, House>, IHouseRepository
     {
@@ -160,6 +160,11 @@ namespace DigestsSubDomain.Data.Repositories
         public new async Task<bool> IsExistAsync(Expression<Func<House, bool>> predicate)
         {
             return await base.IsExistAsync(predicate);
+        }
+
+        public Task CreateDb(HowCreateDb howCreateDb)
+        {
+            throw new NotImplementedException();
         }
 
         #endregion

@@ -1,8 +1,8 @@
-﻿using DigestsSubDomain.Data.Entities;
-using DigestsSubDomain.Data.Entities.HouseDigests;
+﻿using DigestsSubDomain.Data.EfCore.Entities;
+using DigestsSubDomain.Data.EfCore.Entities.HouseDigests;
 using Microsoft.EntityFrameworkCore;
 
-namespace DigestsSubDomain.Data.DbContext
+namespace DigestsSubDomain.Data.EfCore.DbContext
 {
     public sealed class Context : Microsoft.EntityFrameworkCore.DbContext
     {
@@ -25,10 +25,11 @@ namespace DigestsSubDomain.Data.DbContext
         {
             _connStr = connStr;
             ChangeTracker.QueryTrackingBehavior = QueryTrackingBehavior.NoTracking;//Отключение Tracking для всего контекста
-            if (isEnsureCreated)
-            {
-                Database.EnsureCreated(); //Если БД нет, то создать. (ОТКЛЮЧАТЬ ПРИ МИГРАЦИИ, Т.К. БД СОЗДАЕТСЯ 2 РАЗА)
-            }
+            //TODO: убрать создангие БД из контекста,
+            //if (isEnsureCreated)
+            //{
+            //    Database.EnsureCreated(); //Если БД нет, то создать. (ОТКЛЮЧАТЬ ПРИ МИГРАЦИИ, Т.К. БД СОЗДАЕТСЯ 2 РАЗА)
+            //}
         }
 
         #endregion
@@ -46,7 +47,7 @@ namespace DigestsSubDomain.Data.DbContext
             //optionsBuilder.UseSqlServer(connectionString);
             //optionsBuilder.UseSqlServer(connectionString, ob => ob.MigrationsAssembly(typeof(Context).GetTypeInfo().Assembly.GetName().Name));\
 
-            optionsBuilder.UseSqlServer(_connStr);
+            optionsBuilder.UseNpgsql(_connStr);
         }
 
 

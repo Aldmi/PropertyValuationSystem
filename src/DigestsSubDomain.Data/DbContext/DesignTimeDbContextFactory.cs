@@ -2,7 +2,7 @@
 using Microsoft.Extensions.Configuration;
 using Shared.ForConfigFiles;
 
-namespace DigestsSubDomain.Data.DbContext
+namespace DigestsSubDomain.Data.EfCore.DbContext
 {
     /// <summary>
     /// Получение контекста для системы миграции (если конструктор контекста принимает парметры)

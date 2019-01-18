@@ -2,7 +2,7 @@
 using DigestsSubDomain.Core.Model;
 using DigestsSubDomain.Core.Model.Digests.HouseDigests;
 
-namespace DigestsSubDomain.Data.Repositories
+namespace DigestsSubDomain.Data.EfCore.Repositories
 {
     /// <summary>
     /// Доступ к Компаниям

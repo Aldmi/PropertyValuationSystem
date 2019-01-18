@@ -1,10 +1,10 @@
 ﻿using AutoMapper;
 using DigestsSubDomain.Core.Model;
 using DigestsSubDomain.Core.Model.Digests.HouseDigests;
-using DigestsSubDomain.Data.Entities;
-using DigestsSubDomain.Data.Entities.HouseDigests;
+using DigestsSubDomain.Data.EfCore.Entities;
+using DigestsSubDomain.Data.EfCore.Entities.HouseDigests;
 
-namespace DigestsSubDomain.Data.Mapper
+namespace DigestsSubDomain.Data.EfCore.Mapper
 {
     public class AutoMapperConfig
     {

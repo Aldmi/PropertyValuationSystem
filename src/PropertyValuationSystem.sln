@@ -47,7 +47,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DddTestApi", "DddTestApi\Dd
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Database.EFCore", "Database.EFCore\Database.EFCore.csproj", "{F13E71AA-4338-499A-B0C2-B6958645A8EB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DigestsSubDomain.Data", "DigestsSubDomain.Data\DigestsSubDomain.Data.csproj", "{895A75AC-43F3-48E3-A89C-A8D1D070086B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DigestsSubDomain.Data.EfCore", "DigestsSubDomain.Data\DigestsSubDomain.Data.EfCore.csproj", "{895A75AC-43F3-48E3-A89C-A8D1D070086B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
