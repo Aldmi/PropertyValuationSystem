@@ -2,7 +2,7 @@
 
 namespace DAL.Abstract.Entities.Digests.HouseDigests
 {
-    public class House : EntityBase
+    public class HouseOld : EntityBase
     {
         public string City { get; set; }                // Город
         public string District { get; set; }            // Район

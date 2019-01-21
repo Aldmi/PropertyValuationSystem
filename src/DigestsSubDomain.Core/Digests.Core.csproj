@@ -8,4 +8,9 @@
     <Folder Include="Services\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\DAL.Abstract\DAL.Abstract.csproj" />
+    <ProjectReference Include="..\Shared\Shared.Kernel.csproj" />
+  </ItemGroup>
+
 </Project>

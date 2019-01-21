@@ -1,6 +1,7 @@
 ﻿using Database.Abstract.Abstract;
 using Digests.Core.Model;
-using Digests.Core.Model.House;
+using Digests.Core.Model._4Company;
+using Digests.Core.Model._4House;
 
 namespace Digests.Data.Abstract
 {

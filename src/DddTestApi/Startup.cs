@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Autofac;
 using DddTestApi.AutofacModules;
-using Digests.Core.Model.House;
+using Digests.Core.Model._4House;
 using Digests.Data.Abstract;
 using Digests.Data.EfCore.Mapper;
 using Digests.Data.EfCore.Repositories;

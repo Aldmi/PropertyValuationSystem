@@ -14,7 +14,7 @@ namespace DAL.EFCore.Mappers
         {
             var config = new MapperConfiguration(cfg =>
                 {
-                    cfg.CreateMap<House, EfHouse>().ReverseMap();
+                    cfg.CreateMap<HouseOld, EfHouse>().ReverseMap();
                     cfg.CreateMap<WallMaterial, EfWallMaterial>().ReverseMap();
                     cfg.CreateMap<Company, EfCompany>().ReverseMap();
                 });

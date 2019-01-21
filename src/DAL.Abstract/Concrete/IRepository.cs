@@ -15,7 +15,7 @@ namespace DAL.Abstract.Concrete
     /// <summary>
     /// Доступ к домам (СПРАВОЧНИК)
     /// </summary>
-    public interface IHouseRepository : IGenericDataRepository<House>
+    public interface IHouseRepository : IGenericDataRepository<HouseOld>
     {
     }
 
