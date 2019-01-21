@@ -4,8 +4,6 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using BL.Services.Mediators.DigestMediators;
-using DAL.Abstract.Concrete;
-using DAL.Abstract.Entities.Digests.HouseDigests;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Serilog;
@@ -19,14 +17,12 @@ namespace WebApi.Controllers
     // [Authorize]
     public class ValuesController : ControllerBase
     {
-        private readonly IHouseRepository _houseRepository;
         private readonly ILogger _loger;
         private readonly DigestBaseMediator _digestBaseMed;
 
 
-        public ValuesController(IHouseRepository houseRepository, ILogger loger, DigestBaseMediator digestBaseMed)
+        public ValuesController(ILogger loger, DigestBaseMediator digestBaseMed)
         {
-            _houseRepository = houseRepository;
             _loger = loger;
             _digestBaseMed = digestBaseMed;
         }
@@ -50,17 +46,17 @@ namespace WebApi.Controllers
         }
 
         // GET api/values/5
-        [HttpGet("{id}")]
-        public async Task<IEnumerable<WallMaterial>> Get(int id)
-        {
-            IEnumerable<WallMaterial> res;
-            using (_loger.TimeOperation("GetWallMaterialAsync Methode"))
-            {
-                res = await _digestBaseMed.GetWallMaterialAsync();
-            }
+        //[HttpGet("{id}")]
+        //public async Task<IEnumerable<WallMaterial>> Get(int id)
+        //{
+        //    IEnumerable<WallMaterial> res;
+        //    using (_loger.TimeOperation("GetWallMaterialAsync Methode"))
+        //    {
+        //        res = await _digestBaseMed.GetWallMaterialAsync();
+        //    }
 
-            return res;
-        }
+        //    return res;
+        //}
 
         // POST api/values
         [HttpPost]

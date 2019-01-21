@@ -75,7 +75,8 @@ namespace DddTestApi
 
                 //DEBUG-------
                 var uowTest = scope.Resolve<IUnitOfWorkDigests>();
-                var newHouse = new House { City = "Новосибирск6", Year = 1988, WallMaterial = new WallMaterial { Name = "Кирпич" } };
+                var newHouse = new House("Новосибирск", "Заельцовский", "Овражная", "11", 2013, "Заельцовская","56821.1 98562.2", new WallMaterial("Кирпич"));
+                
                 await uowTest.HouseRepository.AddAsync(newHouse);
                 await uowTest.SaveChangesAsync();
                 //DEBUG-------

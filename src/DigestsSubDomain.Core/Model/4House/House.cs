@@ -25,7 +25,7 @@ namespace Digests.Core.Model._4House
 
         public House(string city, string district, string street, string number, int? year, string metroStation, string geo, WallMaterial wallMaterial)
         {
-            //TODO: добавить валидацйию
+            //TODO: добавить валидацию
             City = city;
             District = district;
             Street = street;
@@ -33,7 +33,7 @@ namespace Digests.Core.Model._4House
             Year = year;
             MetroStation = metroStation;
             Geo = geo;
-            WallMaterial = wallMaterial;
+            WallMaterial = wallMaterial; //TODO: как проверять на допустимый материал стен.
         }
 
         #endregion
