@@ -49,6 +49,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Digests.Data.EfCore", "Dige
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{36EEB292-8AFF-4ADD-A3F6-8ECC600773E1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Digests.Data.Abstract", "Digests.Data.Abstract\Digests.Data.Abstract.csproj", "{F5B668B0-8CE9-428F-A56F-76423554F665}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -107,6 +109,10 @@ Global
 		{895A75AC-43F3-48E3-A89C-A8D1D070086B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{895A75AC-43F3-48E3-A89C-A8D1D070086B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{895A75AC-43F3-48E3-A89C-A8D1D070086B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F5B668B0-8CE9-428F-A56F-76423554F665}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5B668B0-8CE9-428F-A56F-76423554F665}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5B668B0-8CE9-428F-A56F-76423554F665}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5B668B0-8CE9-428F-A56F-76423554F665}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -128,6 +134,7 @@ Global
 		{E75C1A87-2414-4E1F-A93A-39F5D3F70663} = {665EFA47-8EE9-4973-ABDC-0A67F3FFE732}
 		{F13E71AA-4338-499A-B0C2-B6958645A8EB} = {1925ED1F-B9F7-4829-BBB9-1F2A0E833C4B}
 		{895A75AC-43F3-48E3-A89C-A8D1D070086B} = {CA4F2E55-CBCF-4F9F-BDAC-7C67F78EE279}
+		{F5B668B0-8CE9-428F-A56F-76423554F665} = {CA4F2E55-CBCF-4F9F-BDAC-7C67F78EE279}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {8716BE27-C92C-40C2-952F-7CF128D6CFED}

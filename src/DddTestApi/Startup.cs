@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Autofac;
 using DddTestApi.AutofacModules;
 using Digests.Core.Model.House;
+using Digests.Data.Abstract;
 using Digests.Data.EfCore.Mapper;
 using Digests.Data.EfCore.Repositories;
 using Digests.Data.EfCore.Uow;
@@ -67,15 +68,16 @@ namespace DddTestApi
             //СОЗДАНИЕ БД (если не созданно)--------------------------------------------------
             try
             {
-                //TODO: с оздавать БД через UOW
-                //await scope.Resolve<IHouseRepository>().CreateDb(HowCreateDb.Migrate);
-                var uow= scope.Resolve<UowDigests>();
+                //TODO: с оздавать БД через UOW 
+                var uow= scope.Resolve<IUnitOfWorkDigests>();
                 await uow.CreateDb(HowCreateDb.Migrate);
 
+
                 //DEBUG-------
-                //var serialPortOptionRepository = scope.Resolve<IHouseRepository>();
-                //var newHouse = new House {City = "Новосибирск6", Year = 1988, WallMaterial =  new WallMaterial{Name = "Кирпич"}};
-                //await serialPortOptionRepository.AddAsync(newHouse);
+                var uowTest = scope.Resolve<IUnitOfWorkDigests>();
+                var newHouse = new House { City = "Новосибирск6", Year = 1988, WallMaterial = new WallMaterial { Name = "Кирпич" } };
+                await uowTest.HouseRepository.AddAsync(newHouse);
+                await uowTest.SaveChangesAsync();
                 //DEBUG-------
             }
             catch (Exception ex)

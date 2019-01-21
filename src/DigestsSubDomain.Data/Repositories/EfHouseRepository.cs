@@ -4,6 +4,7 @@ using System.Linq.Expressions;
 using System.Threading.Tasks;
 using Database.EFCore;
 using Digests.Core.Model.House;
+using Digests.Data.Abstract;
 using Digests.Data.EfCore.DbContext;
 using Digests.Data.EfCore.Entities.HouseDigests;
 using Digests.Data.EfCore.Mapper;
@@ -15,7 +16,7 @@ namespace Digests.Data.EfCore.Repositories
     {
         #region ctor
 
-        public EfHouseRepository(string connectionString) : base(new Context(connectionString), AutoMapperConfig.Mapper)
+        public EfHouseRepository(Context context) : base(context, AutoMapperConfig.Mapper)
         {
         }
 

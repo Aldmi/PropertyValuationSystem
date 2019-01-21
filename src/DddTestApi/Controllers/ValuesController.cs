@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Digests.Data.Abstract;
 using Microsoft.AspNetCore.Mvc;
 
 namespace DddTestApi.Controllers
@@ -10,6 +11,14 @@ namespace DddTestApi.Controllers
     [ApiController]
     public class ValuesController : ControllerBase
     {
+        //private readonly IUnitOfWorkDigests _unitOfWorkDigests;
+
+        //public ValuesController(IUnitOfWorkDigests unitOfWorkDigests)
+        //{
+        //    _unitOfWorkDigests = unitOfWorkDigests;
+        //}
+
+
         // GET api/values
         [HttpGet]
         public ActionResult<IEnumerable<string>> Get()

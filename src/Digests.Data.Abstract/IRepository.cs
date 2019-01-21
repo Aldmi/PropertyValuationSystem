@@ -2,7 +2,7 @@
 using Digests.Core.Model;
 using Digests.Core.Model.House;
 
-namespace Digests.Data.EfCore.Repositories
+namespace Digests.Data.Abstract
 {
     /// <summary>
     /// Доступ к Компаниям

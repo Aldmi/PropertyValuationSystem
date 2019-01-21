@@ -146,7 +146,6 @@ namespace Database.EFCore
         {
             var efOptions = _mapper.Map<TDb>(entity);
             DbSet.Add(efOptions);
-            DbContext.SaveChanges();
         }
 
 
@@ -162,7 +161,6 @@ namespace Database.EFCore
         {
             var efOptions = _mapper.Map<IEnumerable<TDb>>(entitys);
             DbSet.AddRange(efOptions);
-            DbContext.SaveChanges();
         }
 
 
@@ -189,7 +187,6 @@ namespace Database.EFCore
         {
             var efOptions = _mapper.Map<TDb>(entity);
             DbSet.Remove(efOptions);
-            DbContext.SaveChanges();
         }
 
 
@@ -198,7 +195,6 @@ namespace Database.EFCore
             var efPredicate = _mapper.MapExpression<Expression<Func<TDb, bool>>>(predicate);
             var efOptions = DbSet.Where(efPredicate).ToList();
             DbSet.RemoveRange(efOptions);
-            DbContext.SaveChanges();
         }
 
 
@@ -222,7 +218,6 @@ namespace Database.EFCore
         protected void Edit(TMap entity)
         {
             DbContext.Entry(entity).State = EntityState.Modified;
-            DbContext.SaveChanges();
         }
 
 
