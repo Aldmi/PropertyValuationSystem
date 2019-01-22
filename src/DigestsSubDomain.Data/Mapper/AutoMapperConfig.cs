@@ -1,9 +1,8 @@
 ﻿using AutoMapper;
-using Digests.Core.Model;
 using Digests.Core.Model._4Company;
 using Digests.Core.Model._4House;
-using Digests.Data.EfCore.Entities;
-using Digests.Data.EfCore.Entities.HouseDigests;
+using Digests.Data.EfCore.Entities._4Company;
+using Digests.Data.EfCore.Entities._4House;
 
 namespace Digests.Data.EfCore.Mapper
 {

@@ -1,12 +1,10 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 using Database.Abstract;
 
-namespace Digests.Data.EfCore.Entities.HouseDigests
+namespace Digests.Data.EfCore.Entities._4House
 {
-    public class EfHouse : IEntity
+    public class EfHouse : BaseEntity
     {
-        public int Id { get; set; }
-
         public string City { get; set; }                // Город
         public string District { get; set; }            // Район
         public string Street { get; set; }              // Улица

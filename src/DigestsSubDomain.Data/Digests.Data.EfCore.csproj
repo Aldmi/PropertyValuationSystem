@@ -22,4 +22,8 @@
     <ProjectReference Include="..\Shared\Shared.Kernel.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Entities\Shared\" />
+  </ItemGroup>
+
 </Project>

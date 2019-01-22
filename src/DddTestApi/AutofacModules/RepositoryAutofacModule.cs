@@ -28,6 +28,7 @@ namespace DddTestApi.AutofacModules
         {
             builder.Register(c => EfUowDigests.EfUowDigestsFactory(_connectionString)).As<IUnitOfWorkDigests>()
                    .InstancePerLifetimeScope();
+                
 
         }
     }

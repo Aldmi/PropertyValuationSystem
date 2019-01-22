@@ -74,11 +74,15 @@ namespace DddTestApi
 
 
                 //DEBUG-------
-                var uowTest = scope.Resolve<IUnitOfWorkDigests>();
-                var newHouse = new House("Новосибирск", "Заельцовский", "Овражная", "11", 2013, "Заельцовская","56821.1 98562.2", new WallMaterial("Кирпич"));
-                
-                await uowTest.HouseRepository.AddAsync(newHouse);
-                await uowTest.SaveChangesAsync();
+                //var uowTest = scope.Resolve<IUnitOfWorkDigests>();
+                ////var newHouse = new House("Новосибирск", "Заельцовский", "Овражная", "11", 2013, "Заельцовская","56821.1 98562.2", new WallMaterial("Кирпич"));
+                //var newWallMaterial= new WallMaterial("Кирпич");
+                //await uowTest.WallMaterialRepository.AddAsync(newWallMaterial);          
+                //await uowTest.SaveChangesAsync();
+
+                ////uowTest = scope.Resolve<IUnitOfWorkDigests>();
+                //await uowTest.WallMaterialRepository.DeleteAsync(wm => true);
+                //await uowTest.SaveChangesAsync();
                 //DEBUG-------
             }
             catch (Exception ex)

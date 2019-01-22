@@ -1,6 +1,5 @@
-﻿using System;
-using Digests.Data.EfCore.Entities;
-using Digests.Data.EfCore.Entities.HouseDigests;
+﻿using Digests.Data.EfCore.Entities._4Company;
+using Digests.Data.EfCore.Entities._4House;
 using Microsoft.EntityFrameworkCore;
 
 namespace Digests.Data.EfCore.DbContext
@@ -15,6 +14,7 @@ namespace Digests.Data.EfCore.DbContext
         public DbSet<EfHouse> Houses { get; set; }
         public DbSet<EfWallMaterial> WallMaterials { get; set; }
         public DbSet<EfCompany> Companys { get; set; }
+        public DbSet<EfWallMaterial> SharedWallMaterials { get; set; }
 
         #endregion
 
@@ -25,7 +25,7 @@ namespace Digests.Data.EfCore.DbContext
         public Context(string connStr)
         {
             _connStr = connStr;
-            ChangeTracker.QueryTrackingBehavior = QueryTrackingBehavior.NoTracking;//Отключение Tracking для всего контекста
+            ChangeTracker.QueryTrackingBehavior = QueryTrackingBehavior.TrackAll;
         }
 
         #endregion

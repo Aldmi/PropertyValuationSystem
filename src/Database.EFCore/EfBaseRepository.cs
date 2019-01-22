@@ -17,7 +17,7 @@ namespace Database.EFCore
     /// <typeparam name="TDb">Тип в системе хранения</typeparam>
     /// <typeparam name="TMap">Тип в бизнесс логики</typeparam>
     public abstract class EfBaseRepository<TDb, TMap> : IDisposable
-                                                        where TDb : class, IEntity
+                                                        where TDb : class
                                                         where TMap : class
     {
    
@@ -153,7 +153,6 @@ namespace Database.EFCore
         {
             var efOptions = _mapper.Map<TDb>(entity);
             await DbSet.AddAsync(efOptions);
-            await DbContext.SaveChangesAsync();
         }
 
 
@@ -178,8 +177,7 @@ namespace Database.EFCore
                 throw;
             }
         
-        
-            await DbContext.SaveChangesAsync();
+      
         }
 
 
@@ -202,7 +200,6 @@ namespace Database.EFCore
         {
             var efOptions = _mapper.Map<TDb>(entity);
             DbSet.Remove(efOptions);
-            await DbContext.SaveChangesAsync();
         }
 
 
@@ -211,7 +208,6 @@ namespace Database.EFCore
             var efPredicate = _mapper.MapExpression<Expression<Func<TDb, bool>>>(predicate);
             var efOptions = await DbSet.Where(efPredicate).ToListAsync();
             DbSet.RemoveRange(efOptions);
-            await DbContext.SaveChangesAsync();
         }
 
 
@@ -224,7 +220,6 @@ namespace Database.EFCore
         protected async Task EditAsync(TMap entity)
         {
             DbContext.Entry(entity).State = EntityState.Modified;
-            await DbContext.SaveChangesAsync();
         }
 
 

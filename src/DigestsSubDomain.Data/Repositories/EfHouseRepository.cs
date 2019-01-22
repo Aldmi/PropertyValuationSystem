@@ -6,7 +6,7 @@ using Database.EFCore;
 using Digests.Core.Model._4House;
 using Digests.Data.Abstract;
 using Digests.Data.EfCore.DbContext;
-using Digests.Data.EfCore.Entities.HouseDigests;
+using Digests.Data.EfCore.Entities._4House;
 using Digests.Data.EfCore.Mapper;
 using Shared.Kernel.Enums;
 
