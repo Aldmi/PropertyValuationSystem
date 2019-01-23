@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 using Digests.Core.Model._4House;
 using FluentAssertions;
 using Xunit;
-using Xunit.Priority;
+
 
 namespace Digests.IntegrationTests
 {

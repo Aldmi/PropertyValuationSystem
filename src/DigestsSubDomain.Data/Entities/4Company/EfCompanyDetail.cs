@@ -6,8 +6,8 @@ namespace Digests.Data.EfCore.Entities._4Company
     /// Реквизиты фирмы.
     /// ValueObject
     /// </summary>
-    public class EfCompanyDetails : BaseEntity
+    public class EfCompanyDetail : BaseEntity
     {
-
+        public string DetailInfo { get; set; }
     }
 }

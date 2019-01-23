@@ -24,6 +24,7 @@ namespace Digests.Core.Model._4Company
         public string Name { get; }
         public CompanyDetails CompanyDetails { get; }
         public IReadOnlyList<House> GetHouses => _houses;
+
         #endregion
 
 
