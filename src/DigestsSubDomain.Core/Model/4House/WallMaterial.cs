@@ -7,7 +7,7 @@ namespace Digests.Core.Model._4House
     /// Материал Стен.
     /// ValueObject.
     /// </summary>
-    public class WallMaterial : DomainValueObject<WallMaterial>
+    public class WallMaterial : DomainEntity
     {
         #region prop
 
@@ -30,21 +30,5 @@ namespace Digests.Core.Model._4House
         #endregion
 
 
-
-
-        #region OvverideMembers
-
-        protected override bool EqualsCore(WallMaterial other)
-        {
-            var equality = Name.Equals(other.Name);
-            return equality;
-        }
-
-        protected override int GetHashCodeCore()
-        {
-            return Name.GetHashCode();
-        }
-
-        #endregion
     }
 }

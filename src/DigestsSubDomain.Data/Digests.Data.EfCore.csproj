@@ -23,7 +23,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Entities\Shared\" />
+    <Folder Include="Migrations\" />
   </ItemGroup>
 
 </Project>

@@ -1,4 +1,5 @@
-﻿using Digests.Data.EfCore.Entities._4Company;
+﻿using Digests.Data.EfCore.DbContext.EntitiConfiguration;
+using Digests.Data.EfCore.Entities._4Company;
 using Digests.Data.EfCore.Entities._4House;
 using Microsoft.EntityFrameworkCore;
 
@@ -11,10 +12,9 @@ namespace Digests.Data.EfCore.DbContext
 
         #region Reps
 
+        public DbSet<EfCompany> Companys { get; set; }
         public DbSet<EfHouse> Houses { get; set; }
         public DbSet<EfWallMaterial> WallMaterials { get; set; }
-        public DbSet<EfCompany> Companys { get; set; }
-        public DbSet<EfWallMaterial> SharedWallMaterials { get; set; }
 
         #endregion
 
@@ -50,7 +50,8 @@ namespace Digests.Data.EfCore.DbContext
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-           //modelBuilder.ApplyConfiguration(new EfDeviceOptionConfig());
+           modelBuilder.ApplyConfiguration(new EfHouseConfig());
+           modelBuilder.ApplyConfiguration(new EfCompanyConfig());
            base.OnModelCreating(modelBuilder);
         }
 

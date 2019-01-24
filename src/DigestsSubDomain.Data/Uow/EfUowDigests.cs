@@ -14,7 +14,6 @@ namespace Digests.Data.EfCore.Uow
         private ICompanyRepository _companyRepository;
         private IHouseRepository _houseRepository;
         private IWallMaterialRepository _wallMaterialRepository;
-        private ISharedWallMaterialsRepository _sharedWallMaterialsRepository;
 
         #endregion
 
@@ -24,7 +23,6 @@ namespace Digests.Data.EfCore.Uow
         public ICompanyRepository CompanyRepository => _companyRepository ?? (_companyRepository = new EfCompanyRepository(_context));    
         public IHouseRepository HouseRepository => _houseRepository ?? (_houseRepository = new EfHouseRepository(_context));
         public IWallMaterialRepository WallMaterialRepository => _wallMaterialRepository ?? (_wallMaterialRepository = new EfWallMaterialRepository(_context));
-        public ISharedWallMaterialsRepository SharedWallMaterialsRepository => _sharedWallMaterialsRepository ?? (_sharedWallMaterialsRepository = new EfSharedWallMaterialsRepository(_context));
 
         #endregion
 

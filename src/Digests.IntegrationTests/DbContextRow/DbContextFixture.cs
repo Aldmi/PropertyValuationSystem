@@ -19,10 +19,12 @@ namespace Digests.IntegrationTests.DbContextRow
 
         public void Dispose()
         {
+           // Context.Database.EnsureDeleted();
            var companyes=  Context.Companys.ToList();
+           var wallMaterials = Context.WallMaterials.ToList();
            Context.Companys.RemoveRange(companyes);
-
-            Context.SaveChanges();
+           Context.WallMaterials.RemoveRange(wallMaterials);
+           Context.SaveChanges();
         }
     }
 }

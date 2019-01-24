@@ -1,22 +1,18 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
 using Database.Abstract;
+using Digests.Core.Model._4Company;
+using Digests.Core.Model._4House;
 using Digests.Data.EfCore.Entities._4House;
+using Newtonsoft.Json;
 
 namespace Digests.Data.EfCore.Entities._4Company
 {
+    [Table("Company")]
     public class EfCompany : BaseEntity
     {
         public string Name { get; set; }
-        public List<EfHouse> EfHouses { get; set; }
-
-
-        #region NavigationProp
-
-        [ForeignKey("EfCompanyDetailsId")]
-        public EfCompanyDetail EfCompanyDetail { get; set; }
-        public int EfCompanyDetailsId { get; set; }
-
-        #endregion
+        public CompanyDetails CompanyDetails { get; set; }
+        public List<EfHouse> EfHouses { get; set; } = new List<EfHouse>();
     }
 }
