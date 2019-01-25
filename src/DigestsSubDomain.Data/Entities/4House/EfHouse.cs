@@ -14,7 +14,7 @@ namespace Digests.Data.EfCore.Entities._4House
     public class EfHouse : BaseEntity
     {
         #region prop
-        public Address AddressMetadata { get; set; }
+        public Address Address { get; set; }
         public int? Year { get; set; }
         public string MetroStation { get; set; }
 

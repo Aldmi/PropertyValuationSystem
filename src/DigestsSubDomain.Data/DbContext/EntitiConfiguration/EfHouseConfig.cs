@@ -11,7 +11,7 @@ namespace Digests.Data.EfCore.DbContext.EntitiConfiguration
     {
         public void Configure(EntityTypeBuilder<EfHouse> builder)
         {
-            builder.Property(h => h.AddressMetadata)
+            builder.Property(h => h.Address)
                 .HasConversion(
                     v => (v == null) ? null : JsonConvert.SerializeObject(v),
                     v => string.IsNullOrEmpty(v) ? null : JsonConvert.DeserializeObject<Address>(v));

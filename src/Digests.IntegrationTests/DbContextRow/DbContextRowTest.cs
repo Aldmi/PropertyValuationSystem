@@ -4,17 +4,20 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using Digests.Core.Model._4Company;
+using Digests.Core.Model._4House;
 using Digests.Data.EfCore.DbContext;
 using Digests.Data.EfCore.Entities._4Company;
 using Digests.Data.EfCore.Entities._4House;
-using Digests.IntegrationTests.Libs;
 using FluentAssertions;
 using Microsoft.EntityFrameworkCore;
 using Xunit;
 using Xunit.Abstractions;
+using Xunit.Priority;
+using PriorityOrderer = Xunit.Priority.PriorityOrderer;
 
 namespace Digests.IntegrationTests.DbContextRow
 {
+    [TestCaseOrderer(PriorityOrderer.Name, PriorityOrderer.Assembly)]
     public class DbContextRowTest : IClassFixture<DbContextFixture>
     {
         private readonly ITestOutputHelper _output;
@@ -28,8 +31,8 @@ namespace Digests.IntegrationTests.DbContextRow
 
 
 
-        [Fact, TestPriority(3)]
-        public async Task AddNewCompanyTest()
+        [Fact, Priority(1)]
+        public async   Task AddNewCompanyTest()
         {
             //ADD new company-----------------------------------------
             var newCompany = new EfCompany { Name = "РакиВДраки", CompanyDetails = new CompanyDetails("Раковая тима") };
@@ -40,10 +43,14 @@ namespace Digests.IntegrationTests.DbContextRow
             var count = await _context.Companys.CountAsync();
             count.Should().Be(1);
             addedCompany.Should().NotBeNull();
-            //addedCompany.EfCompanyDetail.Should().NotBeNull();
-            //addedCompany.EfCompanyDetail.DetailInfo.Should().Be("Раковая тима");
+            addedCompany.CompanyDetails.Should().NotBeNull();
+            addedCompany.CompanyDetails.DetailInfo.Should().Be("Раковая тима");
+        }
 
-            //Add WallMaterials-----------------------------------------
+
+        [Fact, Priority(2)]
+        public async Task AddWallMaterialsTest()
+        {
             var wallMaterials = new List<EfWallMaterial>
             {
                 new EfWallMaterial {Name = "Кирпич"},
@@ -53,72 +60,103 @@ namespace Digests.IntegrationTests.DbContextRow
             await _context.WallMaterials.AddRangeAsync(wallMaterials);
             await _context.SaveChangesAsync();
 
-            count = await _context.WallMaterials.CountAsync();
+            var count = await _context.WallMaterials.CountAsync();
             count.Should().Be(3);
-
-            ////Add House in Company-----------------------------------------
-            //var wallMaterial = await _context.WallMaterials.FirstOrDefaultAsync(wm => wm.Name == "Кирпич");
-            //var newHouse = new EfHouse {City = "Новосибирск", WallMaterial = wallMaterial };
-            //var company = await _context.Companys.FirstOrDefaultAsync(comp => comp.Name == newCompany.Name);
-            //company.EfHouses.Add(newHouse);
-            //await _context.SaveChangesAsync();
-
-            ////Remove WallMaterials-----------------------------------------
-            //wallMaterial = await _context.WallMaterials.FirstOrDefaultAsync(wm => wm.Name == "Кирпич");
-            //_context.WallMaterials.Remove(wallMaterial);
-            //await _context.SaveChangesAsync();
-
-            //count = await _context.WallMaterials.CountAsync();
-            //company = await _context.Companys.FirstOrDefaultAsync(comp => comp.Name == newCompany.Name);
-            //var housesWithoutWallmaterial= company.EfHouses.Where(h => h.WallMaterial == null).ToList();
-            //housesWithoutWallmaterial.Count.Should().Be(1);
-            //count.Should().Be(2);
-
-            ////AddNewCompanyWith2House
-            //newCompany = new EfCompany { Name = "рога и копыта", EfCompanyDetail = new EfCompanyDetail { DetailInfo = "холодец" } };
-            //await _context.Companys.AddAsync(newCompany);
-            //await _context.SaveChangesAsync();
-            //addedCompany = await _context.Companys.FirstOrDefaultAsync(comp => comp.Name == newCompany.Name);
-            //var wallMaterial1 = await _context.WallMaterials.FirstOrDefaultAsync(wm => wm.Name == "Бетон");
-            //var wallMaterial2 = await _context.WallMaterials.FirstOrDefaultAsync(wm => wm.Name == "Дерево");
-            //var wallMaterialNotFound = await _context.WallMaterials.FirstOrDefaultAsync(wm => wm.Name == "бамбук");
-            //var newHouses = new List<EfHouse>
-            //{
-            //    new EfHouse {City = "Новосибирск", Street="Красный проспект", WallMaterial = wallMaterial1},
-            //    new EfHouse {City = "Новосибирск", Street="Танковая", WallMaterial = wallMaterial2},
-            //    new EfHouse {City = "Новосибирск", Street="Мичурина", WallMaterial = wallMaterialNotFound}
-            //};        
-            //addedCompany.EfHouses.AddRange(newHouses);
-            //await _context.SaveChangesAsync();
-
-            //var countComp = await _context.Companys.CountAsync();
-            //countComp.Should().Be(2);
-            //addedCompany = await _context.Companys.FirstOrDefaultAsync(comp => comp.Name == newCompany.Name);
-            //var addedHouses = _context.Houses.Where(h => h.EfCompanyId == addedCompany.Id).ToList();        
-            //addedHouses.Count.Should().Be(3);
-
-            ////Remove House in Company-----------------------------------------
-            //company = await _context.Companys.FirstOrDefaultAsync(comp => comp.Name == "рога и копыта");
-            //var removingHouse =_context.Houses.FirstOrDefault(h => h.EfCompanyId == company.Id && h.Street == "Танковая");
-            //company.EfHouses.Remove(removingHouse);
-            //await _context.SaveChangesAsync();
-
-            //countComp = await _context.Houses.CountAsync(h=>h.EfCompanyId == company.Id);
-            //countComp.Should().Be(2);
         }
 
 
-        [Fact, TestPriority(1)]
-        public async Task xxxxx()
+        [Fact, Priority(3)]
+        public async Task AddHouseInCompany()
         {
+            var wallMaterial = await _context.WallMaterials.FirstOrDefaultAsync(wm => wm.Name == "Кирпич");
+            var newHouse = new EfHouse
+            {
+                Address = new Address("Новосиб", "калининский", "Танкоавя", "1", "9852 2586"),
+                WallMaterial = wallMaterial
+            };
+            var company = await _context.Companys.FirstOrDefaultAsync(comp => comp.Name == "РакиВДраки");
+            company.EfHouses.Add(newHouse);
+            await _context.SaveChangesAsync();
 
+            company = await _context.Companys.FirstOrDefaultAsync(comp => comp.Name == "РакиВДраки");
+            company.EfHouses.Count.Should().Be(1);
         }
 
 
-        [Fact, TestPriority(2)]
-        public async Task yyyyy()
+        [Fact, Priority(4)]
+        public async Task RemoveWallMaterials()
         {
+            var wallMaterial = await _context.WallMaterials.FirstOrDefaultAsync(wm => wm.Name == "Кирпич");
 
+            _context.WallMaterials.Remove(wallMaterial);
+            await _context.SaveChangesAsync();
+
+            var count = await _context.WallMaterials.CountAsync();
+            count.Should().Be(2);
+        }
+
+
+        [Fact, Priority(5)]
+        public async Task AddNewCompanyWith2House()
+        {
+            var newCompany = new EfCompany { Name = "рога и копыта", CompanyDetails = new CompanyDetails("холодец") };
+            await _context.Companys.AddAsync(newCompany);
+            await _context.SaveChangesAsync();
+            var addedCompany = await _context.Companys.FirstOrDefaultAsync(comp => comp.Name == newCompany.Name);
+            var wallMaterial1 = await _context.WallMaterials.FirstOrDefaultAsync(wm => wm.Name == "Бетон");
+            var wallMaterial2 = await _context.WallMaterials.FirstOrDefaultAsync(wm => wm.Name == "Дерево");
+            var wallMaterialNotFound = await _context.WallMaterials.FirstOrDefaultAsync(wm => wm.Name == "бамбук");
+            var newHouses = new List<EfHouse>
+            {
+                new EfHouse { Address = new Address("Новосиб", "калининский", "Красный проспект", "10", "9852 2586"), WallMaterial = wallMaterial1 },
+                new EfHouse { Address = new Address("Новосиб", "калининский", "Иподромская", "589", "9852 2586"), WallMaterial = wallMaterial2 },
+                new EfHouse { Address = new Address("Новосиб", "калининский", "Танковая", "63", "9852 5963"), WallMaterial = wallMaterialNotFound },
+            };
+            addedCompany.EfHouses.AddRange(newHouses);
+            await _context.SaveChangesAsync();
+
+            var countComp = await _context.Companys.CountAsync();
+            countComp.Should().Be(2);
+            addedCompany = await _context.Companys.FirstOrDefaultAsync(comp => comp.Name == newCompany.Name);
+            var addedHouses = _context.Houses.Where(h => h.EfCompanyId == addedCompany.Id).ToList();
+            addedHouses.Count.Should().Be(3);
+        }
+
+
+        [Fact, Priority(6)]
+        public async Task RemoveHouseInCompany()
+        {
+            var company = await _context.Companys.FirstOrDefaultAsync(comp => comp.Name == "рога и копыта");
+            var address = new Address("Новосиб", "калининский", "Танковая", "63", "9852 5963");
+            var removingHouse = _context.Houses.FirstOrDefault(h => (h.EfCompanyId == company.Id) && (h.Address == address));
+
+            company.EfHouses.Remove(removingHouse);
+            await _context.SaveChangesAsync();
+
+            var countComp = await _context.Houses.CountAsync(h => h.EfCompanyId == company.Id);
+            countComp.Should().Be(2);
+        }
+
+
+        [Fact, Priority(7)]
+        public async Task RemoveCompany()
+        {
+            var company = await _context.Companys.FirstOrDefaultAsync(comp => comp.Name == "рога и копыта");
+            _context.Companys.Remove(company);
+            await _context.SaveChangesAsync();
+
+            var countComp = await _context.Houses.CountAsync();
+            countComp.Should().Be(1);
+
+            var firsthouse= await _context.Houses.FirstOrDefaultAsync();
+            var address = new Address("Новосиб", "калининский", "Танкоавя", "1", "9852 2586");
+            firsthouse.Address.Should().Be(address);
+
+            var firstCompany= await _context.Companys.FirstOrDefaultAsync();
+            firstCompany.Name.Should().Be("РакиВДраки");
+
+            var countWm = await _context.WallMaterials.CountAsync();
+            countWm.Should().Be(2);
         }
     }
 }
