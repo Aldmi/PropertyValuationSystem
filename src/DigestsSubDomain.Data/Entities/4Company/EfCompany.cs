@@ -13,6 +13,6 @@ namespace Digests.Data.EfCore.Entities._4Company
     {
         public string Name { get; set; }
         public CompanyDetails CompanyDetails { get; set; }
-        public List<EfHouse> EfHouses { get; set; } = new List<EfHouse>();
+        public List<EfHouse> Houses { get; set; } = new List<EfHouse>();
     }
 }

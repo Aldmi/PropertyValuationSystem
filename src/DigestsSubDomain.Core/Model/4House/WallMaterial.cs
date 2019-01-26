@@ -5,9 +5,8 @@ namespace Digests.Core.Model._4House
 {
     /// <summary>
     /// Материал Стен.
-    /// ValueObject.
     /// </summary>
-    public class WallMaterial : DomainEntity
+    public class WallMaterial : DomainAggregateRoot
     {
         #region prop
 

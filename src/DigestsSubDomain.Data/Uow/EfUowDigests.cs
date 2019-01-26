@@ -12,7 +12,6 @@ namespace Digests.Data.EfCore.Uow
 
         private readonly Context _context;
         private ICompanyRepository _companyRepository;
-        private IHouseRepository _houseRepository;
         private IWallMaterialRepository _wallMaterialRepository;
 
         #endregion
@@ -21,7 +20,6 @@ namespace Digests.Data.EfCore.Uow
         #region prop
 
         public ICompanyRepository CompanyRepository => _companyRepository ?? (_companyRepository = new EfCompanyRepository(_context));    
-        public IHouseRepository HouseRepository => _houseRepository ?? (_houseRepository = new EfHouseRepository(_context));
         public IWallMaterialRepository WallMaterialRepository => _wallMaterialRepository ?? (_wallMaterialRepository = new EfWallMaterialRepository(_context));
 
         #endregion

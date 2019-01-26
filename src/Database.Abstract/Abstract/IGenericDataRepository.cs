@@ -2,10 +2,15 @@
 using System.Collections.Generic;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
+using Shared.Kernel.ForDomain;
 
 namespace Database.Abstract.Abstract
 {
-    public interface IGenericDataRepository<T>
+    /// <summary>
+    /// Абстрактный репозиторий.
+    /// </summary>
+    /// <typeparam name="T">Доступ ТОЛЬКО через КОРЕНЬ АГРЕГАЦИИ</typeparam>
+    public interface IGenericDataRepository<T> where T : DomainAggregateRoot
     {
         T GetById(int id);
         Task<T> GetByIdAsync(int id);

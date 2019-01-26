@@ -8,7 +8,7 @@ namespace Digests.Core.Model._4House
         #region prop
 
         public Address Address { get;  }
-        public int? Year { get;  }                  // Год постройки
+        public int? Year { get; }                   // Год постройки
         public string MetroStation { get; }         // Ближайшая станция метро
         public WallMaterial WallMaterial { get;  }
 

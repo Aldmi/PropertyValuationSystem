@@ -9,7 +9,7 @@ namespace Digests.Core.Model._4Company
     /// Компания.
     /// AgregateRoot
     /// </summary>
-    public class Company : DomainEntity
+    public class Company : DomainAggregateRoot
     {
         #region fields
 

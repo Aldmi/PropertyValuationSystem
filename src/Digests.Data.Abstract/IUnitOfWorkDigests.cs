@@ -7,7 +7,6 @@ namespace Digests.Data.Abstract
     public interface IUnitOfWorkDigests : IDisposable
     {
         ICompanyRepository CompanyRepository { get; }
-        IHouseRepository HouseRepository { get; }
         IWallMaterialRepository WallMaterialRepository { get;  }
 
         Task<int> SaveChangesAsync();

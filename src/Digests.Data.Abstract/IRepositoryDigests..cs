@@ -13,13 +13,6 @@ namespace Digests.Data.Abstract
     }
 
     /// <summary>
-    /// Доступ к домам (СПРАВОЧНИК)
-    /// </summary>
-    public interface IHouseRepository : IGenericDataRepository<House>
-    {
-    }
-
-    /// <summary>
     /// Доступ к материалам стен (СПРАВОЧНИК)
     /// </summary>
     public interface IWallMaterialRepository : IGenericDataRepository<WallMaterial>

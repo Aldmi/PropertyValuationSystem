@@ -75,11 +75,11 @@ namespace Digests.IntegrationTests.DbContextRow
                 WallMaterial = wallMaterial
             };
             var company = await _context.Companys.FirstOrDefaultAsync(comp => comp.Name == "РакиВДраки");
-            company.EfHouses.Add(newHouse);
+            company.Houses.Add(newHouse);
             await _context.SaveChangesAsync();
 
             company = await _context.Companys.FirstOrDefaultAsync(comp => comp.Name == "РакиВДраки");
-            company.EfHouses.Count.Should().Be(1);
+            company.Houses.Count.Should().Be(1);
         }
 
 
@@ -112,13 +112,13 @@ namespace Digests.IntegrationTests.DbContextRow
                 new EfHouse { Address = new Address("Новосиб", "калининский", "Иподромская", "589", "9852 2586"), WallMaterial = wallMaterial2 },
                 new EfHouse { Address = new Address("Новосиб", "калининский", "Танковая", "63", "9852 5963"), WallMaterial = wallMaterialNotFound },
             };
-            addedCompany.EfHouses.AddRange(newHouses);
+            addedCompany.Houses.AddRange(newHouses);
             await _context.SaveChangesAsync();
 
             var countComp = await _context.Companys.CountAsync();
             countComp.Should().Be(2);
             addedCompany = await _context.Companys.FirstOrDefaultAsync(comp => comp.Name == newCompany.Name);
-            var addedHouses = _context.Houses.Where(h => h.EfCompanyId == addedCompany.Id).ToList();
+            var addedHouses = _context.Companys.SelectMany(c=>c.Houses).Where(h => h.EfCompanyId== addedCompany.Id).ToList();
             addedHouses.Count.Should().Be(3);
         }
 
@@ -128,13 +128,13 @@ namespace Digests.IntegrationTests.DbContextRow
         {
             var company = await _context.Companys.FirstOrDefaultAsync(comp => comp.Name == "рога и копыта");
             var address = new Address("Новосиб", "калининский", "Танковая", "63", "9852 5963");
-            var removingHouse = _context.Houses.FirstOrDefault(h => (h.EfCompanyId == company.Id) && (h.Address == address));
+            var removingHouse = company.Houses.FirstOrDefault(h => (h.EfCompanyId == company.Id) && (h.Address == address));
 
-            company.EfHouses.Remove(removingHouse);
+            company.Houses.Remove(removingHouse);
             await _context.SaveChangesAsync();
 
-            var countComp = await _context.Houses.CountAsync(h => h.EfCompanyId == company.Id);
-            countComp.Should().Be(2);
+            int countHouse = await _context.Companys.SelectMany(c => c.Houses).CountAsync(h => h.EfCompanyId == company.Id);
+            countHouse.Should().Be(2);
         }
 
 
@@ -145,10 +145,10 @@ namespace Digests.IntegrationTests.DbContextRow
             _context.Companys.Remove(company);
             await _context.SaveChangesAsync();
 
-            var countComp = await _context.Houses.CountAsync();
+            int countComp = await _context.Companys.CountAsync();
             countComp.Should().Be(1);
 
-            var firsthouse= await _context.Houses.FirstOrDefaultAsync();
+            var firsthouse = await _context.Companys.SelectMany(c => c.Houses).FirstOrDefaultAsync();
             var address = new Address("Новосиб", "калининский", "Танкоавя", "1", "9852 2586");
             firsthouse.Address.Should().Be(address);
 

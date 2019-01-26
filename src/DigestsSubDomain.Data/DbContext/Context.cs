@@ -13,7 +13,6 @@ namespace Digests.Data.EfCore.DbContext
         #region Reps
 
         public DbSet<EfCompany> Companys { get; set; }
-        public DbSet<EfHouse> Houses { get; set; }
         public DbSet<EfWallMaterial> WallMaterials { get; set; }
 
         #endregion
