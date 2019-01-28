@@ -2,7 +2,7 @@
 using System.Linq;
 using Digests.Data.EfCore.DbContext;
 
-namespace Digests.IntegrationTests.DbContextRow
+namespace Digests.Data.IntegrationTests.DbContextRow
 {
     public class DbContextFixture : IDisposable
     {

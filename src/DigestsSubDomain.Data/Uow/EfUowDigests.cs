@@ -1,4 +1,5 @@
-﻿using Database.EFCore;
+﻿using System;
+using Database.EFCore;
 using Digests.Data.Abstract;
 using Digests.Data.EfCore.DbContext;
 using Digests.Data.EfCore.Mapper;
@@ -36,13 +37,22 @@ namespace Digests.Data.EfCore.Uow
         static EfUowDigests()
         {
             AutoMapperConfig.Register(); //При первом создании Uow, будет настроенн AutoMapper 
+            try
+            {
+                AutoMapperConfig.AssertConfigurationIsValid();//Если настройки мапиинга не валидны будет выбрашенно исключение
+            }
+            catch (Exception e)
+            {
+                throw;
+            }
+        
         }
 
         #endregion
 
 
 
-        public static EfUowDigests EfUowDigestsFactory(string connectionString)
+        public static EfUowDigests UowDigestsFactory(string connectionString)
         {
            var context= new Context(connectionString);
            var uow = new EfUowDigests(context);

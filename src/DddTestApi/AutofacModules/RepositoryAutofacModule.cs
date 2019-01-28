@@ -26,7 +26,7 @@ namespace DddTestApi.AutofacModules
 
         protected override void Load(ContainerBuilder builder)
         {
-            builder.Register(c => EfUowDigests.EfUowDigestsFactory(_connectionString)).As<IUnitOfWorkDigests>()
+            builder.Register(c => EfUowDigests.UowDigestsFactory(_connectionString)).As<IUnitOfWorkDigests>()
                    .InstancePerLifetimeScope();
                 
 

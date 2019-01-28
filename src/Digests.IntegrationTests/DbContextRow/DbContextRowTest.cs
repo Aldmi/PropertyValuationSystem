@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
+﻿using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Digests.Core.Model._4Company;
@@ -15,7 +13,7 @@ using Xunit.Abstractions;
 using Xunit.Priority;
 using PriorityOrderer = Xunit.Priority.PriorityOrderer;
 
-namespace Digests.IntegrationTests.DbContextRow
+namespace Digests.Data.IntegrationTests.DbContextRow
 {
     [TestCaseOrderer(PriorityOrderer.Name, PriorityOrderer.Assembly)]
     public class DbContextRowTest : IClassFixture<DbContextFixture>
@@ -34,7 +32,6 @@ namespace Digests.IntegrationTests.DbContextRow
         [Fact, Priority(1)]
         public async   Task AddNewCompanyTest()
         {
-            //ADD new company-----------------------------------------
             var newCompany = new EfCompany { Name = "РакиВДраки", CompanyDetails = new CompanyDetails("Раковая тима") };
             await _context.Companys.AddAsync(newCompany);
             await _context.SaveChangesAsync();

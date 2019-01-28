@@ -2,7 +2,7 @@
 using Digests.Data.EfCore.Uow;
 using Shared.Kernel.Enums;
 
-namespace Digests.IntegrationTests
+namespace Digests.Data.IntegrationTests.UnitOfWork
 {
     /// <summary>
     /// Инициализация и очиска тестовой бд через UOW.
@@ -13,13 +13,14 @@ namespace Digests.IntegrationTests
 
         public UowFixture()
         {
-            var conStr = "Host=localhost;Port=5432;Database=DigestsDbTest;Username=postgres;Password=dmitr";
-            Uow = EfUowDigests.EfUowDigestsFactory(conStr);
-            Uow.CreateDb(HowCreateDb.Migrate).Wait();
+            const string conStr = "Host=localhost;Port=5432;Database=DigestsDbUowTest;Username=postgres;Password=dmitr";
+            Uow = EfUowDigests.UowDigestsFactory(conStr);
+            Uow.CreateDb(HowCreateDb.EnsureCreated).Wait();
         }
 
         public void Dispose()
         {
+            Uow.CompanyRepository.Delete(wm => true);
             Uow.WallMaterialRepository.Delete(wm => true);
             Uow.SaveChanges();
         }
