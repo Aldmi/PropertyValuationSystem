@@ -38,7 +38,9 @@ namespace Digests.Data.EfCore.Repositories
         #region Special Methods
         public async Task<Company> GetCompanyByNameAsync(string companyName)
         {
-            var efCompany = await _context.Companys.Include(c => c.Houses).FirstOrDefaultAsync(c => c.Name == companyName);
+            var efCompany = await _context.Companys.AsNoTracking()
+                .Include(c => c.Houses).
+                FirstOrDefaultAsync(c => c.Name == companyName);
             var company = Mapper.Map<Company>(efCompany);
             return company;
         }
@@ -46,7 +48,8 @@ namespace Digests.Data.EfCore.Repositories
 
         public async Task<IReadOnlyList<House>> GetAllHouseAsync(long companyId)
         {
-          var housesEf= await _context.Houses
+          var housesEf= await _context.Houses.AsNoTracking()
+              .Include(h=> h.WallMaterial)
               .Where(h => h.EfCompanyId == companyId)
               .ToListAsync();
           var houses = Mapper.Map<IReadOnlyList<House>>(housesEf);
@@ -56,7 +59,9 @@ namespace Digests.Data.EfCore.Repositories
 
         public async Task<House> GetHouseAsync(long companyId, long houseId)
         {
-           var efHouse= await _context.Houses.FirstOrDefaultAsync(h => h.EfCompanyId == companyId && h.Id == houseId);
+           var efHouse= await _context.Houses.AsNoTracking()
+               .Include(h => h.WallMaterial)
+               .FirstOrDefaultAsync(h => h.EfCompanyId == companyId && h.Id == houseId);
            var house = Mapper.Map<House>(efHouse);
            return house;
         }
@@ -64,7 +69,9 @@ namespace Digests.Data.EfCore.Repositories
 
         public async Task<House> GetHouseAsync(long companyId, Address address)
         {
-           var efHouse = await _context.Houses.FirstOrDefaultAsync(h => h.EfCompanyId == companyId && h.Address == address);
+           var efHouse = await _context.Houses.AsNoTracking()
+               .Include(h => h.WallMaterial)
+               .FirstOrDefaultAsync(h => h.EfCompanyId == companyId && h.Address == address);
            var house = Mapper.Map<House>(efHouse);
            return house;
         }
@@ -75,7 +82,7 @@ namespace Digests.Data.EfCore.Repositories
         /// </summary>
         public async Task<IReadOnlyList<WallMaterial>> GetAllWallMaterialsAsync(long companyId)
         {
-            var wallmaterialsEf = await _context.Houses
+            var wallmaterialsEf = await _context.Houses.AsNoTracking()
                 .Where(h => h.EfCompanyId == companyId)
                 .Select(h=>h.WallMaterial)
                 .Where(w=> w.IsShared == false)
@@ -93,7 +100,8 @@ namespace Digests.Data.EfCore.Repositories
         /// <returns></returns>
         public async Task<IReadOnlyList<House>> GetHouseOfWallMaterialAsync(long companyId, string nameWallmaterial)
         {
-            var efHouses = await _context.Houses
+            var efHouses = await _context.Houses.AsNoTracking()
+                .Include(h => h.WallMaterial)
                 .Where(h => h.EfCompanyId == companyId && h.WallMaterial.Name == nameWallmaterial)
                 .ToListAsync();
             var houses = Mapper.Map<IReadOnlyList<House>>(efHouses);

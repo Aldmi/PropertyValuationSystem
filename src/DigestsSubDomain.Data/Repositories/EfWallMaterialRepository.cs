@@ -31,6 +31,7 @@ namespace Digests.Data.EfCore.Repositories
 
         #region Special Methods
 
+        //DEBUG
         public void UpdateTest(string name)
         {
             //var wallMaterial= DbSet.FirstOrDefault(w => w.Name == name);
