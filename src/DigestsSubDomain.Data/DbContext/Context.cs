@@ -14,6 +14,7 @@ namespace Digests.Data.EfCore.DbContext
 
         public DbSet<EfCompany> Companys { get; set; }
         public DbSet<EfWallMaterial> WallMaterials { get; set; }
+        public DbSet<EfHouse> Houses { get; set; }
 
         #endregion
 
@@ -35,13 +36,6 @@ namespace Digests.Data.EfCore.DbContext
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            //Context сам получает строку подключения при миграции и работе.
-            //(Рабоатет для миграции и работы!!!!!!!)
-            // var config = JsonConfigLib.GetConfiguration();
-            //var connectionString = config.GetConnectionString("MainDbConnection");
-            //optionsBuilder.UseSqlServer(connectionString);
-            //optionsBuilder.UseSqlServer(connectionString, ob => ob.MigrationsAssembly(typeof(Context).GetTypeInfo().Assembly.GetName().Name));\
-
             optionsBuilder.UseNpgsql(_connStr);
         }
 

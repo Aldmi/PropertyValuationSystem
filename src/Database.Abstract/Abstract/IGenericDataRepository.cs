@@ -12,8 +12,8 @@ namespace Database.Abstract.Abstract
     /// <typeparam name="T">Доступ ТОЛЬКО через КОРЕНЬ АГРЕГАЦИИ</typeparam>
     public interface IGenericDataRepository<T> where T : DomainAggregateRoot
     {
-        T GetById(int id);
-        Task<T> GetByIdAsync(int id);
+        T GetById(long id);
+        Task<T> GetByIdAsync(long id);
 
         T GetSingle(Expression<Func<T, bool>> predicate);
         Task<T> GetSingleAsync(Expression<Func<T, bool>> predicate);

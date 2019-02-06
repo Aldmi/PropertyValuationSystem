@@ -11,6 +11,7 @@ namespace Digests.Data.EfCore.Entities._4House
     public class EfWallMaterial : BaseEntity
     {
         public string Name { get; set; }
+        public bool IsShared { get; set; }
 
         #region NavigationProp
         public List<EfHouse> Houses { get; set; } = new List<EfHouse>();

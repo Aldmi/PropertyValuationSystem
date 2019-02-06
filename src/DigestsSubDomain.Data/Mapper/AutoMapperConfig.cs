@@ -24,13 +24,26 @@ namespace Digests.Data.EfCore.Mapper
                         .ForMember(dest => dest.MetroStation, opt => opt.MapFrom(src => src.MetroStation))
                         .ForMember(dest => dest.Address, opt => opt.MapFrom(src => src.Address))
                         .ForMember(dest => dest.WallMaterial, opt => opt.MapFrom(src => src.WallMaterial))
-                        .ReverseMap(); 
+                        .ReverseMap();
 
                     cfg.CreateMap<EfWallMaterial, WallMaterial>()
+                        .ConstructUsing(src => new WallMaterial(src.Name, src.IsShared))
                         .ForMember(dest => dest.Name, opt => opt.MapFrom(src => src.Name))
-                        .ReverseMap();
+                        .ForMember(dest => dest.IsShared, opt => opt.MapFrom(src => src.IsShared));
+                    cfg.CreateMap<WallMaterial, EfWallMaterial>()
+                        .ConstructUsing(src => new EfWallMaterial{Name = src.Name, IsShared = src.IsShared})
+                        .ForMember(dest => dest.Name, opt => opt.MapFrom(src => src.Name))
+                        .ForMember(dest => dest.IsShared, opt => opt.MapFrom(src => src.IsShared))
+                        .ForMember(dest => dest.Houses, opt => opt.Ignore());
+                      
+
+
+                    //cfg.CreateMap<EfWallMaterial, WallMaterial>()
+                    //    .ForMember(dest => dest.Name, opt => opt.MapFrom(src => src.Name))
+                    //    .ForMember(dest => dest.IsShared, opt => opt.MapFrom(src => src.IsShared));
                     //cfg.CreateMap<WallMaterial, EfWallMaterial>()
                     //    .ForMember(dest => dest.Name, opt => opt.MapFrom(src => src.Name))
+                    //    .ForMember(dest => dest.IsShared, opt => opt.MapFrom(src => src.IsShared))
                     //    .ForMember(dest => dest.Houses, opt => opt.Ignore());
 
                     cfg.CreateMap<EfCompany, Company>()

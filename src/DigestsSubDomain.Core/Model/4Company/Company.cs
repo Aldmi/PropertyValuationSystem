@@ -13,7 +13,7 @@ namespace Digests.Core.Model._4Company
     {
         #region fields
 
-        private readonly List<House> _houses = new List<House>();
+        private List<House> _houses;
 
         #endregion
 
@@ -22,9 +22,13 @@ namespace Digests.Core.Model._4Company
         #region prop
 
         public string Name { get; } 
-        public CompanyDetails CompanyDetails { get; }
-        public IReadOnlyList<House> GetHouses => _houses;
+        public CompanyDetails CompanyDetails { get; private set; }
 
+        public IReadOnlyList<House> GetHouses
+        {
+            get => _houses;
+            private set => _houses = value as List<House>; //для маппинга
+        }
         #endregion
 
 
@@ -41,6 +45,7 @@ namespace Digests.Core.Model._4Company
 
             Name = name;
             CompanyDetails = companyDetails;
+            _houses = new List<House>();
         }
 
         #endregion
@@ -52,6 +57,18 @@ namespace Digests.Core.Model._4Company
         public void AddHouse(House house)
         {
             _houses.Add(house);
+        }
+
+
+        public void RemoveHouse(House house)
+        {
+            _houses.Remove(house);
+        }
+
+
+        public void UpdateCompanyDetails(CompanyDetails newCompanyDetails)
+        {
+            CompanyDetails = newCompanyDetails;
         }
 
         #endregion

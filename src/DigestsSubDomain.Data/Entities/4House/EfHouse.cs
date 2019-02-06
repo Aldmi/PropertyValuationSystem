@@ -24,10 +24,10 @@ namespace Digests.Data.EfCore.Entities._4House
         #region NavigationProp
 
         [ForeignKey("WallMaterialId")] public EfWallMaterial WallMaterial { get; set; }
-        public int? WallMaterialId { get; set; }
+        public long? WallMaterialId { get; set; }
 
         [ForeignKey("EfCompanyId")] public EfCompany EfCompany { get; set; }
-        public int EfCompanyId { get; set; }
+        public long EfCompanyId { get; set; }
 
         #endregion
     }
