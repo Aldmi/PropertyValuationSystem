@@ -17,11 +17,11 @@ using Xunit.Priority;
 namespace Digests.Data.IntegrationTests.UnitOfWork
 {
     [TestCaseOrderer(PriorityOrderer.Name, PriorityOrderer.Assembly)]
-    public class UowStorageTest : IClassFixture<UowFixture>
+    public class CompanyRepositoryTest : IClassFixture<UowFixture>
     {
         private readonly EfUowDigests _uow;
 
-        public UowStorageTest(UowFixture uowFixture)
+        public CompanyRepositoryTest(UowFixture uowFixture)
         {
             _uow = uowFixture.Uow;
         }
@@ -46,7 +46,15 @@ namespace Digests.Data.IntegrationTests.UnitOfWork
             new object[] { new Address("Новосиб", "Заельцовский", "Овражная", "11", "4593 5639"), 2, 0 },
             new object[] { new Address("Новосиб", "Кировский", "Петухова", "45", "8632 862"), 1, 0 }
         };
-                    
+
+        //string wmInternalName, House house, int countWallMaterialExpected
+        public static IEnumerable<object[]> GetDataUpdateHouseInCompanyTest => new[]
+        {
+            new object[] { "Дерево", new House(new Address("Кемерово", "Центральный", "Ленина", "562", "9856 5621"), null), 0},
+            new object[] { null, new House(new Address("Томск", "Центральный", "Павлова", "562", "8963 7412"), new WallMaterial("шлакоблок")), 1},
+            new object[] { null, new House(new Address("Сочи", "Сталинский", "Ленина", "562", "9856 8963"), null), 0},
+        };
+        
         #endregion
 
 
@@ -178,7 +186,6 @@ namespace Digests.Data.IntegrationTests.UnitOfWork
         }
 
 
-
         [Fact, Priority(5)]
         public async Task UpdateCompanyDetailsTest()
         {
@@ -191,6 +198,46 @@ namespace Digests.Data.IntegrationTests.UnitOfWork
             res.Should().BeTrue();
             company = await _uow.CompanyRepository.GetCompanyByNameAsync("РакиВДраки");
             company.CompanyDetails.DetailInfo.Should().Be(newCompDet.DetailInfo);        
+        }
+
+
+        [Theory, Priority(6)]
+        [MemberData(nameof(GetDataUpdateHouseInCompanyTest))]
+        public async Task UpdateHouseInCompanyTest(string wmInternalName, House house, int countWallMaterialExpected)
+        {
+            var company = await _uow.CompanyRepository.GetCompanyByNameAsync("РакиВДраки");
+            var houseUpdated = company.GetHouses.FirstOrDefault();
+            if (!string.IsNullOrEmpty(wmInternalName))
+            {
+                var wallMaterial = _uow.WallMaterialRepository.GetSingle(material => material.Name == wmInternalName);
+                house.ChangeWallMaterial(wallMaterial);
+            }
+
+            var res = await _uow.CompanyRepository.UpdateHouseInCompanyAsync(company.Id, houseUpdated.Id, house);
+            await _uow.SaveChangesAsync();
+
+            res.Should().BeTrue();
+            company = await _uow.CompanyRepository.GetCompanyByNameAsync("РакиВДраки");
+            houseUpdated= await _uow.CompanyRepository.GetHouseAsync(company.Id, house.Address);
+            houseUpdated.Should().NotBeNull();
+            houseUpdated.Address.Should().Be(house.Address);
+
+            if (!string.IsNullOrEmpty(wmInternalName))
+            {
+                houseUpdated.WallMaterial.Name.Should().Be(wmInternalName);
+            }
+            else
+            if (house.WallMaterial == null)
+            {
+                houseUpdated.WallMaterial.Should().BeNull();
+            }
+            else
+            {
+                houseUpdated.WallMaterial.Name.Should().Be(house.WallMaterial.Name);
+            }
+
+            var wallMaterials = await _uow.CompanyRepository.GetAllWallMaterialsAsync(company.Id);
+            wallMaterials.Count.Should().Be(countWallMaterialExpected);
         }
     }
 }

@@ -154,8 +154,31 @@ namespace Digests.Data.EfCore.Repositories
 
         public async Task<bool> UpdateHouseInCompanyAsync(long companyId, long houseId, House newHouse)
         {
-            //TODO: Обновлять свойства текущего дома.
-            throw new NotImplementedException();
+            var efHouse= await _context.Houses.FirstOrDefaultAsync(h => h.EfCompanyId == companyId && h.Id == houseId);
+            if (efHouse == null)
+                throw new KeyNotFoundException("Дом не найден");
+
+            efHouse.Address = newHouse.Address;
+            efHouse.MetroStation = newHouse.MetroStation;
+            efHouse.Year = newHouse.Year;
+            if (newHouse.WallMaterial == null)  // материал стен не известен
+            {
+                efHouse.WallMaterialId = null;
+            }
+            else
+            if(newHouse.WallMaterial.Id != 0)   // материал стен уже добавленный
+            {
+                efHouse.WallMaterialId = newHouse.WallMaterial.Id;
+            }
+            else
+            if (newHouse.WallMaterial.Id == 0)  // материал стен новый
+            {
+                var efWallMaterial= Mapper.Map<EfWallMaterial>(newHouse.WallMaterial);
+                efHouse.WallMaterial = efWallMaterial;
+            }
+
+            var res = _context.Houses.Update(efHouse);
+            return res.State == EntityState.Modified;
         }
     }
 

@@ -10,7 +10,7 @@ namespace Digests.Core.Model._4House
         public Address Address { get;  }
         public int? Year { get; }                   // Год постройки
         public string MetroStation { get; }         // Ближайшая станция метро
-        public WallMaterial WallMaterial { get;  }
+        public WallMaterial WallMaterial { get; private set; }
 
         #endregion
 
@@ -34,5 +34,11 @@ namespace Digests.Core.Model._4House
         }
 
         #endregion
+
+
+        public void ChangeWallMaterial(WallMaterial wm)
+        {
+            WallMaterial = wm;
+        }
     }
 }
