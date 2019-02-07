@@ -13,11 +13,13 @@ namespace Database.EFCore
 {
     /// <summary>
     /// Базовый тип репозитория для EntitiFramework
+    /// Все Get методы возвращают не отслеживаемые сущности, без Include.
+    /// Нет метода Upadate, т.к. сущность не отслеживается.
     /// </summary>
     /// <typeparam name="TDb">Тип в системе хранения</typeparam>
     /// <typeparam name="TMap">Тип в бизнесс логики</typeparam>
     public abstract class EfBaseRepository<TDb, TMap> : IDisposable
-                                                        where TDb : class
+                                                        where TDb : BaseEntity
                                                         where TMap : class
     {
    
@@ -49,35 +51,35 @@ namespace Database.EFCore
 
         public virtual TMap GetById(long id)
         {
-            var efSpOption = DbSet.Find(id);
-            var spOptions = Mapper.Map<TMap>(efSpOption);
-            return spOptions;
+            var efEntity = DbSet.AsNoTracking().FirstOrDefault(db => db.Id == id);
+            var entity = Mapper.Map<TMap>(efEntity);
+            return entity;
         }
 
 
         public virtual async Task<TMap> GetByIdAsync(long id)
         {
-            var efSpOption = await DbSet.FindAsync(id);
-            var spOptions = Mapper.Map<TMap>(efSpOption);
-            return spOptions;
+            var efEntity = await DbSet.AsNoTracking().FirstOrDefaultAsync(db => db.Id == id);
+            var entity = Mapper.Map<TMap>(efEntity);
+            return entity;
         }
 
 
         public virtual TMap GetSingle(Expression<Func<TMap, bool>> predicate)
         {
             var efPredicate = Mapper.MapExpression<Expression<Func<TDb, bool>>>(predicate);
-            var efSpOption = DbSet.SingleOrDefault(efPredicate);
-            var spOption = Mapper.Map<TMap>(efSpOption);
-            return spOption;
+            var efEntity = DbSet.AsNoTracking().SingleOrDefault(efPredicate);
+            var entity = Mapper.Map<TMap>(efEntity);
+            return entity;
         }
 
 
         public virtual async Task<TMap> GetSingleAsync(Expression<Func<TMap, bool>> predicate)
         {
             var efPredicate = Mapper.MapExpression<Expression<Func<TDb, bool>>>(predicate);
-            var efSpOption = await DbSet.SingleOrDefaultAsync(efPredicate); //DEBUG AsNoTracking
-            var spOption = Mapper.Map<TMap>(efSpOption);
-            return spOption;
+            var efEntity = await DbSet.AsNoTracking().SingleOrDefaultAsync(efPredicate); //DEBUG AsNoTracking
+            var entity = Mapper.Map<TMap>(efEntity);
+            return entity;
         }
 
         //TODO: Отладить!!!!  using: (IEnumerable<Phone> phones = phoneRepo.GetWithInclude(p=>p.Company);)
@@ -96,35 +98,35 @@ namespace Database.EFCore
 
         public virtual IEnumerable<TMap> List()
         {
-            var efOptions = DbSet.ToList();
-            var spOptions = Mapper.Map<IEnumerable<TMap>>(efOptions);
-            return spOptions;
+            var efEntitys = DbSet.AsNoTracking().ToList();
+            var entity = Mapper.Map<IEnumerable<TMap>>(efEntitys);
+            return entity;
         }
 
 
         public virtual IEnumerable<TMap> List(Expression<Func<TMap, bool>> predicate)
         {
             var efPredicate = Mapper.MapExpression<Expression<Func<TDb, bool>>>(predicate);
-            var efOptions = DbSet.Where(efPredicate).ToList();
-            var spOptions = Mapper.Map<IEnumerable<TMap>>(efOptions);
-            return spOptions;
+            var efEntitys = DbSet.AsNoTracking().Where(efPredicate).ToList();
+            var entity = Mapper.Map<IEnumerable<TMap>>(efEntitys);
+            return entity;
         }
 
 
         public virtual async Task<IEnumerable<TMap>> ListAsync()
         {
-            var efOptions = await DbSet.ToListAsync();
-            var spOptions = Mapper.Map<IEnumerable<TMap>>(efOptions);
-            return spOptions;
+            var efEntitys = await DbSet.AsNoTracking().ToListAsync();
+            var entity = Mapper.Map<IEnumerable<TMap>>(efEntitys);
+            return entity;
         }
 
 
         public virtual async Task<IEnumerable<TMap>> ListAsync(Expression<Func<TMap, bool>> predicate)
         {
             var efPredicate = Mapper.MapExpression<Expression<Func<TDb, bool>>>(predicate);
-            var efOptions = await DbSet.Where(efPredicate).ToListAsync();
-            var spOptions = Mapper.Map<IEnumerable<TMap>>(efOptions);
-            return spOptions;
+            var efEntitys = await DbSet.AsNoTracking().Where(efPredicate).ToListAsync();
+            var entity = Mapper.Map<IEnumerable<TMap>>(efEntitys);
+            return entity;
         }
 
 
@@ -144,73 +146,62 @@ namespace Database.EFCore
 
         public virtual void Add(TMap entity)
         {
-            var efOptions = Mapper.Map<TDb>(entity);
-            DbSet.Add(efOptions);
+            var efEntitys = Mapper.Map<TDb>(entity);
+            DbSet.Add(efEntitys);
         }
 
 
         public virtual async Task AddAsync(TMap entity)
         {
-            var efOptions = Mapper.Map<TDb>(entity);
-            await DbSet.AddAsync(efOptions);
+            var efEntitys = Mapper.Map<TDb>(entity);
+            await DbSet.AddAsync(efEntitys);
         }
 
 
         public virtual void AddRange(IEnumerable<TMap> entitys)
         {
-            var efOptions = Mapper.Map<IEnumerable<TDb>>(entitys);
-            DbSet.AddRange(efOptions);
+            var efEntitys = Mapper.Map<IEnumerable<TDb>>(entitys);
+            DbSet.AddRange(efEntitys);
         }
 
 
         public virtual async Task AddRangeAsync(IEnumerable<TMap> entitys)
         {
-            var efOptions = Mapper.Map<IEnumerable<TDb>>(entitys);
-            await DbSet.AddRangeAsync(efOptions);
+            var efEntitys = Mapper.Map<IEnumerable<TDb>>(entitys);
+            await DbSet.AddRangeAsync(efEntitys);
         }
 
 
-        public virtual void Delete(TMap entity)
+        public virtual void Delete(long id)
         {
-            var efOptions = Mapper.Map<TDb>(entity);
-            DbSet.Remove(efOptions);
+            var efEntity = DbSet.Find(id);
+            DbSet.Remove(efEntity);
+        }
+
+
+        public virtual async Task DeleteAsync(long id)
+        {
+            var efEntity = await DbSet.FindAsync(id);
+            DbSet.Remove(efEntity);
         }
 
 
         public virtual void Delete(Expression<Func<TMap, bool>> predicate)
         {
             var efPredicate = Mapper.MapExpression<Expression<Func<TDb, bool>>>(predicate);
-            var efOptions = DbSet.Where(efPredicate).ToList();
-            DbSet.RemoveRange(efOptions);
-        }
-
-
-        public virtual async Task DeleteAsync(TMap entity)
-        {
-            var efOptions = Mapper.Map<TDb>(entity);
-            DbSet.Remove(efOptions);
+            var efEntitys = DbSet.Where(efPredicate).ToList();
+            DbSet.RemoveRange(efEntitys);
         }
 
 
         public virtual async Task DeleteAsync(Expression<Func<TMap, bool>> predicate)
         {
             var efPredicate = Mapper.MapExpression<Expression<Func<TDb, bool>>>(predicate);
-            var efOptions = await DbSet.Where(efPredicate).ToListAsync();
-            DbSet.RemoveRange(efOptions);
+            var efEntitys = await DbSet.Where(efPredicate).ToListAsync();
+            DbSet.RemoveRange(efEntitys);
         }
 
 
-        public virtual void Edit(TMap entity)
-        {
-            var efentity = Mapper.Map<TDb>(entity);
-            DbContext.Entry(efentity).State = EntityState.Modified;
-        }
-
-
-        public virtual async Task EditAsync(TMap entity)
-        {
-            DbContext.Entry(entity).State = EntityState.Modified;
-        }
 
 
         public virtual bool IsExist(Expression<Func<TMap, bool>> predicate)

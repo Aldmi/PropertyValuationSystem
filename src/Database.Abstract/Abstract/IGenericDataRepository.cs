@@ -33,13 +33,10 @@ namespace Database.Abstract.Abstract
         void AddRange(IEnumerable<T> entitys); 
         Task AddRangeAsync(IEnumerable<T> entitys); 
 
-        void Delete(T entity);
+        void Delete(long id);
         void Delete(Expression<Func<T, bool>> predicate);
-        Task DeleteAsync(T entity);
+        Task DeleteAsync(long id);
         Task DeleteAsync(Expression<Func<T, bool>> predicate);
-
-        void Edit(T entity);
-        Task EditAsync(T entity);
 
         bool IsExist(Expression<Func<T, bool>> predicate);
         Task<bool> IsExistAsync(Expression<Func<T, bool>> predicate);
