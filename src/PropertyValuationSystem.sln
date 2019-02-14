@@ -47,6 +47,12 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Digests.Data.Abstract", "Di
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Digests.Data.IntegrationTests", "Digests.IntegrationTests\Digests.Data.IntegrationTests.csproj", "{82EC9DC9-05C1-499E-BC45-94803677CE1C}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "InfrastructureLayer", "InfrastructureLayer", "{86CA5C30-5BAE-425E-8FDB-9A8E6FD548A1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AppicationLayer", "AppicationLayer", "{8D97DD63-C577-473C-BF7F-0EF0FDB85912}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Application", "Application\Application.csproj", "{9C0D14C5-5C0A-41A7-8B21-FD3F0F5A1323}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -105,6 +111,10 @@ Global
 		{82EC9DC9-05C1-499E-BC45-94803677CE1C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{82EC9DC9-05C1-499E-BC45-94803677CE1C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{82EC9DC9-05C1-499E-BC45-94803677CE1C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9C0D14C5-5C0A-41A7-8B21-FD3F0F5A1323}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C0D14C5-5C0A-41A7-8B21-FD3F0F5A1323}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C0D14C5-5C0A-41A7-8B21-FD3F0F5A1323}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C0D14C5-5C0A-41A7-8B21-FD3F0F5A1323}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -126,6 +136,7 @@ Global
 		{895A75AC-43F3-48E3-A89C-A8D1D070086B} = {CA4F2E55-CBCF-4F9F-BDAC-7C67F78EE279}
 		{F5B668B0-8CE9-428F-A56F-76423554F665} = {CA4F2E55-CBCF-4F9F-BDAC-7C67F78EE279}
 		{82EC9DC9-05C1-499E-BC45-94803677CE1C} = {CA4F2E55-CBCF-4F9F-BDAC-7C67F78EE279}
+		{9C0D14C5-5C0A-41A7-8B21-FD3F0F5A1323} = {8D97DD63-C577-473C-BF7F-0EF0FDB85912}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {8716BE27-C92C-40C2-952F-7CF128D6CFED}

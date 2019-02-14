@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Digests.Data.Abstract\Digests.Data.Abstract.csproj" />
+    <ProjectReference Include="..\DigestsSubDomain.Core\Digests.Core.csproj" />
+    <ProjectReference Include="..\Shared\Shared.Kernel.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Mapper\" />
+  </ItemGroup>
+
+</Project>

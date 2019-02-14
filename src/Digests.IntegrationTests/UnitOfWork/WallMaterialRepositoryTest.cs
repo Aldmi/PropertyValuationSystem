@@ -25,7 +25,7 @@ namespace Digests.Data.IntegrationTests.UnitOfWork
         [Fact, Priority(1)]
         public async Task AddWallMaterialTask()
         {
-            var wallMaterial = new WallMaterial("Кирпич");
+            var wallMaterial =  WallMaterial.Create("Кирпич", true).Value;
             await _uow.WallMaterialRepository.AddAsync(wallMaterial);
             await _uow.SaveChangesAsync();
 

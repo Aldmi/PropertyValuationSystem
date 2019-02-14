@@ -1,5 +1,8 @@
 ﻿using System;
+using CSharpFunctionalExtensions;
+using FluentValidation;
 using Shared.Kernel.ForDomain;
+using Shared.Kernel.Validators;
 
 namespace Digests.Core.Model._4House
 {
@@ -18,14 +21,14 @@ namespace Digests.Core.Model._4House
 
         #region ctor
 
-        public House(Address address,  WallMaterial wallMaterial)
+        private House(Address address,  WallMaterial wallMaterial)
         {
             //TODO: добавить валидацию
             Address = address;
             WallMaterial = wallMaterial; //TODO: как проверять на допустимый материал стен.
         }
 
-        public House(Address address, WallMaterial wallMaterial, int year, string metroStation)
+        private House(Address address, WallMaterial wallMaterial, int year, string metroStation)
             :this(address, wallMaterial)
         {
             //TODO: добавить валидацию
@@ -34,6 +37,42 @@ namespace Digests.Core.Model._4House
         }
 
         #endregion
+
+
+
+        #region Factory
+
+        public static Result<House, string> Create(Address address, WallMaterial wallMaterial)
+        {
+            return Create(address, wallMaterial, 0, null);
+        }
+
+
+        public static Result<House, string> Create(Address address, WallMaterial wallMaterial, int year, string metroStation)
+        {
+            var house = new House(address, wallMaterial, year, metroStation);
+            var houseValidator = new HouseValidator();
+            var valRes = houseValidator.Validate(house);
+            if (valRes.IsValid)
+            {
+                return Result.Ok<House, string>(house);
+            }
+            var errors = valRes.ToString("~");
+            return Result.Fail<House, string>(errors);
+        }
+
+
+        private class HouseValidator : AbstractValidator<House>
+        {
+            public HouseValidator()
+            {
+                RuleFor(x => x.Address).NotNull();
+            }
+        }
+
+        #endregion
+
+
 
 
         public void ChangeWallMaterial(WallMaterial wm)

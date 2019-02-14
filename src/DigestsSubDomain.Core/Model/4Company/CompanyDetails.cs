@@ -1,4 +1,6 @@
-﻿using Shared.Kernel.ForDomain;
+﻿using CSharpFunctionalExtensions;
+using FluentValidation;
+using Shared.Kernel.ForDomain;
 
 namespace Digests.Core.Model._4Company
 {
@@ -15,11 +17,44 @@ namespace Digests.Core.Model._4Company
         #endregion
 
 
+
         #region ctor
 
-        public CompanyDetails(string detailInfo)
+        private CompanyDetails(string detailInfo)
         {
             DetailInfo = detailInfo;
+        }
+
+        private CompanyDetails()
+        {
+            //for serialization
+        }
+
+        #endregion
+
+
+
+        #region Factory
+
+        public static Result<CompanyDetails, string> Create(string detailInfo)
+        {
+            CompanyDetails companyDetails = new CompanyDetails(detailInfo);
+            CompanyDetailsValidator detailsValidator = new CompanyDetailsValidator();
+            var valRes = detailsValidator.Validate(companyDetails);
+            if (valRes.IsValid)
+            {
+                return Result.Ok<CompanyDetails, string>(companyDetails);
+            }
+            var errors = valRes.ToString("~");
+            return Result.Fail<CompanyDetails, string>(errors);
+        }
+
+        private class CompanyDetailsValidator : AbstractValidator<CompanyDetails>
+        {
+            public CompanyDetailsValidator()
+            {
+                RuleFor(x => x.DetailInfo).NotEmpty();
+            }
         }
 
         #endregion

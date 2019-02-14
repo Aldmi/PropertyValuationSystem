@@ -1,7 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using CSharpFunctionalExtensions;
 using Digests.Core.Model._4House;
+using FluentValidation;
 using Shared.Kernel.ForDomain;
+using Shared.Kernel.Validators;
 
 namespace Digests.Core.Model._4Company
 {
@@ -35,17 +38,39 @@ namespace Digests.Core.Model._4Company
 
         #region ctor
 
-        public Company(string name, CompanyDetails companyDetails)
+        private Company(string name, CompanyDetails companyDetails)
         {
-            if (string.IsNullOrEmpty(name) || string.IsNullOrWhiteSpace(name)) //TODO: вынести валидацию разных типов в Shared
-                throw new InvalidOperationException("Навание фирмы задано не верно");
-
-            if(companyDetails == null)
-                throw new ArgumentNullException(nameof(companyDetails));
-
             Name = name;
             CompanyDetails = companyDetails;
             _houses = new List<House>();
+        }
+
+        #endregion
+
+
+
+        #region Factory
+
+        public static Result<Company, string> Create(string name, CompanyDetails companyDetails)
+        {
+            Company company = new Company(name, companyDetails);
+            CompanyValidator validator = new CompanyValidator();
+            var valRes = validator.Validate(company);
+            if (valRes.IsValid)
+            {
+                return Result.Ok<Company, string>(company);
+            }
+            var errors = valRes.ToString("~");
+            return Result.Fail<Company, string>(errors);
+        }
+
+        private class CompanyValidator : AbstractValidator<Company>
+        {
+            public CompanyValidator()
+            {
+                RuleFor(x => x.Name).SetValidator(new StringNotNullNotEmptyValidator());
+                RuleFor(x => x.CompanyDetails).NotNull();
+            }
         }
 
         #endregion
@@ -72,5 +97,13 @@ namespace Digests.Core.Model._4Company
         }
 
         #endregion
+
+
+
     }
+
+
+
+
+
 }

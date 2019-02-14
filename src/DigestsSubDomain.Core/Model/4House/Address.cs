@@ -1,4 +1,9 @@
-﻿using Shared.Kernel.ForDomain;
+﻿using CSharpFunctionalExtensions;
+using Digests.Core.Model._4Company;
+using FluentValidation;
+using Newtonsoft.Json;
+using Shared.Kernel.ForDomain;
+using Shared.Kernel.Validators;
 
 namespace Digests.Core.Model._4House
 {
@@ -6,7 +11,7 @@ namespace Digests.Core.Model._4House
     {
         #region prop
 
-        public string City { get;  }                // Город
+        public string City { get; }                // Город
         public string District { get;  }            // Район
         public string Street { get; }               // Улица
         public string Number { get;  }              // Дом
@@ -18,13 +23,44 @@ namespace Digests.Core.Model._4House
 
         #region ctor
 
-        public Address(string city, string district, string street, string number, string geo)
+        [JsonConstructor]
+        private Address(string city, string district, string street, string number, string geo)
         {
             City = city;
             District = district;
             Street = street;
             Number = number;
             Geo = geo;
+        }
+
+        #endregion
+
+
+
+        #region Factory
+
+        public static Result<Address, string> Create(string city, string district, string street, string number, string geo)
+        {
+            var address = new Address(city, district, street, number, geo);
+            var addressValidator = new AddressValidator();
+            var valRes = addressValidator.Validate(address);
+            if (valRes.IsValid)
+            {
+                return Result.Ok<Address, string>(address);
+            }
+            var errors = valRes.ToString("~");
+            return Result.Fail<Address, string>(errors);
+        }
+
+
+        private class AddressValidator : AbstractValidator<Address>
+        {
+            public AddressValidator()
+            {
+                RuleFor(x => x.City).SetValidator(new StringNotNullNotEmptyValidator());
+                RuleFor(x => x.Street).SetValidator(new StringNotNullNotEmptyValidator());
+                RuleFor(x => x.Number).SetValidator(new StringNotNullNotEmptyValidator());
+            }
         }
 
         #endregion

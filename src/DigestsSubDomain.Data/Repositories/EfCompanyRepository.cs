@@ -71,7 +71,7 @@ namespace Digests.Data.EfCore.Repositories
         {
            var efHouse = await _context.Houses.AsNoTracking()
                .Include(h => h.WallMaterial)
-               .FirstOrDefaultAsync(h => h.EfCompanyId == companyId && h.Address == address);
+               .FirstOrDefaultAsync(h => h.EfCompanyId == companyId );//&& h.Address == address
            var house = Mapper.Map<House>(efHouse);
            return house;
         }

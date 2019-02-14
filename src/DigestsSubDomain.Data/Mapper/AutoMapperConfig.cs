@@ -27,7 +27,7 @@ namespace Digests.Data.EfCore.Mapper
                         .ReverseMap();
 
                     cfg.CreateMap<EfWallMaterial, WallMaterial>()
-                        .ConstructUsing(src => new WallMaterial(src.Name, src.IsShared))
+                        .ConstructUsing(src =>  WallMaterial.Create(src.Name, src.IsShared).Value)
                         .ForMember(dest => dest.Name, opt => opt.MapFrom(src => src.Name))
                         .ForMember(dest => dest.IsShared, opt => opt.MapFrom(src => src.IsShared));
                     cfg.CreateMap<WallMaterial, EfWallMaterial>()
@@ -54,6 +54,7 @@ namespace Digests.Data.EfCore.Mapper
                         .ForMember(dest => dest.Name, opt => opt.MapFrom(src => src.Name))
                         .ForMember(dest => dest.CompanyDetails, opt => opt.MapFrom(src => src.CompanyDetails))
                         .ForMember(dest => dest.Houses, opt => opt.MapFrom(src => src.GetHouses));
+
                 });
             Mapper = config.CreateMapper();
         }
