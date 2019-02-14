@@ -1,5 +1,6 @@
 ﻿using CSharpFunctionalExtensions;
 using FluentValidation;
+using Newtonsoft.Json;
 using Shared.Kernel.ForDomain;
 
 namespace Digests.Core.Model._4Company
@@ -20,14 +21,10 @@ namespace Digests.Core.Model._4Company
 
         #region ctor
 
+        [JsonConstructor]
         private CompanyDetails(string detailInfo)
         {
             DetailInfo = detailInfo;
-        }
-
-        private CompanyDetails()
-        {
-            //for serialization
         }
 
         #endregion
