@@ -7,7 +7,7 @@ using Digests.Data.EfCore.Uow;
 
 namespace DddTestApi.AutofacModules
 {
-    public class RepositoryAutofacModule : Module
+    public class UnitOfWorkAutofacModule : Module
     {
         private readonly string _connectionString;
 
@@ -15,7 +15,7 @@ namespace DddTestApi.AutofacModules
 
         #region ctor
 
-        public RepositoryAutofacModule(string connectionString)
+        public UnitOfWorkAutofacModule(string connectionString)
         {
             _connectionString = connectionString;
         }

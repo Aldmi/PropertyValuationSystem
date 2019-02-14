@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Application.Services;
 using Digests.Data.Abstract;
 using Microsoft.AspNetCore.Mvc;
 
@@ -11,18 +12,23 @@ namespace DddTestApi.Controllers
     [ApiController]
     public class ValuesController : ControllerBase
     {
-        //private readonly IUnitOfWorkDigests _unitOfWorkDigests;
+        private readonly IUnitOfWorkDigests _unitOfWorkDigests;
+        private readonly DigestsService _digestsService;
 
-        //public ValuesController(IUnitOfWorkDigests unitOfWorkDigests)
-        //{
-        //    _unitOfWorkDigests = unitOfWorkDigests;
-        //}
+        public ValuesController(IUnitOfWorkDigests unitOfWorkDigests, DigestsService digestsService)
+        {
+            _unitOfWorkDigests = unitOfWorkDigests;
+            _digestsService = digestsService;
+        }
 
 
         // GET api/values
         [HttpGet]
         public ActionResult<IEnumerable<string>> Get([FromServices]IUnitOfWorkDigests unitOfWorkDigests)
         {
+
+           // _digestsService.AddNewCompany()
+
             return new string[] { "value1", "value2" };
         }
 

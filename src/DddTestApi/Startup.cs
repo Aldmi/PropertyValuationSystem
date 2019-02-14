@@ -55,7 +55,9 @@ namespace DddTestApi
         public void ConfigureContainer(ContainerBuilder builder)
         {
             var connectionString = AppConfiguration.GetConnectionString("DigestsSubDomainDbConnectionUseNpgsql");
-            builder.RegisterModule(new RepositoryAutofacModule(connectionString));
+            builder.RegisterModule(new UnitOfWorkAutofacModule(connectionString));
+
+            builder.RegisterModule(new ApplicationServicesAutofacModule());
         }
 
 
@@ -70,7 +72,7 @@ namespace DddTestApi
             {
                 //TODO: с оздавать БД через UOW 
                 var uow= scope.Resolve<IUnitOfWorkDigests>();
-                await uow.CreateDb(HowCreateDb.Migrate);
+                await uow.CreateDb(HowCreateDb.EnsureCreated); // EnsureCreated 4 Debug
 
 
                 //DEBUG-------
